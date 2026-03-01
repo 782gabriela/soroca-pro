@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        soroca: {
+          purple: "hsl(var(--soroca-purple))",
+          "purple-dark": "hsl(var(--soroca-purple-dark))",
+          lavender: "hsl(var(--soroca-lavender))",
+          gray: "hsl(var(--soroca-gray))",
+          dark: "hsl(var(--soroca-dark))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
