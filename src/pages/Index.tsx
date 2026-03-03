@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ValueProposition from "@/components/ValueProposition";
 import ServiceLines from "@/components/ServiceLines";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
@@ -16,7 +15,6 @@ const Index = () => (
     <Header />
     <main>
       <Hero />
-      <ValueProposition />
       <ServiceLines />
       <Services />
       <Projects />
