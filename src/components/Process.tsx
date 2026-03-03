@@ -1,11 +1,11 @@
 import { Ear, Search, FileText, HardHat, CheckCircle2 } from "lucide-react";
 
 const steps = [
-  { icon: Ear, num: "01", title: "Escuchamos tu necesidad", desc: "Nos cuentas qué necesitas y valoramos la mejor forma de resolverlo." },
-  { icon: Search, num: "02", title: "Valoramos la actuación", desc: "Visitamos el espacio si hace falta y evaluamos el alcance del trabajo." },
-  { icon: FileText, num: "03", title: "Preparamos presupuesto", desc: "Te entregamos un presupuesto detallado, cerrado y sin letra pequeña." },
-  { icon: HardHat, num: "04", title: "Ejecutamos y coordinamos", desc: "Gestionamos todos los oficios para que tú no tengas que preocuparte." },
-  { icon: CheckCircle2, num: "05", title: "Entregamos y revisamos", desc: "Repasamos el trabajo contigo. No cerramos hasta que esté correcto." },
+  { icon: Ear, num: "01", title: "Recepción de la solicitud", desc: "Atendemos tu solicitud, resolvemos las primeras dudas y valoramos la mejor forma de enfocar el trabajo desde el inicio." },
+  { icon: Search, num: "02", title: "Análisis de la intervención", desc: "Realizamos una evaluación detallada de la actuación necesaria." },
+  { icon: FileText, num: "03", title: "Preparamos presupuesto", desc: "Te entregamos un presupuesto detallado." },
+  { icon: HardHat, num: "04", title: "Ejecutamos y coordinamos", desc: "Llevamos a cabo los trabajos con una planificación clara, coordinando cada fase de la actuación y supervisando su desarrollo." },
+  { icon: CheckCircle2, num: "05", title: "Revisión final y entrega", desc: "Realizamos una revisión completa del trabajo para comprobar que todo esté correctamente ejecutado." },
 ];
 
 const Process = () => (
