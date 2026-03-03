@@ -2,7 +2,7 @@ import { Clock, Users, FileText, MapPin, CheckCircle } from "lucide-react";
 
 const points = [
   { icon: Clock, title: "Respuesta rápida", desc: "Contacto ágil y valoración en la menor brevedad posible" },
-  { icon: Users, title: "Todos los oficios coordinados", desc: "Un solo interlocutor gestiona cada gremio implicado" },
+  { icon: Users, title: "Coordinación de todos los oficios", desc: "Un solo interlocutor gestiona cada gremio implicado" },
   { icon: FileText, title: "Presupuesto claro y cerrado", desc: "Sabes lo que pagas antes de empezar, sin sorpresas" },
   { icon: MapPin, title: "Empresa local, trato directo", desc: "Base en la zona de Alicante. Cercanía real" },
   { icon: CheckCircle, title: "Seguimiento hasta el final", desc: "Revisamos cada fase y no cerramos hasta que esté bien" },
