@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import logoSoroca from "@/assets/logo-soroca.jpeg";
 
 const Footer = () =>
 <footer className="bg-soroca-dark py-12 text-primary-foreground/80 md:py-16">
@@ -7,8 +8,8 @@ const Footer = () =>
         {/* Brand */}
         <div>
           <div className="mb-4 flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <span className="text-sm font-bold text-primary-foreground">GS</span>
+            <div className="h-9 w-9 overflow-hidden rounded-lg">
+              <img src={logoSoroca} alt="Grupo Soroca" className="h-full w-full object-cover" />
             </div>
             <span className="text-base font-bold text-primary-foreground">Grupo Soroca</span>
           </div>
@@ -49,7 +50,7 @@ const Footer = () =>
           <ul className="space-y-3 text-sm text-primary-foreground/60">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <a href="tel:+34600000000" className="transition-colors hover:text-primary-foreground">655 020 020
+              <a href="tel:+34655020020" className="transition-colors hover:text-primary-foreground">655 020 020
 
             </a>
             </li>
