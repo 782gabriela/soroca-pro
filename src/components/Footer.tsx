@@ -1,7 +1,7 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 
-const Footer = () => (
-  <footer className="bg-soroca-dark py-12 text-primary-foreground/80 md:py-16">
+const Footer = () =>
+<footer className="bg-soroca-dark py-12 text-primary-foreground/80 md:py-16">
     <div className="container mx-auto px-4">
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
@@ -47,19 +47,19 @@ const Footer = () => (
           <ul className="space-y-3 text-sm text-primary-foreground/60">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <a href="tel:+34600000000" className="transition-colors hover:text-primary-foreground">
-                600 000 000
-              </a>
+              <a href="tel:+34600000000" className="transition-colors hover:text-primary-foreground">655 020 020
+
+            </a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <a href="mailto:info@gruposoroca.es" className="transition-colors hover:text-primary-foreground">
-                info@gruposoroca.es
-              </a>
+              <a href="mailto:info@gruposoroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es
+
+            </a>
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>Alicante, España</span>
+              <span>Avenida Noruega 1, BUNGALOW 21 URB NOVAMAR Alicante ·Gran Alacant </span>
             </li>
           </ul>
         </div>
@@ -74,7 +74,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-  </footer>
-);
+  </footer>;
+
 
 export default Footer;
