@@ -47,19 +47,15 @@ const Footer = () =>
           <ul className="space-y-3 text-sm text-primary-foreground/60">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <a href="tel:+34600000000" className="transition-colors hover:text-primary-foreground">655 020 020
-
-            </a>
+              <a href="tel:+34600000000" className="transition-colors hover:text-primary-foreground">655 020 020</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <a href="mailto:info@gruposoroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es
-
-            </a>
+              <a href="mailto:info@gruposoroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es</a>
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>Avenida Noruega 1, BUNGALOW 21 URB NOVAMAR Alicante ·Gran Alacant </span>
+              <span>Avenida Noruega 1, BUNGALOW 21 URB NOVAMAR  Alicante · Gran Alacant</span>
             </li>
           </ul>
         </div>
