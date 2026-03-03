@@ -43,11 +43,11 @@ const Header = () => {
         {/* Desktop CTA + phone */}
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="tel:+34600000000"
+            href="tel:+34655020020"
             className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <Phone className="h-4 w-4" />
-            600 000 000
+            655 020 020
           </a>
           <Button asChild>
             <a href="#contacto">Pide presupuesto</a>
@@ -81,10 +81,10 @@ const Header = () => {
           </nav>
           <div className="mt-3 flex flex-col gap-2">
             <a
-              href="tel:+34600000000"
+              href="tel:+34655020020"
               className="flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-medium"
             >
-              <Phone className="h-4 w-4" /> 600 000 000
+              <Phone className="h-4 w-4" /> 655 020 020
             </a>
             <Button asChild className="w-full">
               <a href="#contacto" onClick={() => setMobileOpen(false)}>
