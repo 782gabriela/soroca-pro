@@ -7,7 +7,7 @@ import Projects from "@/components/Projects";
 import Process from "@/components/Process";
 import Trust from "@/components/Trust";
 import Zones from "@/components/Zones";
-import CtaBlock from "@/components/CtaBlock";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -23,7 +23,7 @@ const Index = () => (
       <Process />
       <Trust />
       <Zones />
-      <CtaBlock />
+      <ContactForm />
     </main>
     <Footer />
     <WhatsAppButton />
