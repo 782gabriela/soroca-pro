@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 const viviendaImg = "/lovable-uploads/7c7e7606-1c68-472e-a901-74e2ed0e001e.png";
 import comunidadesImg from "@/assets/comunidades.jpeg";
 import negociosImg from "@/assets/negocios.jpeg";
-import urgenciasImg from "@/assets/urgencias.jpeg";
+const urgenciasImg = "/lovable-uploads/3d2f7f58-6fe9-4cb2-8139-022b7ef922f7.jpg";
 
 const lines = [
 {
