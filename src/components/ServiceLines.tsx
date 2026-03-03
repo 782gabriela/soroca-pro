@@ -1,5 +1,8 @@
-import { Building2, Store, AlertTriangle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import viviendaImg from "@/assets/viviendas.png";
+import comunidadesImg from "@/assets/comunidades.jpeg";
+import negociosImg from "@/assets/negocios.jpeg";
+import urgenciasImg from "@/assets/urgencias.jpeg";
 
 const lines = [
   {
@@ -9,19 +12,19 @@ const lines = [
     cta: "Ver servicios para viviendas",
   },
   {
-    icon: Building2,
+    image: comunidadesImg,
     title: "Comunidades",
     desc: "Mantenimiento, fachadas, cubiertas e impermeabilización para comunidades de propietarios.",
     cta: "Ver servicios para comunidades",
   },
   {
-    icon: Store,
+    image: negociosImg,
     title: "Negocios y locales",
     desc: "Adecuación, reforma y mantenimiento de locales comerciales y oficinas.",
     cta: "Ver servicios para negocios",
   },
   {
-    icon: AlertTriangle,
+    image: urgenciasImg,
     title: "Urgencias",
     desc: "Reparaciones e incidencias que no pueden esperar. Respuesta rápida en tu zona.",
     cta: "Contactar por urgencia",
@@ -43,15 +46,9 @@ const ServiceLines = () => (
             key={l.title}
             className="group rounded-xl border border-border bg-card p-6 transition-shadow hover:shadow-lg md:p-8"
           >
-            {'image' in l && l.image ? (
-              <div className="mb-4 h-14 w-14 overflow-hidden rounded-lg">
-                <img src={l.image} alt={l.title} className="h-full w-full object-cover" />
-              </div>
-            ) : (
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary">
-                {'icon' in l && l.icon && <l.icon className="h-6 w-6 text-primary" />}
-              </div>
-            )}
+            <div className="mb-4 h-14 w-14 overflow-hidden rounded-lg">
+              <img src={l.image} alt={l.title} className="h-full w-full object-cover" />
+            </div>
             <h3 className="mb-2 text-lg font-semibold text-foreground">{l.title}</h3>
             <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{l.desc}</p>
             <a
