@@ -30,17 +30,22 @@ const Footer = () =>
           </ul>
         </div>
 
-        {/* Zones */}
+        {/* Horario */}
         <div>
-          <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground">Zonas</h4>
-          <ul className="space-y-2 text-sm text-primary-foreground/60">
+          <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground">Horario</h4>
+          <ul className="space-y-3 text-sm text-primary-foreground/60">
             <li>
-</li>
-            <li>Gran Alacant</li>
-            <li>Elche</li>
+              <span className="block font-medium text-primary-foreground/80">Lunes - Viernes</span>
+              8:00 - 18:00
+            </li>
             <li>
-</li>
-            <li>Alrededores</li>
+              <span className="block font-medium text-primary-foreground/80">Sábado / Domingo</span>
+              Cerrado
+            </li>
+            <li>
+              <span className="block font-medium text-primary-foreground/80">Servicio de Averías 24h</span>
+              365 días
+            </li>
           </ul>
         </div>
 
