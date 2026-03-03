@@ -1,8 +1,9 @@
-import { Home, Building2, Store, AlertTriangle, ArrowRight } from "lucide-react";
+import { Building2, Store, AlertTriangle, ArrowRight } from "lucide-react";
+import viviendaImg from "@/assets/viviendas.png";
 
 const lines = [
   {
-    icon: Home,
+    image: viviendaImg,
     title: "Viviendas",
     desc: "Reformas, reparaciones y mejoras para tu hogar. Desde una avería hasta una reforma integral.",
     cta: "Ver servicios para viviendas",
@@ -42,9 +43,15 @@ const ServiceLines = () => (
             key={l.title}
             className="group rounded-xl border border-border bg-card p-6 transition-shadow hover:shadow-lg md:p-8"
           >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary">
-              <l.icon className="h-6 w-6 text-primary" />
-            </div>
+            {'image' in l && l.image ? (
+              <div className="mb-4 h-14 w-14 overflow-hidden rounded-lg">
+                <img src={l.image} alt={l.title} className="h-full w-full object-cover" />
+              </div>
+            ) : (
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary">
+                {'icon' in l && l.icon && <l.icon className="h-6 w-6 text-primary" />}
+              </div>
+            )}
             <h3 className="mb-2 text-lg font-semibold text-foreground">{l.title}</h3>
             <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{l.desc}</p>
             <a
