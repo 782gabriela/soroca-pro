@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import logoSoroca from "@/assets/logo-soroca.jpeg";
 
 const navItems = [
   { label: "Servicios", href: "#servicios" },
@@ -17,8 +18,8 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-            <span className="text-lg font-bold text-primary-foreground">GS</span>
+          <div className="h-10 w-10 overflow-hidden rounded-lg">
+            <img src={logoSoroca} alt="Grupo Soroca" className="h-full w-full object-cover" />
           </div>
           <div className="hidden sm:block">
             <span className="text-lg font-bold text-foreground">Grupo Soroca</span>
