@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { services } from "@/data/services";
 import logoSoroca from "@/assets/logo-soroca.jpeg";
+import BudgetRequestModal from "@/components/BudgetRequestModal";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [budgetOpen, setBudgetOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -101,8 +103,8 @@ const Header = () => {
             <Phone className="h-4 w-4" />
             655 020 020
           </a>
-          <Button asChild>
-            <Link to="/contacto">Pide presupuesto</Link>
+          <Button onClick={() => setBudgetOpen(true)}>
+            Pide presupuesto
           </Button>
         </div>
 
@@ -164,12 +166,13 @@ const Header = () => {
             <a href="tel:+34655020020" className="flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-medium">
               <Phone className="h-4 w-4" /> 655 020 020
             </a>
-            <Button asChild className="w-full">
-              <Link to="/contacto" onClick={() => setMobileOpen(false)}>Pide presupuesto</Link>
+            <Button className="w-full" onClick={() => { setMobileOpen(false); setBudgetOpen(true); }}>
+              Pide presupuesto
             </Button>
           </div>
         </div>
       )}
+      <BudgetRequestModal open={budgetOpen} onOpenChange={setBudgetOpen} />
     </header>
   );
 };
