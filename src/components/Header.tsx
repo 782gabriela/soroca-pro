@@ -172,6 +172,7 @@ const Header = () => {
           </div>
         </div>
       )}
+      <BudgetRequestModal open={budgetOpen} onOpenChange={setBudgetOpen} />
     </header>
   );
 };
