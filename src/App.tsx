@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BudgetModalProvider } from "@/contexts/BudgetModalContext";
 import Index from "./pages/Index";
 import ServiceDetail from "./pages/ServiceDetail";
 import Viviendas from "./pages/Viviendas";
@@ -23,19 +24,21 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/servicios/:slug" element={<ServiceDetail />} />
-          <Route path="/viviendas" element={<Viviendas />} />
-          <Route path="/comunidades" element={<Comunidades />} />
-          <Route path="/negocios" element={<Negocios />} />
-          <Route path="/proyectos" element={<ProyectosPage />} />
-          <Route path="/zonas" element={<ZonasPage />} />
-          <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-          <Route path="/contacto" element={<ContactoPage />} />
-          <Route path="/horario" element={<HorarioPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <BudgetModalProvider>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/servicios/:slug" element={<ServiceDetail />} />
+            <Route path="/viviendas" element={<Viviendas />} />
+            <Route path="/comunidades" element={<Comunidades />} />
+            <Route path="/negocios" element={<Negocios />} />
+            <Route path="/proyectos" element={<ProyectosPage />} />
+            <Route path="/zonas" element={<ZonasPage />} />
+            <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+            <Route path="/contacto" element={<ContactoPage />} />
+            <Route path="/horario" element={<HorarioPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BudgetModalProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
