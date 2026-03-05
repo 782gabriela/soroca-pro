@@ -103,8 +103,8 @@ const Header = () => {
             <Phone className="h-4 w-4" />
             655 020 020
           </a>
-          <Button asChild>
-            <Link to="/contacto">Pide presupuesto</Link>
+          <Button onClick={() => setBudgetOpen(true)}>
+            Pide presupuesto
           </Button>
         </div>
 
