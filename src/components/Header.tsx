@@ -166,8 +166,8 @@ const Header = () => {
             <a href="tel:+34655020020" className="flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-medium">
               <Phone className="h-4 w-4" /> 655 020 020
             </a>
-            <Button asChild className="w-full">
-              <Link to="/contacto" onClick={() => setMobileOpen(false)}>Pide presupuesto</Link>
+            <Button className="w-full" onClick={() => { setMobileOpen(false); setBudgetOpen(true); }}>
+              Pide presupuesto
             </Button>
           </div>
         </div>
