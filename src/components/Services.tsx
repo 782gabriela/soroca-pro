@@ -14,7 +14,7 @@ const Services = () => (
       <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
         {services.map((s) => (
           <Link
-            key={s.name}
+            key={s.slug}
             to={`/servicios/${s.slug}`}
             className="group rounded-xl border border-border bg-card p-5 text-center transition-shadow hover:shadow-md"
           >
@@ -29,7 +29,7 @@ const Services = () => (
       <div className="mt-10 text-center">
         <p className="mb-4 text-sm text-muted-foreground">¿No encuentras lo que buscas?</p>
         <Button variant="outline" asChild>
-          <a href="#contacto">Cuéntanos tu caso</a>
+          <Link to="/contacto">Cuéntanos tu caso</Link>
         </Button>
       </div>
     </div>

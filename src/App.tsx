@@ -8,6 +8,11 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Viviendas from "./pages/Viviendas";
 import Comunidades from "./pages/Comunidades";
 import Negocios from "./pages/Negocios";
+import ProyectosPage from "./pages/ProyectosPage";
+import ZonasPage from "./pages/ZonasPage";
+import SobreNosotros from "./pages/SobreNosotros";
+import ContactoPage from "./pages/ContactoPage";
+import HorarioPage from "./pages/HorarioPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,7 +29,11 @@ const App = () => (
           <Route path="/viviendas" element={<Viviendas />} />
           <Route path="/comunidades" element={<Comunidades />} />
           <Route path="/negocios" element={<Negocios />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/proyectos" element={<ProyectosPage />} />
+          <Route path="/zonas" element={<ZonasPage />} />
+          <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+          <Route path="/contacto" element={<ContactoPage />} />
+          <Route path="/horario" element={<HorarioPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
