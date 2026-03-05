@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { services } from "@/data/services";
 import logoSoroca from "@/assets/logo-soroca.jpeg";
+import BudgetRequestModal from "@/components/BudgetRequestModal";
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
