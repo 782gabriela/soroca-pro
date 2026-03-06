@@ -72,10 +72,6 @@ const Header = () => {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a href="tel:+34655020020" className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
-            <Phone className="h-4 w-4" />
-            655 020 020
-          </a>
           <Button onClick={() => openBudgetModal()}>Pide presupuesto</Button>
         </div>
 
