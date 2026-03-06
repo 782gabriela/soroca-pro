@@ -135,6 +135,7 @@ export const services: ServiceData[] = [
     name: "Aire acondicionado",
     slug: "aire-acondicionado",
     desc: "Instalación, reparación y mantenimiento de climatización",
+    image: aireImg,
     longDesc:
       "Instalación y mantenimiento de sistemas de aire acondicionado y climatización para viviendas, comunidades y locales comerciales. Trabajamos con las mejores marcas y ofrecemos soluciones energéticamente eficientes.",
     features: [
