@@ -1,5 +1,6 @@
 import { MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -11,52 +12,51 @@ const ZonasPage = () => (
   <div className="flex min-h-screen flex-col">
     <Header />
     <main className="flex-1">
-      <section className="bg-muted/30 py-16 md:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
-            Zonas de trabajo
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Trabajamos en toda la provincia de Alicante y alrededores. Nuestro equipo se desplaza donde nos necesites.
-          </p>
+      <section className="bg-gradient-to-b from-primary/5 to-background pt-20 pb-12 md:pt-28 md:pb-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">
+              Zonas de trabajo
+            </h1>
+            <p className="text-base font-normal leading-[1.75] text-foreground/90 md:text-lg" style={{ maxWidth: '780px' }}>
+              Trabajamos en toda la provincia de Alicante y alrededores. Nuestro equipo se desplaza donde nos necesites.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="mb-6 text-xl font-bold text-foreground sm:text-2xl">Zonas principales</h2>
-            <div className="mb-10 flex flex-wrap gap-3">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Cobertura</div>
+            <h2 className="mb-8 text-2xl font-bold leading-snug text-foreground md:text-3xl">Zonas principales</h2>
+            <div className="mb-12 flex flex-wrap gap-3">
               {zonasPrincipales.map((z) => (
-                <span
-                  key={z}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground"
-                >
-                  <MapPin className="h-3.5 w-3.5 text-primary" />
+                <Badge key={z} variant="secondary" className="px-5 py-2.5 text-base font-bold shadow-sm">
+                  <MapPin className="mr-2 h-4 w-4" />
                   {z}
-                </span>
+                </Badge>
               ))}
             </div>
 
-            <h2 className="mb-6 text-xl font-bold text-foreground sm:text-2xl">Alrededores</h2>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Más zonas</div>
+            <h2 className="mb-8 text-2xl font-bold leading-snug text-foreground md:text-3xl">Alrededores</h2>
             <div className="mb-12 flex flex-wrap gap-3">
               {alrededores.map((z) => (
-                <span
-                  key={z}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground/70"
-                >
-                  <MapPin className="h-3.5 w-3.5 text-muted-foreground" />
+                <Badge key={z} variant="secondary" className="px-5 py-2.5 text-base font-bold shadow-sm">
+                  <MapPin className="mr-2 h-4 w-4" />
                   {z}
-                </span>
+                </Badge>
               ))}
             </div>
 
-            <div className="rounded-xl border border-border bg-secondary/50 p-8 text-center">
+            <div className="rounded-2xl border border-border/50 bg-card p-8 text-center shadow-sm">
+              <Phone className="mx-auto mb-4 h-10 w-10 text-primary" />
               <h3 className="mb-2 text-lg font-bold text-foreground">¿Tu zona no aparece?</h3>
-              <p className="mb-6 text-muted-foreground">
+              <p className="mb-6 text-[15px] leading-[1.7] text-muted-foreground md:text-base">
                 Llámanos y lo confirmamos. Es posible que también cubramos tu zona.
               </p>
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="px-10 text-base">
                 <a href="tel:+34655020020">
                   <Phone className="mr-2 h-4 w-4" />
                   Llamar: 655 020 020
