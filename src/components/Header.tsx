@@ -104,9 +104,6 @@ const Header = () => {
             <Link to="/contacto" onClick={() => setMobileOpen(false)} className="rounded-md px-4 py-3 text-sm font-medium text-foreground/80 transition-colors hover:bg-accent">Contacto</Link>
           </nav>
           <div className="mt-3 flex flex-col gap-2">
-            <a href="tel:+34655020020" className="flex items-center justify-center gap-2 rounded-md border border-border px-4 py-3 text-sm font-medium">
-              <Phone className="h-4 w-4" /> 655 020 020
-            </a>
             <Button className="w-full" onClick={() => { setMobileOpen(false); openBudgetModal(); }}>Pide presupuesto</Button>
           </div>
         </div>
