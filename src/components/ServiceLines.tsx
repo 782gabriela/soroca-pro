@@ -6,7 +6,7 @@ import { useBudgetModal } from "@/contexts/BudgetModalContext";
 const viviendaImg = "/lovable-uploads/7c7e7606-1c68-472e-a901-74e2ed0e001e.png";
 import comunidadesImg from "@/assets/comunidades.jpeg";
 import negociosImg from "@/assets/negocios.jpeg";
-const urgenciasImg = "/lovable-uploads/e017f61a-8dee-4e7a-a90b-6bad3ba51f21.png";
+import urgenciasImg from "@/assets/urgencias-casco.png";
 
 const ServiceLines = () => {
   const { openBudgetModal } = useBudgetModal();

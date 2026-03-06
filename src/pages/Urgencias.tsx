@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
-import urgenciasImg from "@/assets/urgencias.jpeg";
+import urgenciasImg from "@/assets/urgencias-casco.png";
 
 const relatedServices = [
   { name: "Fontanería", slug: "fontaneria" },
