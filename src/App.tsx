@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { BudgetModalProvider } from "@/contexts/BudgetModalContext";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import { CookieBanner, CookieDetailModal, CookiePrivacyModal } from "@/components/CookieConsent";
+import { LanguageProvider, type Language } from "@/i18n/context";
 import Index from "./pages/Index";
 import ServiceDetail from "./pages/ServiceDetail";
 import Viviendas from "./pages/Viviendas";
@@ -19,8 +20,37 @@ import ContactoPage from "./pages/ContactoPage";
 import HorarioPage from "./pages/HorarioPage";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import SEOHead from "./components/SEOHead";
 
 const queryClient = new QueryClient();
+
+const AppRoutes = ({ language }: { language: Language }) => (
+  <LanguageProvider language={language}>
+    <BudgetModalProvider>
+      <SEOHead />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/servicios/:slug" element={<ServiceDetail />} />
+        <Route path="/categorias/viviendas" element={<Viviendas />} />
+        <Route path="/categorias/comunidades" element={<Comunidades />} />
+        <Route path="/categorias/negocios-locales" element={<Negocios />} />
+        <Route path="/categorias/urgencias" element={<Urgencias />} />
+        <Route path="/viviendas" element={<Navigate to={language === "es" ? "/categorias/viviendas" : `/${language}/categorias/viviendas`} replace />} />
+        <Route path="/comunidades" element={<Navigate to={language === "es" ? "/categorias/comunidades" : `/${language}/categorias/comunidades`} replace />} />
+        <Route path="/negocios" element={<Navigate to={language === "es" ? "/categorias/negocios-locales" : `/${language}/categorias/negocios-locales`} replace />} />
+        <Route path="/proyectos" element={<ProyectosPage />} />
+        <Route path="/zonas" element={<ZonasPage />} />
+        <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+        <Route path="/contacto" element={<ContactoPage />} />
+        <Route path="/horario" element={<HorarioPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <CookieBanner />
+      <CookieDetailModal />
+      <CookiePrivacyModal />
+    </BudgetModalProvider>
+  </LanguageProvider>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -30,31 +60,12 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <CookieConsentProvider>
-          <BudgetModalProvider>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/servicios/:slug" element={<ServiceDetail />} />
-              {/* Category pages */}
-              <Route path="/categorias/viviendas" element={<Viviendas />} />
-              <Route path="/categorias/comunidades" element={<Comunidades />} />
-              <Route path="/categorias/negocios-locales" element={<Negocios />} />
-              <Route path="/categorias/urgencias" element={<Urgencias />} />
-              {/* Redirects from old routes */}
-              <Route path="/viviendas" element={<Navigate to="/categorias/viviendas" replace />} />
-              <Route path="/comunidades" element={<Navigate to="/categorias/comunidades" replace />} />
-              <Route path="/negocios" element={<Navigate to="/categorias/negocios-locales" replace />} />
-              {/* Other pages */}
-              <Route path="/proyectos" element={<ProyectosPage />} />
-              <Route path="/zonas" element={<ZonasPage />} />
-              <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-              <Route path="/contacto" element={<ContactoPage />} />
-              <Route path="/horario" element={<HorarioPage />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            <CookieBanner />
-            <CookieDetailModal />
-            <CookiePrivacyModal />
-          </BudgetModalProvider>
+          <Routes>
+            <Route path="/en/*" element={<AppRoutes language="en" />} />
+            <Route path="/de/*" element={<AppRoutes language="de" />} />
+            <Route path="/ru/*" element={<AppRoutes language="ru" />} />
+            <Route path="/*" element={<AppRoutes language="es" />} />
+          </Routes>
         </CookieConsentProvider>
       </BrowserRouter>
     </TooltipProvider>

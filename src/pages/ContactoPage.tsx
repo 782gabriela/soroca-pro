@@ -5,9 +5,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
+import { useTranslation } from "@/i18n/context";
 
 const ContactoPage = () => {
   const { openBudgetModal } = useBudgetModal();
+  const { t, localePath } = useTranslation();
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -15,11 +17,10 @@ const ContactoPage = () => {
       <main className="flex-1">
         <section className="bg-muted/30 py-16 md:py-24">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">Contacto</h1>
-            <p className="mx-auto max-w-xl text-lg text-muted-foreground">Ponte en contacto con nosotros. Estamos aquí para ayudarte.</p>
+            <h1 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">{t.contactoPage.title}</h1>
+            <p className="mx-auto max-w-xl text-lg text-muted-foreground">{t.contactoPage.subtitle}</p>
           </div>
         </section>
-
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
             <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
@@ -27,45 +28,39 @@ const ContactoPage = () => {
                 <div className="rounded-xl border border-border bg-card p-6">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary"><Phone className="h-5 w-5 text-primary" /></div>
-                    <h3 className="font-semibold text-foreground">Teléfono</h3>
+                    <h3 className="font-semibold text-foreground">{t.contactoPage.telefono}</h3>
                   </div>
                   <a href="tel:+34655020020" className="text-lg font-medium text-primary hover:underline">655 020 020</a>
                 </div>
-
                 <div className="rounded-xl border border-border bg-card p-6">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary"><Mail className="h-5 w-5 text-primary" /></div>
-                    <h3 className="font-semibold text-foreground">Correo electrónico</h3>
+                    <h3 className="font-semibold text-foreground">{t.contactoPage.correo}</h3>
                   </div>
                   <a className="text-lg font-medium text-primary hover:underline" href="mailto:info@soroca.es">info@soroca.es</a>
                 </div>
-
                 <div className="rounded-xl border border-border bg-card p-6">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary"><MapPin className="h-5 w-5 text-primary" /></div>
-                    <h3 className="font-semibold text-foreground">​Ubicacion</h3>
+                    <h3 className="font-semibold text-foreground">{t.contactoPage.ubicacion}</h3>
                   </div>
-                  <p className="text-muted-foreground">​Alicante (Gran Alacant) 
-Avenida Noruega 1, BUNGALOW 21 URB NOVAMAR 3
-                  </p>
+                  <p className="text-muted-foreground whitespace-pre-line">{t.contactoPage.direccion}</p>
                 </div>
               </div>
-
               <div className="flex flex-col gap-6">
                 <div className="rounded-xl border border-border bg-card p-6">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary"><Clock className="h-5 w-5 text-primary" /></div>
-                    <h3 className="font-semibold text-foreground">Horario</h3>
+                    <h3 className="font-semibold text-foreground">{t.contactoPage.horario}</h3>
                   </div>
-                  <p className="mb-4 text-muted-foreground">Consulta nuestro horario de atención.</p>
-                  <Button asChild variant="outline"><Link to="/horario">Consulta nuestro horario</Link></Button>
+                  <p className="mb-4 text-muted-foreground">{t.contactoPage.consultaHorario}</p>
+                  <Button asChild variant="outline"><Link to={localePath("/horario")}>{t.contactoPage.consultaHorarioBtn}</Link></Button>
                 </div>
-
                 <div className="rounded-xl border border-primary/20 bg-primary/5 p-6">
-                  <h3 className="mb-2 font-semibold text-foreground">¿Necesitas un presupuesto?</h3>
-                  <p className="mb-4 text-sm text-muted-foreground">Llámanos o escríbenos y te preparamos un presupuesto sin compromiso.</p>
+                  <h3 className="mb-2 font-semibold text-foreground">{t.contactoPage.necesitasPresupuesto}</h3>
+                  <p className="mb-4 text-sm text-muted-foreground">{t.contactoPage.necesitasPresupuestoDesc}</p>
                   <div className="flex flex-col gap-2">
-                    <Button onClick={() => openBudgetModal()}>Pedir presupuesto</Button>
+                    <Button onClick={() => openBudgetModal()}>{t.contactoPage.pedirPresupuesto}</Button>
                     <Button asChild variant="outline">
                       <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                     </Button>
@@ -78,6 +73,8 @@ Avenida Noruega 1, BUNGALOW 21 URB NOVAMAR 3
       </main>
       <Footer />
       <WhatsAppButton />
-    </div>);};
+    </div>
+  );
+};
 
 export default ContactoPage;
