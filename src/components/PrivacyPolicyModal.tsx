@@ -91,7 +91,7 @@ const PrivacyPolicyModal = ({ open, onOpenChange }: PrivacyPolicyModalProps) => 
 
           <h3 className="pt-2 text-base font-semibold text-foreground">10. Derechos del usuario</h3>
           <p>Puedes ejercer: acceso, rectificación, supresión, oposición, limitación, portabilidad y retirar el consentimiento.</p>
-          <p>Para ejercerlos, escribe a info@soroca.com indicando "Protección de datos" y el derecho que deseas ejercitar. Podremos solicitar acreditación de identidad si fuera necesario.</p>
+          <p>Para ejercerlos, escribe a info@soroca.es indicando "Protección de datos" y el derecho que deseas ejercitar. Podremos solicitar acreditación de identidad si fuera necesario.</p>
           <p>Si consideras que tus derechos no han sido atendidos, puedes reclamar ante la Agencia Española de Protección de Datos (AEPD).</p>
 
           <h3 className="pt-2 text-base font-semibold text-foreground">11. Seguridad</h3>
