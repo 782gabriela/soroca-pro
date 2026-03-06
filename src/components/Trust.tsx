@@ -24,7 +24,7 @@ const testimonials = [
 }];
 
 
-const Trust = () => {};
+const Trust = () => { return null; };
 
 
 
