@@ -31,7 +31,7 @@ const PrivacyPolicyModal = ({ open, onOpenChange }: PrivacyPolicyModalProps) => 
           <ul className="list-disc pl-5 space-y-1">
             <li><strong>Responsable:</strong> Soroca Proyectos y Construcciones S.L. (en adelante, "SOROCA")</li>
             <li><strong>Domicilio:</strong> Gran Alacant, Alicante</li>
-            <li><strong>Correo electrónico:</strong> info@soroca.com</li>
+            <li><strong>Correo electrónico:</strong> info@soroca.es</li>
             <li><strong>Teléfono:</strong> 655 020 020</li>
           </ul>
 
@@ -91,7 +91,7 @@ const PrivacyPolicyModal = ({ open, onOpenChange }: PrivacyPolicyModalProps) => 
 
           <h3 className="pt-2 text-base font-semibold text-foreground">10. Derechos del usuario</h3>
           <p>Puedes ejercer: acceso, rectificación, supresión, oposición, limitación, portabilidad y retirar el consentimiento.</p>
-          <p>Para ejercerlos, escribe a info@soroca.com indicando "Protección de datos" y el derecho que deseas ejercitar. Podremos solicitar acreditación de identidad si fuera necesario.</p>
+          <p>Para ejercerlos, escribe a info@soroca.es indicando "Protección de datos" y el derecho que deseas ejercitar. Podremos solicitar acreditación de identidad si fuera necesario.</p>
           <p>Si consideras que tus derechos no han sido atendidos, puedes reclamar ante la Agencia Española de Protección de Datos (AEPD).</p>
 
           <h3 className="pt-2 text-base font-semibold text-foreground">11. Seguridad</h3>
