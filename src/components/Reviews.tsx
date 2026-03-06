@@ -1,4 +1,7 @@
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/Soroca+Proyectos+y+Construcciones";
 
 const Reviews = () => (
   <section className="bg-muted py-16 md:py-24">
@@ -10,13 +13,34 @@ const Reviews = () => (
         </p>
       </div>
 
-      <div className="mx-auto max-w-md rounded-xl border border-border bg-card p-10 text-center shadow-sm">
-        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
-          <Star className="h-6 w-6 text-primary" />
+      <div className="mx-auto max-w-lg rounded-xl border border-border bg-card p-8 text-center shadow-sm">
+        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-secondary">
+          <Star className="h-7 w-7 text-primary" />
         </div>
-        <p className="text-sm text-muted-foreground">
-          No se han podido cargar reseñas en este momento.
+        <h3 className="mb-2 text-lg font-semibold text-foreground">
+          Consulta nuestras reseñas en Google
+        </h3>
+        <p className="mb-6 text-sm text-muted-foreground">
+          Descubre lo que nuestros clientes opinan sobre nuestro trabajo, calidad y profesionalismo.
         </p>
+        <Button asChild>
+          <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
+            <ExternalLink className="mr-2 h-4 w-4" />
+            Ver reseñas en Google
+          </a>
+        </Button>
+      </div>
+
+      <div className="mt-8 text-center">
+        <a
+          href={GOOGLE_REVIEWS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
+        >
+          Ver todas las reseñas en Google
+          <ExternalLink className="h-3.5 w-3.5" />
+        </a>
       </div>
     </div>
   </section>
