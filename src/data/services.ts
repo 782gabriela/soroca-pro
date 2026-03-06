@@ -9,6 +9,14 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import fontaneriaImg from "@/assets/services/fontaneria.jpg";
+import pinturaImg from "@/assets/services/pintura.jpg";
+import electricidadImg from "@/assets/services/electricidad.jpg";
+import cerrajeriaImg from "@/assets/services/cerrajeria.jpg";
+import carpinteriaImg from "@/assets/services/carpinteria-metalica.jpg";
+import ascensoresImg from "@/assets/services/ascensores.jpg";
+import aireImg from "@/assets/services/aire-acondicionado.jpg";
+
 export interface ServiceData {
   icon: LucideIcon;
   name: string;
@@ -16,6 +24,7 @@ export interface ServiceData {
   desc: string;
   longDesc: string;
   features: string[];
+  image: string;
 }
 
 export const services: ServiceData[] = [
@@ -24,6 +33,7 @@ export const services: ServiceData[] = [
     name: "Fontanería",
     slug: "fontaneria",
     desc: "Reparaciones, instalaciones y detección de fugas",
+    image: fontaneriaImg,
     longDesc:
       "Servicio completo de fontanería: desde reparaciones puntuales hasta instalaciones completas. Utilizamos tecnología avanzada para la detección de fugas y ofrecemos soluciones duraderas y eficientes.",
     features: [
