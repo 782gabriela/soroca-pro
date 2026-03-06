@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const zonasPrincipales = ["Alicante", "Elche", "Gran Alacant", "Santa Pola", "Torrevieja", "Guardamar del Segura", "Crevillente", "Aspe", "Novelda", "San Vicente del Raspeig"];
+const zonasPrincipales = ["Alicante", "Elche", "Gran Alacant", "Santa Pola", "Torrevieja", "Guardamar del Segura"];
 const alrededores = ["Campello", "Mutxamel", "San Juan de Alicante", "Villajoyosa", "Benidorm", "Altea", "Calpe", "Orihuela", "Pilar de la Horadada", "Rojales"];
 
 const ZonasPage = () =>
