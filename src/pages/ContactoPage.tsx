@@ -37,15 +37,17 @@ const ContactoPage = () => {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary"><Mail className="h-5 w-5 text-primary" /></div>
                     <h3 className="font-semibold text-foreground">Correo electrónico</h3>
                   </div>
-                  <a href="mailto:info@soroca.com" className="text-lg font-medium text-primary hover:underline">info@soroca.com</a>
+                  <a className="text-lg font-medium text-primary hover:underline" href="mailto:info@soroca.es">info@soroca.es</a>
                 </div>
 
                 <div className="rounded-xl border border-border bg-card p-6">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary"><MapPin className="h-5 w-5 text-primary" /></div>
-                    <h3 className="font-semibold text-foreground">info@soroca.es</h3>
+                    <h3 className="font-semibold text-foreground">​Ubicacion</h3>
                   </div>
-                  <p className="text-muted-foreground">Gran Alacant, Alicante</p>
+                  <p className="text-muted-foreground">​Alicante (Gran Alacant) 
+Avenida Noruega 1, BUNGALOW 21 URB NOVAMAR 3
+                  </p>
                 </div>
               </div>
 
@@ -76,8 +78,6 @@ const ContactoPage = () => {
       </main>
       <Footer />
       <WhatsAppButton />
-    </div>);
-
-};
+    </div>);};
 
 export default ContactoPage;
