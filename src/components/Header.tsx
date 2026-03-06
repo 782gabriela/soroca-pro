@@ -91,7 +91,7 @@ const Header = () => {
             {mobileServicesOpen && (
               <div className="ml-4 flex flex-col gap-1">
                 {services.map((s) => (
-                  <Link key={s.slug} to={`/servicios/${s.slug}`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-md px-4 py-2.5 text-sm text-foreground/80 transition-colors hover:bg-accent">
+                  <Link key={s.slug} to={`/servicios/${s.slug}`} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-md px-4 py-2.5 text-sm uppercase tracking-wide text-foreground/80 transition-colors hover:bg-accent">
                     <s.icon className="h-4 w-4 text-primary" />
                     {s.name}
                   </Link>
