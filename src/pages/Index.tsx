@@ -20,7 +20,7 @@ const Index = () => (
       <Services />
       <Projects />
       <Process />
-      <Trust />
+      
       <Reviews />
       <Zones />
       <ContactForm />
