@@ -16,13 +16,18 @@ const Services = () => (
           <Link
             key={s.slug}
             to={`/servicios/${s.slug}`}
-            className="group rounded-xl border border-border bg-card p-5 text-center transition-shadow hover:shadow-md"
+            className="group overflow-hidden rounded-xl border border-border bg-card transition-shadow hover:shadow-md"
           >
-            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary">
-              <s.icon className="h-5 w-5 text-primary" />
+            <div className="aspect-[16/10] w-full overflow-hidden">
+              <img src={s.image} alt={s.name} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
             </div>
-            <h3 className="mb-1 text-sm font-semibold text-foreground">{s.name}</h3>
-            <p className="text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
+            <div className="p-4 text-center">
+              <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-secondary">
+                <s.icon className="h-4 w-4 text-primary" />
+              </div>
+              <h3 className="mb-1 text-sm font-semibold text-foreground">{s.name}</h3>
+              <p className="text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
+            </div>
           </Link>
         ))}
       </div>
