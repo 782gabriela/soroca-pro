@@ -11,10 +11,6 @@ const viviendaImg = "/lovable-uploads/7c7e7606-1c68-472e-a901-74e2ed0e001e.png";
 
 const relatedSlugs = ["fontaneria", "electricidad", "pintura-decoracion", "cerrajeria", "carpinteria-metalica", "aire-acondicionado"];
 
-const slugToKey: Record<string, string> = {
-  "fontaneria": "fontaneria", "electricidad": "electricidad", "pintura-decoracion": "pinturaDecoracion",
-  "cerrajeria": "cerrajeria", "carpinteria-metalica": "carpinteriaMetalica", "aire-acondicionado": "aireAcondicionado",
-};
 
 const Viviendas = () => {
   const { openBudgetModal } = useBudgetModal();
