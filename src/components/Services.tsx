@@ -3,6 +3,17 @@ import { Button } from "@/components/ui/button";
 import { services } from "@/data/services";
 import { useTranslation } from "@/i18n/context";
 
+const Services = () => {
+  const { t, localePath } = useTranslation();
+
+  return (
+    <section id="servicios" className="bg-background py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="mb-3 text-2xl font-bold text-foreground sm:text-3xl">{t.servicesGrid.title}</h2>
+          <p className="mx-auto max-w-xl text-muted-foreground">{t.servicesGrid.subtitle}</p>
+        </div>
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {services.map((s) => {
             const svcT = (t.services as any)[s.slug] || null;
             return (

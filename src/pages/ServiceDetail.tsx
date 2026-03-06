@@ -10,7 +10,17 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
 import { useTranslation } from "@/i18n/context";
 
-  // Get translated service data
+const renderBold = (text: string) => {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) => i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part);
+};
+
+const ServiceDetail = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const service = services.find((s) => s.slug === slug);
+  const { openBudgetModal } = useBudgetModal();
+  const { t, localePath } = useTranslation();
+
   const svcT = slug ? (t.services as any)[slug] : null;
 
   if (!service) {
@@ -79,19 +89,6 @@ import { useTranslation } from "@/i18n/context";
                     <span className="text-[15px] font-medium leading-relaxed text-foreground md:text-base">{feature}</span>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-6 md:py-10">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-5xl">
-              <div className="group relative overflow-hidden rounded-2xl border border-border/40 bg-muted/20 shadow-md transition-shadow hover:shadow-lg">
-                <div className="flex h-56 items-center justify-center md:h-72">
-                  <div className="flex flex-col items-center gap-3 text-muted-foreground/60"><ImageIcon className="h-10 w-10" /><span className="text-sm font-medium tracking-wide">{t.serviceDetail.imagenServicio}</span></div>
-                </div>
-                <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-black/5 to-transparent" />
               </div>
             </div>
           </div>
