@@ -118,6 +118,7 @@ export const services: ServiceData[] = [
     name: "Ascensores y elevadores",
     slug: "ascensores-elevadores",
     desc: "Instalación, mantenimiento y modernización",
+    image: ascensoresImg,
     longDesc:
       "Servicio integral de ascensores y elevadores: instalación de nuevos equipos, mantenimiento preventivo y correctivo, modernización de ascensores antiguos y cumplimiento de normativa vigente.",
     features: [
