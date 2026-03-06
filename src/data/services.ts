@@ -50,6 +50,7 @@ export const services: ServiceData[] = [
     name: "Pintura y decoración",
     slug: "pintura-decoracion",
     desc: "Interior, exterior y acabados decorativos",
+    image: pinturaImg,
     longDesc:
       "Servicios profesionales de pintura y decoración interior y exterior. Preparamos las superficies adecuadamente y utilizamos materiales de primera calidad para un acabado impecable y duradero.",
     features: [
