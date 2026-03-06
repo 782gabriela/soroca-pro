@@ -57,7 +57,7 @@ const Header = () => {
             {servicesOpen && (
               <div className="absolute left-0 top-full mt-1 w-56 rounded-lg border border-border bg-card py-2 shadow-lg">
                 {services.map((s) => (
-                  <Link key={s.slug} to={`/servicios/${s.slug}`} onClick={() => setServicesOpen(false)} className="flex items-center gap-2 px-4 py-2.5 text-sm text-foreground/80 transition-colors hover:bg-accent hover:text-foreground">
+                  <Link key={s.slug} to={`/servicios/${s.slug}`} onClick={() => setServicesOpen(false)} className="flex items-center gap-2 px-4 py-2.5 text-sm uppercase tracking-wide text-foreground/80 transition-colors hover:bg-accent hover:text-foreground">
                     <s.icon className="h-4 w-4 text-primary" />
                     {s.name}
                   </Link>
