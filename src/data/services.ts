@@ -67,6 +67,7 @@ export const services: ServiceData[] = [
     name: "Electricidad",
     slug: "electricidad",
     desc: "Instalaciones, averías y certificados",
+    image: electricidadImg,
     longDesc:
       "Instalaciones eléctricas completas, reparación de averías y emisión de boletines y certificados oficiales. Trabajamos con electricistas cualificados y autorizados para garantizar la seguridad y el cumplimiento normativo.",
     features: [
