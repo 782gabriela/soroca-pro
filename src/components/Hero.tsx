@@ -29,7 +29,7 @@ const Hero = () => {
             <Button size="lg" variant="outline" asChild className="w-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 sm:w-auto">
               <a href="tel:+34655020020">
                 <Phone className="mr-1.5 h-4 w-4" />
-                Llámanos ahora
+                655 020 020
               </a>
             </Button>
             <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-foreground/30 text-primary-foreground transition-colors hover:bg-primary-foreground/10" aria-label="WhatsApp">
