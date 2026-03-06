@@ -26,15 +26,12 @@ const Hero = () => {
             >
               Pide presupuesto sin compromiso
             </Button>
-            <Button size="lg" variant="outline" asChild className="w-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 sm:w-auto">
+            <Button size="lg" asChild className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:w-auto">
               <a href="tel:+34655020020">
                 <Phone className="mr-1.5 h-4 w-4" />
                 655 020 020
               </a>
             </Button>
-            <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer" className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-foreground/30 text-primary-foreground transition-colors hover:bg-primary-foreground/10" aria-label="WhatsApp">
-              <MessageCircle className="h-5 w-5" />
-            </a>
           </div>
         </div>
       </div>
