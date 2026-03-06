@@ -84,6 +84,7 @@ export const services: ServiceData[] = [
     name: "Cerrajería",
     slug: "cerrajeria",
     desc: "Apertura, instalación y reparación de cerraduras",
+    image: cerrajeriaImg,
     longDesc:
       "Servicio profesional de cerrajería para viviendas, comunidades y negocios. Aperturas de emergencia, cambio de cerraduras, instalación de sistemas de seguridad y cerraduras electrónicas.",
     features: [
