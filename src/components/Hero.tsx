@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
 
 const Hero = () => {
