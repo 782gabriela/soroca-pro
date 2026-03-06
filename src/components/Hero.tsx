@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
+import { useTranslation } from "@/i18n/context";
 
 const Hero = () => {
   const { openBudgetModal } = useBudgetModal();
+  const { t } = useTranslation();
 
   return (
     <section className="relative overflow-hidden bg-primary py-20 md:py-32">
@@ -12,19 +14,15 @@ const Hero = () => {
       <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6 text-3xl font-bold leading-tight tracking-tight text-primary-foreground sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-            Reformas, mantenimiento y rehabilitación en Alicante.
-            <span className="block text-xl font-normal text-primary-foreground/80 sm:text-2xl mt-3">Experiencia · Seriedad · Profesionalismo</span>
+            {t.hero.title}
+            <span className="block text-xl font-normal text-primary-foreground/80 sm:text-2xl mt-3">{t.hero.tagline}</span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
-            Prestamos servicios a viviendas, comunidades y negocios. Un solo equipo para todo lo que tu proyecto necesita.
+            {t.hero.description}
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-            <Button
-              size="lg"
-              className="w-full bg-background text-primary hover:bg-background/90 sm:w-auto"
-              onClick={() => openBudgetModal()}
-            >
-              Pide presupuesto sin compromiso
+            <Button size="lg" className="w-full bg-background text-primary hover:bg-background/90 sm:w-auto" onClick={() => openBudgetModal()}>
+              {t.hero.ctaBudget}
             </Button>
             <Button size="lg" asChild className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:w-auto">
               <a href="tel:+34655020020">

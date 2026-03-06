@@ -1,42 +1,18 @@
 import { useState } from "react";
 import { Star, User } from "lucide-react";
+import { useTranslation } from "@/i18n/context";
 
 const reviews = [
-  {
-    name: "Ana Francisco",
-    rating: 5,
-    source: "Google",
-    text: "Experimentamos una rehabilitación de edificio excepcional con esta empresa. Desde el inicio, el equipo demostró profesionalismo y experiencia. Cumplieron con plazos y presupuestos. Recomendamos a Soroca para proyectos de rehabilitación por su calidad y compromiso.",
-  },
-  {
-    name: "Carlos M.A.",
-    rating: 5,
-    source: "Google",
-    text: "Excelentes trabajadores. Me han realizado varios trabajos en mi comunidad de propietarios en San Juan Playa. Los recomiendo encarecidamente. Trabajos perfectos, limpios y sin problema.",
-  },
-  {
-    name: "Magdalena Jacob",
-    rating: 5,
-    source: "Google",
-    text: "Soroca ha realizado una reforma total de mi cuarto de baño. El resultado supera mis expectativas. Recomiendo sus servicios para cualquier proyecto o reforma. Muchísimas gracias.",
-  },
-  {
-    name: "Rafaela Pérez Borallo",
-    rating: 5,
-    source: "Google",
-    text: "Una empresa seria y trabajan muy bien. Recomiendo. Contentísima con el trabajo que me han hecho.",
-  },
-  {
-    name: "Luis Manuel Lorenzo Ritas",
-    rating: 5,
-    source: "Google",
-    text: "Me han hecho el aseo entero y han hecho un trabajo perfecto. Un 10 para esta gente.",
-  },
+  { name: "Ana Francisco", rating: 5, source: "Google", text: "Experimentamos una rehabilitación de edificio excepcional con esta empresa. Desde el inicio, el equipo demostró profesionalismo y experiencia. Cumplieron con plazos y presupuestos. Recomendamos a Soroca para proyectos de rehabilitación por su calidad y compromiso." },
+  { name: "Carlos M.A.", rating: 5, source: "Google", text: "Excelentes trabajadores. Me han realizado varios trabajos en mi comunidad de propietarios en San Juan Playa. Los recomiendo encarecidamente. Trabajos perfectos, limpios y sin problema." },
+  { name: "Magdalena Jacob", rating: 5, source: "Google", text: "Soroca ha realizado una reforma total de mi cuarto de baño. El resultado supera mis expectativas. Recomiendo sus servicios para cualquier proyecto o reforma. Muchísimas gracias." },
+  { name: "Rafaela Pérez Borallo", rating: 5, source: "Google", text: "Una empresa seria y trabajan muy bien. Recomiendo. Contentísima con el trabajo que me han hecho." },
+  { name: "Luis Manuel Lorenzo Ritas", rating: 5, source: "Google", text: "Me han hecho el aseo entero y han hecho un trabajo perfecto. Un 10 para esta gente." },
 ];
 
 const MAX_LENGTH = 150;
 
-const ReviewCard = ({ name, rating, source, text }: (typeof reviews)[0]) => {
+const ReviewCard = ({ name, rating, source, text, t }: (typeof reviews)[0] & { t: any }) => {
   const [expanded, setExpanded] = useState(false);
   const needsTruncate = text.length > MAX_LENGTH;
   const displayText = !expanded && needsTruncate ? text.slice(0, MAX_LENGTH) + "…" : text;
@@ -52,11 +28,8 @@ const ReviewCard = ({ name, rating, source, text }: (typeof reviews)[0]) => {
         <p className="mb-3 text-sm leading-relaxed text-foreground">
           "{displayText}"
           {needsTruncate && (
-            <button
-              onClick={() => setExpanded(!expanded)}
-              className="ml-1 font-medium text-primary hover:underline"
-            >
-              {expanded ? "Ver menos" : "Ver más"}
+            <button onClick={() => setExpanded(!expanded)} className="ml-1 font-medium text-primary hover:underline">
+              {expanded ? t.reviews.verMenos : t.reviews.verMas}
             </button>
           )}
         </p>
@@ -67,30 +40,31 @@ const ReviewCard = ({ name, rating, source, text }: (typeof reviews)[0]) => {
         </div>
         <div>
           <p className="text-sm font-semibold text-foreground">{name}</p>
-          <p className="text-xs text-muted-foreground">Reseña de {source}</p>
+          <p className="text-xs text-muted-foreground">{t.reviews.resenaFrom} {source}</p>
         </div>
       </div>
     </div>
   );
 };
 
-const Reviews = () => (
-  <section className="bg-muted py-16 md:py-24">
-    <div className="container mx-auto px-4">
-      <div className="mb-12 text-center">
-        <h2 className="mb-3 text-2xl font-bold text-foreground sm:text-3xl">Reseñas</h2>
-        <p className="mx-auto max-w-xl text-muted-foreground">
-          Lo que dicen nuestros clientes sobre Grupo Soroca.
-        </p>
-      </div>
+const Reviews = () => {
+  const { t } = useTranslation();
 
-      <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {reviews.map((r) => (
-          <ReviewCard key={r.name} {...r} />
-        ))}
+  return (
+    <section className="bg-muted py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="mb-3 text-2xl font-bold text-foreground sm:text-3xl">{t.reviews.title}</h2>
+          <p className="mx-auto max-w-xl text-muted-foreground">{t.reviews.subtitle}</p>
+        </div>
+        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {reviews.map((r) => (
+            <ReviewCard key={r.name} {...r} t={t} />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Reviews;
