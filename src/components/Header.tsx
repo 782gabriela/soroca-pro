@@ -18,43 +18,9 @@ const Header = () => {
   const location = useLocation();
   const { t, localePath, lang } = useTranslation();
 
-  // Get translated service names
-  const serviceKeys = ["fontaneria", "pintura-decoracion", "electricidad", "cerrajeria", "carpinteria-metalica", "ascensores-elevadores", "aire-acondicionado"] as const;
-  const slugToKey: Record<string, string> = {
-    "fontaneria": "fontaneria",
-    "pintura-decoracion": "pinturaDecoracion",
-    "electricidad": "electricidad",
-    "cerrajeria": "cerrajeria",
-    "carpinteria-metalica": "carpinteriaMetalica",
-    "ascensores-elevadores": "ascensoresElevadores",
-    "aire-acondicionado": "aireAcondicionado",
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setServicesOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleInicio = () => {
-    setMobileOpen(false);
-    const homePath = localePath("/");
-    if (location.pathname === homePath || location.pathname === "/") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      navigate(homePath);
-    }
-  };
-
   const getServiceName = (slug: string) => {
-    const key = slugToKey[slug];
-    if (key && (t.services as any)[key]) {
-      return (t.services as any)[key].name;
-    }
+    const svcT = (t.services as any)[slug];
+    if (svcT) return svcT.name;
     const svc = services.find(s => s.slug === slug);
     return svc?.name || slug;
   };

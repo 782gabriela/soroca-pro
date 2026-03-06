@@ -37,8 +37,7 @@ const Negocios = () => {
               <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">{t.negocios.serviciosParaNegocio}</h2>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {relatedSlugs.map((slug) => {
-                  const key = slugToKey[slug];
-                  const name = key && (t.services as any)[key] ? (t.services as any)[key].name : slug;
+                  const name = (t.services as any)[slug]?.name || slug;
                   return (
                     <Link key={slug} to={localePath(`/servicios/${slug}`)} className="group flex items-center justify-between rounded-2xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 md:p-6">
                       <span className="text-[15px] font-medium text-foreground md:text-base">{name}</span>

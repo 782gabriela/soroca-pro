@@ -3,30 +3,8 @@ import { Button } from "@/components/ui/button";
 import { services } from "@/data/services";
 import { useTranslation } from "@/i18n/context";
 
-const slugToKey: Record<string, string> = {
-  "fontaneria": "fontaneria",
-  "pintura-decoracion": "pinturaDecoracion",
-  "electricidad": "electricidad",
-  "cerrajeria": "cerrajeria",
-  "carpinteria-metalica": "carpinteriaMetalica",
-  "ascensores-elevadores": "ascensoresElevadores",
-  "aire-acondicionado": "aireAcondicionado",
-};
-
-const Services = () => {
-  const { t, localePath } = useTranslation();
-
-  return (
-    <section id="servicios" className="bg-background py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="mb-3 text-2xl font-bold text-foreground sm:text-3xl">{t.servicesGrid.title}</h2>
-          <p className="mx-auto max-w-xl text-muted-foreground">{t.servicesGrid.subtitle}</p>
-        </div>
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {services.map((s) => {
-            const key = slugToKey[s.slug];
-            const svcT = key ? (t.services as any)[key] : null;
+            const svcT = (t.services as any)[s.slug] || null;
             return (
               <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} className="group overflow-hidden rounded-xl border border-border bg-card transition-shadow hover:shadow-md">
                 <div className="aspect-[16/10] w-full overflow-hidden">

@@ -10,26 +10,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
 import { useTranslation } from "@/i18n/context";
 
-const slugToKey: Record<string, string> = {
-  "fontaneria": "fontaneria", "pintura-decoracion": "pinturaDecoracion", "electricidad": "electricidad",
-  "cerrajeria": "cerrajeria", "carpinteria-metalica": "carpinteriaMetalica",
-  "ascensores-elevadores": "ascensoresElevadores", "aire-acondicionado": "aireAcondicionado",
-};
-
-const renderBold = (text: string) => {
-  const parts = text.split(/\*\*(.*?)\*\*/g);
-  return parts.map((part, i) => i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part);
-};
-
-const ServiceDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const service = services.find((s) => s.slug === slug);
-  const { openBudgetModal } = useBudgetModal();
-  const { t, localePath } = useTranslation();
-
   // Get translated service data
-  const key = slug ? slugToKey[slug] : null;
-  const svcT = key ? (t.services as any)[key] : null;
+  const svcT = slug ? (t.services as any)[slug] : null;
 
   if (!service) {
     return (
