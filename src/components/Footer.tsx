@@ -35,7 +35,7 @@ const Footer = () => {
                 <br />Cerrado
               </li>
               <li>
-                <span className="font-medium text-primary-foreground/80">Servicio de Averías 24h</span>
+                <span className="font-medium text-primary-foreground/80">Servicio Urgencias 24h</span>
                 <br />365 días
               </li>
             </ul>
