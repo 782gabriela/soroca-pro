@@ -17,6 +17,7 @@ import SobreNosotros from "./pages/SobreNosotros";
 import ContactoPage from "./pages/ContactoPage";
 import HorarioPage from "./pages/HorarioPage";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <CookieConsentProvider>
           <BudgetModalProvider>
             <Routes>
