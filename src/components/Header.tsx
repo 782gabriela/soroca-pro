@@ -18,6 +18,16 @@ const Header = () => {
   const location = useLocation();
   const { t, localePath, lang } = useTranslation();
 
+  const handleInicio = () => {
+    setMobileOpen(false);
+    const homePath = localePath("/");
+    if (location.pathname === homePath || location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate(homePath);
+    }
+  };
+
   const getServiceName = (slug: string) => {
     const svcT = (t.services as any)[slug];
     if (svcT) return svcT.name;
