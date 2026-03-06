@@ -9,10 +9,6 @@ import { useTranslation } from "@/i18n/context";
 import urgenciasImg from "@/assets/urgencias-casco.png";
 
 const relatedSlugs = ["fontaneria", "electricidad", "cerrajeria", "aire-acondicionado"];
-const slugToKey: Record<string, string> = {
-  "fontaneria": "fontaneria", "electricidad": "electricidad",
-  "cerrajeria": "cerrajeria", "aire-acondicionado": "aireAcondicionado",
-};
 
 const Urgencias = () => {
   const { openBudgetModal } = useBudgetModal();
