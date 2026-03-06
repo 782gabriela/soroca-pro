@@ -101,6 +101,7 @@ export const services: ServiceData[] = [
     name: "Carpintería metálica",
     slug: "carpinteria-metalica",
     desc: "Ventanas, puertas, rejas y estructuras metálicas",
+    image: carpinteriaImg,
     longDesc:
       "Fabricación e instalación de carpintería metálica y de aluminio. Ventanas, puertas, barandillas, rejas, cerramientos y todo tipo de estructuras metálicas a medida con acabados de alta calidad.",
     features: [
