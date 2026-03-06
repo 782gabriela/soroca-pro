@@ -18,40 +18,48 @@ const HorarioPage = () => (
   <div className="flex min-h-screen flex-col">
     <Header />
     <main className="flex-1">
-      <section className="flex flex-1 items-center justify-center py-20 md:py-32">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="mb-12 text-4xl font-bold text-foreground sm:text-5xl lg:text-6xl">
-            Horario
-          </h1>
-
-          <div className="mx-auto max-w-md">
-            {horario.map((h) => (
-              <div
-                key={h.dia}
-                className={`flex items-center justify-between border-b border-border px-4 py-4 text-lg ${
-                  h.horas === "Cerrado" ? "text-muted-foreground" : "text-foreground"
-                }`}
-              >
-                <span className="font-medium">{h.dia}</span>
-                <span className={h.horas === "Cerrado" ? "text-destructive/70" : "font-semibold"}>
-                  {h.horas}
-                </span>
-              </div>
-            ))}
+      <section className="bg-gradient-to-b from-primary/5 to-background pt-20 pb-12 md:pt-28 md:pb-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">
+              Horario
+            </h1>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button asChild size="lg">
-              <a href="tel:+34655020020">
-                <Phone className="mr-2 h-4 w-4" />
-                Llamar: 655 020 020
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer">
-                WhatsApp
-              </a>
-            </Button>
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-5xl">
+            <div className="mx-auto max-w-md">
+              {horario.map((h) => (
+                <div
+                  key={h.dia}
+                  className={`flex items-center justify-between border-b border-border/50 px-4 py-4 text-base ${
+                    h.horas === "Cerrado" ? "text-muted-foreground" : "text-foreground"
+                  }`}
+                >
+                  <span className="font-medium">{h.dia}</span>
+                  <span className={h.horas === "Cerrado" ? "text-destructive/70" : "font-semibold"}>
+                    {h.horas}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Button asChild size="lg" className="px-10 text-base">
+                <a href="tel:+34655020020">
+                  <Phone className="mr-2 h-4 w-4" />
+                  Llamar: 655 020 020
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer">
+                  WhatsApp
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
