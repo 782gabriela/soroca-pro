@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Process from "@/components/Process";
 import Trust from "@/components/Trust";
+import Reviews from "@/components/Reviews";
 import Zones from "@/components/Zones";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -20,6 +21,7 @@ const Index = () => (
       <Projects />
       <Process />
       <Trust />
+      <Reviews />
       <Zones />
       <ContactForm />
     </main>
