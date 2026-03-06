@@ -9,10 +9,6 @@ import { useTranslation } from "@/i18n/context";
 import comunidadesImg from "@/assets/comunidades.jpeg";
 
 const relatedSlugs = ["fontaneria", "electricidad", "pintura-decoracion", "carpinteria-metalica", "ascensores-elevadores"];
-const slugToKey: Record<string, string> = {
-  "fontaneria": "fontaneria", "electricidad": "electricidad", "pintura-decoracion": "pinturaDecoracion",
-  "carpinteria-metalica": "carpinteriaMetalica", "ascensores-elevadores": "ascensoresElevadores",
-};
 
 const Comunidades = () => {
   const { openBudgetModal } = useBudgetModal();
