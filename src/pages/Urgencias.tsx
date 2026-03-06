@@ -1,21 +1,20 @@
-import { ArrowLeft, Phone, ArrowRight } from "lucide-react";
+import { ArrowLeft, Phone, AlertTriangle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
-import negociosImg from "@/assets/negocios.jpeg";
+import urgenciasImg from "@/assets/urgencias.jpeg";
 
 const relatedServices = [
   { name: "Fontanería", slug: "fontaneria" },
   { name: "Electricidad", slug: "electricidad" },
-  { name: "Pintura y decoración", slug: "pintura-decoracion" },
   { name: "Cerrajería", slug: "cerrajeria" },
   { name: "Aire acondicionado", slug: "aire-acondicionado" },
 ];
 
-const Negocios = () => {
+const Urgencias = () => {
   const { openBudgetModal } = useBudgetModal();
 
   return (
@@ -29,7 +28,10 @@ const Negocios = () => {
               Volver al inicio
             </Link>
             <div className="mx-auto max-w-3xl">
-              <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">Negocios y locales</h1>
+              <h1 className="mb-6 flex items-center gap-3 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">
+                <AlertTriangle className="h-8 w-8 text-destructive md:h-10 md:w-10" />
+                Urgencias
+              </h1>
             </div>
           </div>
         </section>
@@ -37,17 +39,29 @@ const Negocios = () => {
         <section className="pb-8 md:pb-12">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl shadow-md">
-              <img src={negociosImg} alt="Servicios para negocios y locales" className="aspect-[16/9] w-full object-cover" />
+              <img src={urgenciasImg} alt="Servicio de urgencias" className="aspect-[16/9] w-full object-cover" />
             </div>
           </div>
         </section>
 
         <section className="py-8 md:py-12">
           <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto max-w-3xl space-y-6">
               <p className="text-base font-normal leading-[1.75] text-foreground/90 md:text-lg" style={{ maxWidth: '780px' }}>
-                Reformas y mantenimiento de locales comerciales y oficinas en Alicante, Elche, Gran Alacant y alrededores. Hacemos adecuaciones, reparaciones y mejoras para que tu espacio sea funcional, seguro y con buena imagen: trabajos de pintura, electricidad, fontanería, acabados y pequeñas reformas. Planificamos el trabajo para reducir molestias y entregar un resultado profesional.
+                Servicio de urgencias exclusivo para clientes de Grupo Soroca en Alicante, Elche, Gran Alacant y alrededores. Atención prioritaria para incidencias que no pueden esperar, con respuesta rápida y coordinación del equipo para resolver la reparación con orden y seguridad.
               </p>
+              <a href="tel:+34959000000" className="inline-flex items-center gap-3 text-xl font-bold text-primary md:text-2xl">
+                <Phone className="h-6 w-6" />
+                Llamar: 959 000 000
+              </a>
+              <div className="rounded-2xl border border-border/50 bg-muted/40 p-6 md:p-8">
+                <p className="text-base font-normal leading-[1.75] text-foreground/90">
+                  ¿Aún no eres cliente? Contrata tu mantenimiento con Grupo Soroca y accede a urgencias prioritarias cuando lo necesites.
+                </p>
+                <Button size="lg" className="mt-5 px-10 text-base" onClick={() => openBudgetModal()}>
+                  Hazte cliente
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -56,7 +70,7 @@ const Negocios = () => {
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Servicios relacionados</div>
-              <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">Servicios para tu negocio</h2>
+              <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">Servicios de urgencia disponibles</h2>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {relatedServices.map((s) => (
                   <Link
@@ -73,13 +87,14 @@ const Negocios = () => {
           </div>
         </section>
 
+        {/* CTA */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <div className="mx-auto max-w-xl">
               <Phone className="mx-auto mb-4 h-10 w-10 text-primary" />
-              <p className="mb-4 text-2xl font-bold text-foreground md:text-3xl">¿Necesitas reformar tu local?</p>
-              <p className="mx-auto mb-8 text-[15px] leading-[1.7] text-muted-foreground md:text-base">Cuéntanos tu proyecto y te preparamos un presupuesto a medida sin compromiso.</p>
-              <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal()}>Pide presupuesto</Button>
+              <p className="mb-2 text-2xl font-bold text-foreground md:text-3xl">Urgencias: 959 000 000</p>
+              <p className="mx-auto mb-8 text-[15px] leading-[1.7] text-muted-foreground md:text-base">Servicio exclusivo para clientes de Grupo Soroca.</p>
+              <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal()}>Hazte cliente</Button>
             </div>
           </div>
         </section>
@@ -90,4 +105,4 @@ const Negocios = () => {
   );
 };
 
-export default Negocios;
+export default Urgencias;

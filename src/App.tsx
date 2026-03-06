@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { BudgetModalProvider } from "@/contexts/BudgetModalContext";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import { CookieBanner, CookieDetailModal, CookiePrivacyModal } from "@/components/CookieConsent";
@@ -11,6 +11,7 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Viviendas from "./pages/Viviendas";
 import Comunidades from "./pages/Comunidades";
 import Negocios from "./pages/Negocios";
+import Urgencias from "./pages/Urgencias";
 import ProyectosPage from "./pages/ProyectosPage";
 import ZonasPage from "./pages/ZonasPage";
 import SobreNosotros from "./pages/SobreNosotros";
@@ -33,9 +34,16 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/servicios/:slug" element={<ServiceDetail />} />
-              <Route path="/viviendas" element={<Viviendas />} />
-              <Route path="/comunidades" element={<Comunidades />} />
-              <Route path="/negocios" element={<Negocios />} />
+              {/* Category pages */}
+              <Route path="/categorias/viviendas" element={<Viviendas />} />
+              <Route path="/categorias/comunidades" element={<Comunidades />} />
+              <Route path="/categorias/negocios-locales" element={<Negocios />} />
+              <Route path="/categorias/urgencias" element={<Urgencias />} />
+              {/* Redirects from old routes */}
+              <Route path="/viviendas" element={<Navigate to="/categorias/viviendas" replace />} />
+              <Route path="/comunidades" element={<Navigate to="/categorias/comunidades" replace />} />
+              <Route path="/negocios" element={<Navigate to="/categorias/negocios-locales" replace />} />
+              {/* Other pages */}
               <Route path="/proyectos" element={<ProyectosPage />} />
               <Route path="/zonas" element={<ZonasPage />} />
               <Route path="/sobre-nosotros" element={<SobreNosotros />} />
