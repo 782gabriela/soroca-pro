@@ -51,21 +51,28 @@ const ServiceDetail = () => {
       <Header />
       <main className="flex-1">
 
-        {/* ── INTRO (uppercase visual) ── */}
-        <section className="bg-gradient-to-b from-primary/5 to-background pt-20 pb-16 md:pt-28 md:pb-20">
+        {/* ── INTRO ── */}
+        <section className="bg-gradient-to-b from-primary/5 to-background pt-20 pb-12 md:pt-28 md:pb-16">
           <div className="container mx-auto px-4">
             <Link
               to="/#servicios"
-              className="mb-10 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               <ArrowLeft className="h-4 w-4" />
               Volver a servicios
             </Link>
-            <div className="mx-auto max-w-4xl">
-              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 shadow-sm">
-                <Icon className="h-8 w-8 text-primary" />
+            <div className="mx-auto max-w-3xl">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 shadow-sm">
+                <Icon className="h-7 w-7 text-primary" />
               </div>
-              <p className="text-base font-semibold uppercase leading-relaxed tracking-wide text-foreground/90 md:text-lg lg:text-xl">
+              {/* Service name — largest text on page */}
+              <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">
+                {service.name}
+              </h1>
+              {/* Intro — readable, uppercase visual, NOT giant */}
+              <p className="text-base font-normal uppercase leading-[1.7] tracking-wide text-foreground/85 md:text-lg md:leading-[1.75]"
+                 style={{ maxWidth: '780px' }}
+              >
                 {renderBold(service.intro)}
               </p>
             </div>
@@ -90,21 +97,23 @@ const ServiceDetail = () => {
         </section>
 
         {/* ── QUÉ INCLUYE ── */}
-        <section className="py-16 md:py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Nuestro servicio</div>
-              <h2 className="mb-10 text-3xl font-bold text-foreground sm:text-4xl">
+              <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">
                 Qué incluye este servicio
               </h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 {service.features.map((feature) => (
                   <div
                     key={feature}
-                    className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5"
+                    className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 md:p-6"
                   >
                     <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-sm leading-relaxed text-foreground">{feature}</span>
+                    <span className="text-[15px] font-medium leading-relaxed text-foreground md:text-base">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -130,11 +139,11 @@ const ServiceDetail = () => {
         </section>
 
         {/* ── PARA QUIÉN ── */}
-        <section className="bg-muted/20 py-16 md:py-20">
+        <section className="bg-muted/20 py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Clientes</div>
-              <h2 className="mb-10 text-3xl font-bold text-foreground sm:text-4xl">
+              <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">
                 Para quién es este servicio
               </h2>
               <div className="grid gap-5 sm:grid-cols-3">
@@ -148,7 +157,7 @@ const ServiceDetail = () => {
                     </div>
                     <p className="text-lg font-bold text-foreground">{item.label}</p>
                     {item.detail && (
-                      <p className="mt-2 text-sm text-muted-foreground">{item.detail}</p>
+                      <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{item.detail}</p>
                     )}
                   </div>
                 ))}
@@ -158,11 +167,11 @@ const ServiceDetail = () => {
         </section>
 
         {/* ── POR QUÉ CONFIAR ── */}
-        <section className="py-16 md:py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Confianza</div>
-              <h2 className="mb-10 text-3xl font-bold text-foreground sm:text-4xl">
+              <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">
                 Por qué confiar en Grupo Soroca
               </h2>
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -174,7 +183,7 @@ const ServiceDetail = () => {
                     <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
                       <ShieldCheck className="h-5 w-5 text-primary" />
                     </div>
-                    <span className="text-sm font-semibold leading-relaxed text-foreground">{renderBold(item)}</span>
+                    <span className="text-[15px] font-semibold leading-relaxed text-foreground">{renderBold(item)}</span>
                   </div>
                 ))}
               </div>
@@ -183,11 +192,11 @@ const ServiceDetail = () => {
         </section>
 
         {/* ── CÓMO TRABAJAMOS ── */}
-        <section className="bg-primary py-16 md:py-20">
+        <section className="bg-primary py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary-foreground/70">Proceso</div>
-              <h2 className="mb-10 text-3xl font-bold text-primary-foreground sm:text-4xl">
+              <h2 className="mb-10 text-2xl font-bold text-primary-foreground md:text-3xl">
                 Cómo trabajamos
               </h2>
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -199,7 +208,7 @@ const ServiceDetail = () => {
                     <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-foreground text-lg font-bold text-primary">
                       {idx + 1}
                     </span>
-                    <p className="text-sm font-medium leading-relaxed text-primary-foreground">{step}</p>
+                    <p className="text-[15px] font-medium leading-relaxed text-primary-foreground">{step}</p>
                   </div>
                 ))}
               </div>
@@ -208,11 +217,11 @@ const ServiceDetail = () => {
         </section>
 
         {/* ── ZONAS ── */}
-        <section className="py-16 md:py-20">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Cobertura</div>
-              <h2 className="mb-8 text-3xl font-bold text-foreground sm:text-4xl">
+              <h2 className="mb-8 text-2xl font-bold leading-snug text-foreground md:text-3xl">
                 Zonas donde trabajamos
               </h2>
               <div className="flex flex-wrap gap-3">
@@ -220,9 +229,9 @@ const ServiceDetail = () => {
                   <Badge
                     key={zone}
                     variant="secondary"
-                    className="px-5 py-2.5 text-sm font-semibold shadow-sm"
+                    className="px-6 py-3 text-lg font-bold shadow-sm"
                   >
-                    <MapPin className="mr-2 h-4 w-4" />
+                    <MapPin className="mr-2 h-5 w-5" />
                     {zone}
                   </Badge>
                 ))}
@@ -232,11 +241,11 @@ const ServiceDetail = () => {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="bg-muted/20 py-16 md:py-20">
+        <section className="bg-muted/20 py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-4xl">
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Dudas</div>
-              <h2 className="mb-10 text-3xl font-bold text-foreground sm:text-4xl">
+              <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">
                 Preguntas frecuentes (FAQ)
               </h2>
               <Accordion type="single" collapsible className="space-y-3">
@@ -246,10 +255,10 @@ const ServiceDetail = () => {
                     value={`faq-${idx}`}
                     className="rounded-2xl border border-border/50 bg-card px-6 shadow-sm overflow-hidden"
                   >
-                    <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline py-5">
+                    <AccordionTrigger className="text-left text-[15px] font-semibold text-foreground hover:no-underline py-5 md:text-base">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm leading-relaxed text-muted-foreground pb-5">
+                    <AccordionContent className="text-[15px] leading-[1.7] text-muted-foreground pb-5">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -260,7 +269,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* ── CTA ── */}
-        <section className="py-20 md:py-24">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <div className="mx-auto max-w-xl">
               <Phone className="mx-auto mb-4 h-10 w-10 text-primary" />
