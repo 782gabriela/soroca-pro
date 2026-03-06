@@ -31,7 +31,7 @@ const PrivacyPolicyModal = ({ open, onOpenChange }: PrivacyPolicyModalProps) => 
           <ul className="list-disc pl-5 space-y-1">
             <li><strong>Responsable:</strong> Soroca Proyectos y Construcciones S.L. (en adelante, "SOROCA")</li>
             <li><strong>Domicilio:</strong> Gran Alacant, Alicante</li>
-            <li><strong>Correo electrónico:</strong> info@soroca.com</li>
+            <li><strong>Correo electrónico:</strong> info@soroca.es</li>
             <li><strong>Teléfono:</strong> 655 020 020</li>
           </ul>
 
