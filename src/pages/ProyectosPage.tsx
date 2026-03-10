@@ -3,6 +3,7 @@ import { MapPin } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ProjectGallery from "@/components/ProjectGallery";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "@/i18n/context";
 
