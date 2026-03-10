@@ -20,7 +20,7 @@ const Services = () => {
           <h2 className="mb-3 font-display text-3xl font-bold text-primary sm:text-4xl">{t.servicesGrid.title}</h2>
           <p className="mx-auto max-w-xl font-body text-muted-foreground">{t.servicesGrid.subtitle}</p>
         </motion.div>
-        <div className="mx-auto grid max-w-5xl grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-5xl grid-cols-4 gap-2 sm:gap-3">
           {services.map((s, i) => {
             const svcT = (t.services as any)[s.slug] || null;
             const cardClass = "group flex flex-col items-center overflow-hidden rounded-xl glass-card transition-all duration-400 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 block";
