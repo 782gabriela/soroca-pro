@@ -7,6 +7,7 @@ import { BudgetModalProvider } from "@/contexts/BudgetModalContext";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import { CookieBanner, CookieDetailModal, CookiePrivacyModal } from "@/components/CookieConsent";
 import { LanguageProvider, type Language } from "@/i18n/context";
+import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import ServiceDetail from "./pages/ServiceDetail";
 import Viviendas from "./pages/Viviendas";
