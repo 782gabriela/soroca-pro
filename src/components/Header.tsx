@@ -107,10 +107,17 @@ const Header = () => {
             {mobileServicesOpen && (
               <div className="ml-4 flex flex-col gap-1">
                 {services.map((s) => (
-                  <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
-                    <s.icon className="h-4 w-4 text-primary" />
-                    {getServiceName(s.slug)}
-                  </Link>
+                  s.externalUrl ? (
+                    <a key={s.slug} href={s.externalUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
+                      <s.icon className="h-4 w-4 text-primary" />
+                      {getServiceName(s.slug)}
+                    </a>
+                  ) : (
+                    <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
+                      <s.icon className="h-4 w-4 text-primary" />
+                      {getServiceName(s.slug)}
+                    </Link>
+                  )
                 ))}
               </div>
             )}
