@@ -38,7 +38,7 @@ const Header = () => {
   const getServiceName = (slug: string) => {
     const svcT = (t.services as any)[slug];
     if (svcT) return svcT.name;
-    const svc = services.find(s => s.slug === slug);
+    const svc = services.find((s) => s.slug === slug);
     return svc?.name || slug;
   };
 
@@ -50,8 +50,9 @@ const Header = () => {
             <img src={logoSoroca} alt="Grupo Soroca" className="h-full w-full object-cover" />
           </div>
           <div className="hidden sm:block">
-            <span className="font-display text-lg font-bold text-foreground">Grupo Soroca</span>
-            <span className="block font-body text-xs text-muted-foreground">Reformas y mantenimiento</span>
+            <span className="font-display text-lg font-bold text-foreground"></span>
+            <span className="block font-body text-xs text-muted-foreground">
+</span>
           </div>
         </Link>
 
@@ -62,23 +63,22 @@ const Header = () => {
               {t.nav.servicios}
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
-            {servicesOpen && (
-              <div className="absolute left-0 top-full mt-2 w-60 rounded-2xl bg-soroca-lavender border border-border/50 py-2 shadow-xl">
-                {services.map((s) => (
-                  s.externalUrl ? (
-                    <a key={s.slug} href={s.externalUrl} target="_blank" rel="noopener noreferrer" onClick={() => setServicesOpen(false)} className="flex items-center gap-3 px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
+            {servicesOpen && <div className="absolute left-0 top-full mt-2 w-60 rounded-2xl bg-soroca-lavender border border-border/50 py-2 shadow-xl">
+                {services.map((s) =>
+              s.externalUrl ?
+              <a key={s.slug} href={s.externalUrl} target="_blank" rel="noopener noreferrer" onClick={() => setServicesOpen(false)} className="flex items-center gap-3 px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
                       <s.icon className="h-4 w-4 text-primary" />
                       {getServiceName(s.slug)}
-                    </a>
-                  ) : (
-                    <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setServicesOpen(false)} className="flex items-center gap-3 px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
+                    </a> :
+
+              <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setServicesOpen(false)} className="flex items-center gap-3 px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
                       <s.icon className="h-4 w-4 text-primary" />
                       {getServiceName(s.slug)}
                     </Link>
-                  )
-                ))}
+
+              )}
               </div>
-            )}
+            }
           </div>
           <Link to={localePath("/proyectos")} className="rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">{t.nav.proyectos}</Link>
           <Link to={localePath("/zonas")} className="rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">{t.nav.zonas}</Link>
@@ -96,31 +96,31 @@ const Header = () => {
         </button>
       </div>
 
-      {mobileOpen && (
-        <div className="glass-strong border-t border-border/30 px-4 pb-4 md:hidden">
+      {mobileOpen &&
+      <div className="glass-strong border-t border-border/30 px-4 pb-4 md:hidden">
           <nav className="flex flex-col gap-1 pt-2">
             <button onClick={handleInicio} className="rounded-xl px-4 py-3 text-left font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">{t.nav.inicio}</button>
             <button onClick={() => setMobileServicesOpen(!mobileServicesOpen)} className="flex items-center justify-between rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">
               {t.nav.servicios}
               <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`} />
             </button>
-            {mobileServicesOpen && (
-              <div className="ml-4 flex flex-col gap-1">
-                {services.map((s) => (
-                  s.externalUrl ? (
-                    <a key={s.slug} href={s.externalUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
+            {mobileServicesOpen &&
+          <div className="ml-4 flex flex-col gap-1">
+                {services.map((s) =>
+            s.externalUrl ?
+            <a key={s.slug} href={s.externalUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
                       <s.icon className="h-4 w-4 text-primary" />
                       {getServiceName(s.slug)}
-                    </a>
-                  ) : (
-                    <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
+                    </a> :
+
+            <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
                       <s.icon className="h-4 w-4 text-primary" />
                       {getServiceName(s.slug)}
                     </Link>
-                  )
-                ))}
-              </div>
+
             )}
+              </div>
+          }
             <Link to={localePath("/proyectos")} onClick={() => setMobileOpen(false)} className="rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">{t.nav.proyectos}</Link>
             <Link to={localePath("/zonas")} onClick={() => setMobileOpen(false)} className="rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">{t.nav.zonas}</Link>
             <Link to={localePath("/sobre-nosotros")} onClick={() => setMobileOpen(false)} className="rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">{t.nav.sobreNosotros}</Link>
@@ -128,12 +128,12 @@ const Header = () => {
           </nav>
           <div className="mt-3 flex flex-col gap-2">
             <LanguageSelector onSelect={() => setMobileOpen(false)} />
-            <Button className="w-full rounded-full font-body" onClick={() => { setMobileOpen(false); openBudgetModal(); }}>{t.nav.pidePresupuesto}</Button>
+            <Button className="w-full rounded-full font-body" onClick={() => {setMobileOpen(false);openBudgetModal();}}>{t.nav.pidePresupuesto}</Button>
           </div>
         </div>
-      )}
-    </header>
-  );
+      }
+    </header>);
+
 };
 
 export default Header;
