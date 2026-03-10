@@ -25,9 +25,9 @@ const Index = () => {
           <Reviews />
           <Zones />
           <ContactForm />
-        </main>
-        <Footer />
-      </div>
+      </main>
+      <Footer />
+
       <WhatsAppButton />
     </>
   );
