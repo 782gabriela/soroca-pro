@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 250 25% 10%;
 
-    --primary: 270 52% 36%;
+    --primary: 270 48% 50%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 270 30% 95%;
@@ -36,8 +36,8 @@
 
     --radius: 0.75rem;
 
-    --soroca-purple: 270 52% 36%;
-    --soroca-purple-dark: 270 55% 28%;
+    --soroca-purple: 270 48% 50%;
+    --soroca-purple-dark: 270 50% 40%;
     --soroca-lavender: 270 40% 95%;
     --soroca-gray: 250 15% 96%;
     --soroca-dark: 260 30% 8%;
@@ -190,8 +190,8 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 40px 10px hsla(270, 52%, 36%, 0.15); }
-    50% { box-shadow: 0 0 80px 20px hsla(270, 52%, 36%, 0.25); }
+    0%, 100% { box-shadow: 0 0 30px 8px hsla(270, 48%, 50%, 0.12); }
+    50% { box-shadow: 0 0 60px 16px hsla(270, 48%, 50%, 0.2); }
   }
 
   .animate-float {
