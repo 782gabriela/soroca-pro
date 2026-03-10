@@ -31,7 +31,7 @@ const ServiceLines = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-3 font-display text-3xl font-bold text-foreground sm:text-4xl">{t.serviceLines.title}</h2>
+          <h2 className="mb-3 font-display text-3xl font-bold text-primary sm:text-4xl">{t.serviceLines.title}</h2>
           <p className="mx-auto max-w-xl font-body text-muted-foreground">{t.serviceLines.subtitle}</p>
         </motion.div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

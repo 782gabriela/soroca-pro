@@ -39,7 +39,7 @@ const Services = () => {
                     <div className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-secondary/80 backdrop-blur-sm">
                       <s.icon className="h-4 w-4 text-primary" />
                     </div>
-                    <h3 className="mb-1.5 font-display text-sm font-semibold text-foreground">{svcT?.name || s.name}</h3>
+                    <h3 className="mb-1.5 font-display text-sm font-semibold text-primary">{svcT?.name || s.name}</h3>
                     <p className="font-body text-xs leading-relaxed text-muted-foreground">{svcT?.desc || s.desc}</p>
                   </div>
                 </Link>

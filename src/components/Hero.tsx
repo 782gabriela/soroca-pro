@@ -55,7 +55,7 @@ const Hero = () => {
             <Button
               size="lg"
               asChild
-              className="w-full rounded-full border border-soroca-dark/20 bg-soroca-dark/8 font-body text-sm text-soroca-dark/70 backdrop-blur-sm transition-all hover:bg-soroca-dark/15 sm:w-auto"
+              className="w-full rounded-full border border-primary/20 bg-primary/8 font-body text-sm text-primary/70 backdrop-blur-sm transition-all hover:bg-primary/15 sm:w-auto"
             >
               <a href="tel:+34655020020">
                 <Phone className="mr-1.5 h-4 w-4" />

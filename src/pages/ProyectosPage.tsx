@@ -24,7 +24,7 @@ const ProyectosPage = () => {
         <section className="bg-gradient-to-b from-primary/5 to-background pt-20 pb-12 md:pt-28 md:pb-16">
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
-              <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">{t.proyectosPage.title}</h1>
+              <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-primary md:text-5xl">{t.proyectosPage.title}</h1>
               <p className="text-base font-normal leading-[1.75] text-foreground/90 md:text-lg" style={{ maxWidth: '780px' }}>{t.proyectosPage.subtitle}</p>
             </div>
           </div>
