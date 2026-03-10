@@ -65,7 +65,7 @@ const Landing = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
         >
-          <div className="relative h-36 w-36 sm:h-44 sm:w-44">
+          <div className="relative h-44 w-44 sm:h-52 sm:w-52 md:h-56 md:w-56">
             {/* Glow ring */}
             <div className="animate-pulse-glow absolute -inset-3 rounded-full" />
             {/* Glass disc behind logo */}
