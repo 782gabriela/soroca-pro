@@ -41,7 +41,7 @@ const Hero = () => {
               {t.hero.tagline}
             </span>
           </h1>
-          <p className="mx-auto mb-10 max-w-2xl font-body text-base leading-relaxed text-soroca-dark/55 sm:text-lg">
+          <p className="mx-auto mb-10 max-w-2xl font-body text-base leading-relaxed text-primary/55 sm:text-lg">
             {t.hero.description}
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
