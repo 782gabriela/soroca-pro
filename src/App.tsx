@@ -7,6 +7,7 @@ import { BudgetModalProvider } from "@/contexts/BudgetModalContext";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import { CookieBanner, CookieDetailModal, CookiePrivacyModal } from "@/components/CookieConsent";
 import { LanguageProvider, type Language } from "@/i18n/context";
+import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import ServiceDetail from "./pages/ServiceDetail";
 import Viviendas from "./pages/Viviendas";
@@ -29,7 +30,8 @@ const AppRoutes = ({ language }: { language: Language }) => (
     <BudgetModalProvider>
       <SEOHead />
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/inicio" element={<Index />} />
         <Route path="/servicios/:slug" element={<ServiceDetail />} />
         <Route path="/categorias/viviendas" element={<Viviendas />} />
         <Route path="/categorias/comunidades" element={<Comunidades />} />
