@@ -68,7 +68,6 @@ const Hero = () => {
           muted
           playsInline
           className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover"
-          style={{ playbackRate: 0.5 }}
           ref={(el) => { if (el) el.playbackRate = 0.5; }}
         >
           <source src="/videos/hero-video.mov" type="video/mp4" />
