@@ -39,8 +39,9 @@ const Landing = () => {
         />
 
         {/* Glass panels — architectural layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/[0.08] to-card/[0.15] backdrop-blur-[2px]" />
-        <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-card/[0.12] via-card/[0.18] to-card/[0.25] backdrop-blur-[6px]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-background/50 to-transparent" />
+        <div className="absolute inset-0 bg-background/[0.15]" />
 
         {/* Subtle grid texture */}
         <div
@@ -65,7 +66,7 @@ const Landing = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
         >
-          <div className="relative h-36 w-36 sm:h-44 sm:w-44">
+          <div className="relative h-44 w-44 sm:h-52 sm:w-52 md:h-56 md:w-56">
             {/* Glow ring */}
             <div className="animate-pulse-glow absolute -inset-3 rounded-full" />
             {/* Glass disc behind logo */}
@@ -85,11 +86,11 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="mb-1 block font-display text-lg font-light tracking-[0.2em] uppercase text-muted-foreground sm:text-xl">
-            Bienvenido a
+          <span className="mb-2 block font-display text-xl tracking-[0.18em] uppercase text-muted-foreground/80 sm:text-2xl">
+            <span className="text-3xl font-semibold tracking-[0.12em] sm:text-4xl">B</span>ienvenido a
           </span>
-          <h1 className="font-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
-            <span className="text-gradient">Grupo Soroca</span>
+          <h1 className="font-display text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
+            <span className="text-gradient-light">Grupo Soroca</span>
           </h1>
         </motion.div>
 
@@ -108,7 +109,7 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          Tus especialistas en construcción, mantenimiento y reformas
+          Tus especialistas en construcción, mantenimiento y reformas.
         </motion.p>
 
         {/* CTA Button — glass pill */}
