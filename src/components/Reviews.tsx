@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Star, User } from "lucide-react";
 import { useTranslation } from "@/i18n/context";
+import { motion } from "framer-motion";
 
 const reviews = [
   { name: "Ana Francisco", rating: 5, source: "Google", text: "Experimentamos una rehabilitación de edificio excepcional con esta empresa. Desde el inicio, el equipo demostró profesionalismo y experiencia. Cumplieron con plazos y presupuestos. Recomendamos a Soroca para proyectos de rehabilitación por su calidad y compromiso." },
@@ -12,20 +13,26 @@ const reviews = [
 
 const MAX_LENGTH = 150;
 
-const ReviewCard = ({ name, rating, source, text, t }: (typeof reviews)[0] & { t: any }) => {
+const ReviewCard = ({ name, rating, source, text, t, index }: (typeof reviews)[0] & { t: any; index: number }) => {
   const [expanded, setExpanded] = useState(false);
   const needsTruncate = text.length > MAX_LENGTH;
   const displayText = !expanded && needsTruncate ? text.slice(0, MAX_LENGTH) + "…" : text;
 
   return (
-    <div className="flex flex-col justify-between rounded-xl border border-border bg-card p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+    <motion.div
+      className="flex flex-col justify-between rounded-2xl glass-card p-6 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
       <div>
         <div className="mb-3 flex gap-0.5">
           {Array.from({ length: rating }).map((_, i) => (
             <Star key={i} className="h-4 w-4 fill-primary text-primary" />
           ))}
         </div>
-        <p className="mb-3 text-sm leading-relaxed text-foreground">
+        <p className="mb-3 font-body text-sm leading-relaxed text-foreground/80">
           "{displayText}"
           {needsTruncate && (
             <button onClick={() => setExpanded(!expanded)} className="ml-1 font-medium text-primary hover:underline">
@@ -34,16 +41,16 @@ const ReviewCard = ({ name, rating, source, text, t }: (typeof reviews)[0] & { t
           )}
         </p>
       </div>
-      <div className="mt-4 flex items-center gap-3 border-t border-border pt-4">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary">
+      <div className="mt-4 flex items-center gap-3 border-t border-border/50 pt-4">
+        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
           <User className="h-4 w-4 text-primary" />
         </div>
         <div>
-          <p className="text-sm font-semibold text-foreground">{name}</p>
-          <p className="text-xs text-muted-foreground">{t.reviews.resenaFrom} {source}</p>
+          <p className="font-body text-sm font-semibold text-foreground">{name}</p>
+          <p className="font-body text-xs text-muted-foreground">{t.reviews.resenaFrom} {source}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -51,15 +58,21 @@ const Reviews = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-muted py-16 md:py-24">
+    <section className="relative bg-background py-20 md:py-28">
       <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="mb-3 text-2xl font-bold text-foreground sm:text-3xl">{t.reviews.title}</h2>
-          <p className="mx-auto max-w-xl text-muted-foreground">{t.reviews.subtitle}</p>
-        </div>
+        <motion.div
+          className="mb-14 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="mb-3 font-display text-3xl font-bold text-foreground sm:text-4xl">{t.reviews.title}</h2>
+          <p className="mx-auto max-w-xl font-body text-muted-foreground">{t.reviews.subtitle}</p>
+        </motion.div>
         <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((r) => (
-            <ReviewCard key={r.name} {...r} t={t} />
+          {reviews.map((r, i) => (
+            <ReviewCard key={r.name} {...r} t={t} index={i} />
           ))}
         </div>
       </div>
