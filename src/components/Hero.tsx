@@ -47,7 +47,7 @@ const Hero = () => {
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <Button
               size="lg"
-              className="w-full rounded-full bg-soroca-dark px-8 font-body text-sm font-medium text-primary-foreground transition-all hover:bg-soroca-dark/90 hover:shadow-lg sm:w-auto"
+              className="w-full rounded-full bg-primary px-8 font-body text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg sm:w-auto"
               onClick={() => openBudgetModal()}
             >
               {t.hero.ctaBudget}
