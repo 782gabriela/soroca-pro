@@ -86,10 +86,10 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="mb-1 block font-display text-xl tracking-[0.02em] uppercase text-muted-foreground/80 sm:text-2xl leading-tight">
-            <span className="text-4xl font-bold tracking-[0.01em] sm:text-5xl">B</span>ienvenido
+          <span className="mb-1 block text-3xl tracking-[0.01em] text-muted-foreground/80 sm:text-4xl md:text-5xl leading-tight" style={{ fontFamily: "'Dancing Script', cursive" }}>
+            <span className="text-5xl font-bold sm:text-6xl md:text-7xl">B</span>ienvenido
             <br />
-            <span className="text-lg tracking-[0.08em] sm:text-xl">a</span>
+            <span className="text-2xl tracking-[0.05em] sm:text-3xl">a</span>
           </span>
           <h1 className="font-display text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
             <span className="text-gradient-light">Grupo Soroca</span>
