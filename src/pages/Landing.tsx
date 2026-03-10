@@ -39,8 +39,9 @@ const Landing = () => {
         />
 
         {/* Glass panels — architectural layers */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/[0.08] to-card/[0.15] backdrop-blur-[2px]" />
-        <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-card/[0.12] via-card/[0.18] to-card/[0.25] backdrop-blur-[6px]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-background/50 to-transparent" />
+        <div className="absolute inset-0 bg-background/[0.15]" />
 
         {/* Subtle grid texture */}
         <div

@@ -159,6 +159,13 @@
     background-clip: text;
   }
 
+  .text-gradient-light {
+    background: linear-gradient(135deg, hsl(270, 55%, 62%), hsl(280, 60%, 72%), hsl(265, 50%, 68%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .glow-purple {
     box-shadow: 0 0 60px 20px hsla(270, 52%, 36%, 0.15),
                 0 0 120px 40px hsla(270, 52%, 36%, 0.08);
