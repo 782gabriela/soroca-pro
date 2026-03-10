@@ -16,12 +16,19 @@ const Landing = () => {
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
-      {/* Background image */}
-      <img
-        src={landingBg}
-        alt=""
+      {/* Video background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         className="pointer-events-none absolute inset-0 h-full w-full object-cover"
-      />
+        ref={(el) => { if (el) el.playbackRate = 0.5; }}
+      >
+        <source src="/videos/hero-video.mov" type="video/mp4" />
+      </video>
+      {/* Very light purple overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-[hsla(270,40%,96%,0.82)]" />
 
       {/* Content */}
       <div className="relative z-10 flex w-full max-w-2xl flex-col items-center px-6 sm:px-8">
