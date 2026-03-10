@@ -17,7 +17,7 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-3 font-display text-3xl font-bold text-foreground sm:text-4xl">{t.servicesGrid.title}</h2>
+          <h2 className="mb-3 font-display text-3xl font-bold text-primary sm:text-4xl">{t.servicesGrid.title}</h2>
           <p className="mx-auto max-w-xl font-body text-muted-foreground">{t.servicesGrid.subtitle}</p>
         </motion.div>
         <div className="grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-4">
