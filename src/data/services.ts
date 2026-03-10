@@ -6,6 +6,7 @@ import {
   Construction,
   ArrowUpFromLine,
   Wind,
+  Wrench,
   type LucideIcon,
 } from "lucide-react";
 
@@ -16,6 +17,7 @@ import cerrajeriaImg from "@/assets/services/cerrajeria.jpg";
 import carpinteriaImg from "@/assets/services/carpinteria-metalica.jpg";
 import ascensoresImg from "@/assets/services/ascensores.jpg";
 import aireImg from "@/assets/services/aire-acondicionado.jpg";
+import ferreteriaImg from "@/assets/services/ferreteria.jpg";
 
 export interface FaqItem {
   question: string;
@@ -36,6 +38,7 @@ export interface ServiceData {
   faq: FaqItem[];
   cta: string;
   image: string;
+  externalUrl?: string;
 }
 
 export const services: ServiceData[] = [
@@ -418,5 +421,21 @@ export const services: ServiceData[] = [
       },
     ],
     cta: "¿Quieres mejorar tu climatización? Solicita presupuesto sin compromiso.",
+  },
+  {
+    icon: Wrench,
+    name: "Ferretería",
+    slug: "ferreteria",
+    desc: "Herramientas, materiales y suministros profesionales",
+    image: ferreteriaImg,
+    externalUrl: "https://prolift.es/sobre.html",
+    intro: "",
+    features: [],
+    audience: [],
+    trust: [],
+    process: [],
+    zones: [],
+    faq: [],
+    cta: "",
   },
 ];
