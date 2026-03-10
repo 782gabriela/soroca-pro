@@ -35,9 +35,9 @@ const Hero = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h1 className="mb-6 font-display text-3xl font-bold leading-tight tracking-tight text-soroca-dark sm:text-4xl md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
+          <h1 className="mb-6 font-display text-3xl font-bold leading-tight tracking-tight text-primary sm:text-4xl md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
             {t.hero.title}
-            <span className="mt-3 block font-body text-lg font-light text-soroca-dark/60 sm:text-xl">
+            <span className="mt-3 block font-body text-lg font-light text-primary/60 sm:text-xl">
               {t.hero.tagline}
             </span>
           </h1>
