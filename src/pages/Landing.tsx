@@ -86,8 +86,10 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="mb-2 block font-display text-xl tracking-[0.18em] uppercase text-muted-foreground/80 sm:text-2xl">
-            <span className="text-3xl font-semibold tracking-[0.12em] sm:text-4xl">B</span>ienvenido a
+          <span className="mb-1 block font-display text-xl tracking-[0.02em] uppercase text-muted-foreground/80 sm:text-2xl leading-tight">
+            <span className="text-4xl font-bold tracking-[0.01em] sm:text-5xl">B</span>ienvenido
+            <br />
+            <span className="text-lg tracking-[0.08em] sm:text-xl">a</span>
           </span>
           <h1 className="font-display text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
             <span className="text-gradient-light">Grupo Soroca</span>
