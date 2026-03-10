@@ -27,17 +27,17 @@ const Services = () => {
 
             const cardContent = (
               <>
-                <div className="aspect-[16/9] w-full overflow-hidden">
+                <div className="aspect-[4/3] w-full overflow-hidden">
                   <img src={s.image} alt={svcT?.name || s.name} className="h-full w-full object-cover transition-transform duration-600 group-hover:scale-105" loading="lazy" />
                 </div>
-                <div className="flex flex-1 flex-col items-center px-3 py-3 text-center">
-                  <div className="mb-1.5 flex h-7 w-7 items-center justify-center rounded-md bg-secondary/80">
-                    <s.icon className="h-3.5 w-3.5 text-primary" />
+                <div className="flex flex-1 flex-col items-center px-2 py-2 text-center">
+                  <div className="mb-1 flex h-5 w-5 items-center justify-center rounded bg-secondary/80">
+                    <s.icon className="h-3 w-3 text-primary" />
                   </div>
-                  <h3 className="mb-0.5 font-display text-xs font-semibold leading-tight text-primary sm:text-sm">{svcT?.name || s.name}</h3>
-                  <p className="hidden font-body text-[11px] leading-snug text-muted-foreground sm:line-clamp-2 sm:block">{svcT?.desc || s.desc}</p>
+                  <h3 className="mb-0.5 font-display text-[10px] font-semibold leading-tight text-primary sm:text-xs">{svcT?.name || s.name}</h3>
+                  <p className="hidden font-body text-[9px] leading-snug text-muted-foreground sm:line-clamp-2 sm:block sm:text-[10px]">{svcT?.desc || s.desc}</p>
                   {s.externalUrl && (
-                    <span className="mt-1.5 inline-block rounded-full bg-primary/10 px-3 py-1 font-body text-[10px] font-medium text-primary">Acceder</span>
+                    <span className="mt-1 inline-block rounded-full bg-primary/10 px-2 py-0.5 font-body text-[9px] font-medium text-primary">Acceder</span>
                   )}
                 </div>
               </>
