@@ -24,7 +24,7 @@ const Process = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="mb-3 inline-block font-body text-xs font-bold uppercase tracking-[0.25em] text-primary">{t.process.badge}</span>
-          <h2 className="mb-4 font-display text-3xl font-bold text-foreground sm:text-4xl">{t.process.title}</h2>
+          <h2 className="mb-4 font-display text-3xl font-bold text-primary sm:text-4xl">{t.process.title}</h2>
           <p className="mx-auto max-w-xl font-body text-base text-muted-foreground">{t.process.subtitle}</p>
         </motion.div>
 

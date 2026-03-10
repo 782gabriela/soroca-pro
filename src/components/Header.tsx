@@ -63,7 +63,7 @@ const Header = () => {
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
             {servicesOpen && (
-              <div className="glass-strong absolute left-0 top-full mt-2 w-60 rounded-2xl py-2 shadow-xl">
+              <div className="absolute left-0 top-full mt-2 w-60 rounded-2xl bg-soroca-lavender border border-border/50 py-2 shadow-xl">
                 {services.map((s) => (
                   <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setServicesOpen(false)} className="flex items-center gap-3 px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
                     <s.icon className="h-4 w-4 text-primary" />

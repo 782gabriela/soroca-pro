@@ -17,7 +17,7 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-3 font-display text-3xl font-bold text-foreground sm:text-4xl">{t.servicesGrid.title}</h2>
+          <h2 className="mb-3 font-display text-3xl font-bold text-primary sm:text-4xl">{t.servicesGrid.title}</h2>
           <p className="mx-auto max-w-xl font-body text-muted-foreground">{t.servicesGrid.subtitle}</p>
         </motion.div>
         <div className="grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-4">
@@ -36,10 +36,10 @@ const Services = () => {
                     <img src={s.image} alt={svcT?.name || s.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                   </div>
                   <div className="p-5 text-center">
-                    <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-secondary/80 backdrop-blur-sm">
-                      <s.icon className="h-5 w-5 text-primary" />
+                    <div className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-secondary/80 backdrop-blur-sm">
+                      <s.icon className="h-4 w-4 text-primary" />
                     </div>
-                    <h3 className="mb-1.5 font-display text-sm font-semibold text-foreground">{svcT?.name || s.name}</h3>
+                    <h3 className="mb-1.5 font-display text-sm font-semibold text-primary">{svcT?.name || s.name}</h3>
                     <p className="font-body text-xs leading-relaxed text-muted-foreground">{svcT?.desc || s.desc}</p>
                   </div>
                 </Link>
