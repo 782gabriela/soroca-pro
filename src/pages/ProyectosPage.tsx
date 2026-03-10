@@ -60,6 +60,7 @@ const ProyectosPage = () => {
                   <a href={localePath("/contacto")}>{t.proyectosPage.ctaButton}</a>
                 </Button>
               </div>
+              <ProjectGallery />
             </div>
           </div>
         </section>
