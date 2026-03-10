@@ -17,6 +17,7 @@ import cerrajeriaImg from "@/assets/services/cerrajeria.jpg";
 import carpinteriaImg from "@/assets/services/carpinteria-metalica.jpg";
 import ascensoresImg from "@/assets/services/ascensores.jpg";
 import aireImg from "@/assets/services/aire-acondicionado.jpg";
+import ferreteriaImg from "@/assets/services/ferreteria.jpg";
 
 export interface FaqItem {
   question: string;
@@ -37,6 +38,7 @@ export interface ServiceData {
   faq: FaqItem[];
   cta: string;
   image: string;
+  externalUrl?: string;
 }
 
 export const services: ServiceData[] = [
