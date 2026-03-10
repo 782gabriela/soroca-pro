@@ -30,7 +30,8 @@ const AppRoutes = ({ language }: { language: Language }) => (
     <BudgetModalProvider>
       <SEOHead />
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/inicio" element={<Index />} />
         <Route path="/servicios/:slug" element={<ServiceDetail />} />
         <Route path="/categorias/viviendas" element={<Viviendas />} />
         <Route path="/categorias/comunidades" element={<Comunidades />} />
