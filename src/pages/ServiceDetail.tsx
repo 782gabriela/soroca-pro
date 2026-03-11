@@ -68,9 +68,7 @@ const ServiceDetail = () => {
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-5xl">
               <div className="group relative overflow-hidden rounded-2xl border border-border/40 bg-muted/30 shadow-lg transition-shadow hover:shadow-xl">
-                <div className="flex h-72 items-center justify-center md:h-96">
-                  <div className="flex flex-col items-center gap-3 text-muted-foreground/60"><ImageIcon className="h-12 w-12" /><span className="text-sm font-medium tracking-wide">{t.serviceDetail.imagenServicio}</span></div>
-                </div>
+                <img src={service.image} alt={name} className="h-72 w-full object-cover md:h-96" loading="lazy" />
                 <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-black/5 to-transparent" />
               </div>
             </div>
