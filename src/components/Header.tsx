@@ -27,8 +27,8 @@ const Header = () => {
 
   const handleInicio = () => {
     setMobileOpen(false);
-    const homePath = localePath("/");
-    if (location.pathname === homePath || location.pathname === "/") {
+    const homePath = localePath("/inicio");
+    if (location.pathname === homePath || location.pathname === localePath("/inicio")) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       navigate(homePath);
