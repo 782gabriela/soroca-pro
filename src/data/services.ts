@@ -428,7 +428,7 @@ export const services: ServiceData[] = [
     slug: "ferreteria",
     desc: "Herramientas, materiales y suministros profesionales",
     image: ferreteriaImg,
-    externalUrl: "https://prolift.es/sobre.html",
+    externalUrl: "https://prolift.es/es",
     intro: "",
     features: [],
     audience: [],
