@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Hero from "@/components/Hero";
 import ServiceLines from "@/components/ServiceLines";
 import Services from "@/components/Services";
@@ -29,6 +30,7 @@ const Index = () => {
       <Footer />
 
       <WhatsAppButton />
+      <ScrollToTopButton />
     </>
   );
 };

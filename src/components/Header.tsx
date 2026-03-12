@@ -27,8 +27,8 @@ const Header = () => {
 
   const handleInicio = () => {
     setMobileOpen(false);
-    const homePath = localePath("/");
-    if (location.pathname === homePath || location.pathname === "/") {
+    const homePath = localePath("/inicio");
+    if (location.pathname === homePath || location.pathname === localePath("/inicio")) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       navigate(homePath);
@@ -45,7 +45,7 @@ const Header = () => {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? "glass-strong shadow-lg shadow-primary/5" : "bg-background/80 backdrop-blur-sm border-b border-border/50"}`}>
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:h-20">
-        <Link to={localePath("/")} className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
+        <Link to={localePath("/inicio")} className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
           <div className="h-10 w-10 overflow-hidden rounded-xl shadow-md">
             <img alt="Grupo Soroca" className="h-full w-full object-fill" src="/lovable-uploads/fcca1031-6aef-43ad-8781-2025ae3f0ab3.png" />
           </div>
