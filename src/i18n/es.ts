@@ -447,7 +447,7 @@ export const es = {
     "carpinteria-metalica": {
       name: "Carpintería metálica",
       desc: "Ventanas, puertas, rejas y estructuras metálicas",
-      intro: "Fabricación, instalación y reparación de elementos metálicos para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**, con soluciones a medida y montaje seguro.",
+      intro: "Fabricación, instalación y reparación de elementos metálicos para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con soluciones a medida y montaje seguro.",
       features: [
         "Puertas metálicas, rejas y cerramientos (según proyecto)",
         "Barandillas, pasamanos y protecciones",
