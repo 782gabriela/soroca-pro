@@ -206,6 +206,7 @@ export const ro: Translations = {
   },
   serviceDetail: {
     volverServicios: "Înapoi la servicii",
+    paginaAnterior: "Pagina anterioară",
     nuestroServicio: "Serviciul nostru",
     queIncluye: "Ce include acest serviciu",
     clientes: "Clienți",

@@ -206,6 +206,7 @@ export const ru: Translations = {
   },
   serviceDetail: {
     volverServicios: "Назад к услугам",
+    paginaAnterior: "Предыдущая страница",
     nuestroServicio: "Наша услуга",
     queIncluye: "Что включает эта услуга",
     clientes: "Клиенты",

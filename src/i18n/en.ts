@@ -206,6 +206,7 @@ export const en: Translations = {
   },
   serviceDetail: {
     volverServicios: "Back to services",
+    paginaAnterior: "Previous page",
     nuestroServicio: "Our service",
     queIncluye: "What this service includes",
     clientes: "Clients",

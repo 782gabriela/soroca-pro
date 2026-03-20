@@ -206,6 +206,7 @@ export const de: Translations = {
   },
   serviceDetail: {
     volverServicios: "Zurück zu Dienstleistungen",
+    paginaAnterior: "Vorherige Seite",
     nuestroServicio: "Unsere Dienstleistung",
     queIncluye: "Was dieser Service umfasst",
     clientes: "Kunden",
