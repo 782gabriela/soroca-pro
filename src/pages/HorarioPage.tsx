@@ -32,7 +32,7 @@ const HorarioPage = () => {
               </div>
               <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Button asChild size="lg" className="px-10 text-base">
-                  <a href="tel:+34655020020"><Phone className="mr-2 h-4 w-4" />{t.horarioPage.llamar}</a>
+                  <a href="tel:+34959000000"><Phone className="mr-2 h-4 w-4" />{t.horarioPage.llamar}</a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer">WhatsApp</a>
