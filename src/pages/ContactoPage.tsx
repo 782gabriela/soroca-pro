@@ -30,7 +30,7 @@ const ContactoPage = () => {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary"><Phone className="h-5 w-5 text-primary" /></div>
                     <h3 className="font-semibold text-foreground">{t.contactoPage.telefono}</h3>
                   </div>
-                  <a href="tel:+34655020020" className="text-lg font-medium text-primary hover:underline">655 020 020</a>
+                  <a href="tel:+34959000000" className="text-lg font-medium text-primary hover:underline">959 000 000</a>
                 </div>
                 <div className="rounded-xl border border-border bg-card p-6">
                   <div className="mb-3 flex items-center gap-3">
