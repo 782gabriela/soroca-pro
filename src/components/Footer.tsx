@@ -24,8 +24,7 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.horario}</h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-              <li><span className="font-medium text-primary-foreground/70">{t.footer.lunesViernes}</span><br />8:00 - 18:00</li>
-              <li><span className="font-medium text-primary-foreground/70">{t.footer.sabDom}</span><br />{t.footer.cerrado}</li>
+              <li><span className="font-medium text-primary-foreground/70">{t.footer.lunesViernes}</span><br />8:00 - 14:00</li>
               <li><span className="font-medium text-primary-foreground/70">{t.footer.urgencias24h}</span><br />{t.footer.dias365}</li>
             </ul>
           </div>
