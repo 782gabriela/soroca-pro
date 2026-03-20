@@ -419,13 +419,13 @@ export const de: Translations = {
     "ascensores-elevadores": {
       name: "Aufzüge & Lifte",
       desc: "Installation, Wartung und Modernisierung",
-      intro: "Lösungen für Gemeinschaften und Gebäude in **Alicante, Elche, Gran Alacant und Umgebung**.",
-      features: ["Koordination der Installation", "Anpassung von Schächten", "Unterstützende Maurerarbeiten", "Ergänzende Arbeiten in Gemeinschaftsbereichen", "Zeitüberwachung und Koordination"],
-      audience: [{ label: "Eigentümergemeinschaften", detail: "" }, { label: "Wohngebäude", detail: "und Gemeinschaftsbereiche" }, { label: "Sanierungen", detail: "und Barrierefreiheit" }],
+      intro: "Bei SOROCA sind wir der Partner, den Sie brauchen, um Ihr Geschäft am Laufen zu halten. Wir sind darauf spezialisiert, Unternehmen zu unterstützen, die sich der Aufzugswartung widmen – von kleinen Reparaturen und Renovierungen bis hin zu kompletten Montagen.\n\nWir stellen Ihnen ein erfahrenes, schnelles und effizientes Team zur Verfügung, damit Sie Ihre Fristen einhalten und die Zufriedenheit Ihrer Kunden aufrechterhalten können. Außerdem verfügen wir über ein umfangreiches Materiallager, das Sie jederzeit einsehen können.",
+      features: ["Aufzugsrenovierung und Anpassung an die neue ITC", "Bau und Montage neuer Aufzüge", "Absenkung auf Erdgeschossniveau (Cuota 0)", "Lieferung von Ersatzteilen für Aufzüge verschiedener Marken"],
+      audience: [{ label: "Unternehmen", detail: "" }],
       trust: ["Über 15 Jahre Erfahrung", "Organisiertes Team", "Unverbindliches Angebot", "Phasenplanung"],
       process: ["Bedarf und Gebäudezustand prüfen", "Umfang definieren und koordinieren", "Angebot und Phasenplanung", "Ausführung und Endkontrolle"],
       faq: [
-        { question: "Arbeiten Sie mit Eigentümergemeinschaften?", answer: "Ja. Wir koordinieren und begleiten das Projekt." },
+        { question: "Arbeiten Sie mit Eigentümergemeinschaften?", answer: "Wir arbeiten nur mit spezialisierten Unternehmen" },
         { question: "Können Sie Maurerarbeiten koordinieren?", answer: "Ja. Wir koordinieren alle notwendigen Arbeiten." },
         { question: "Verwalten Sie die Planung mit dem Spezialisten?", answer: "Ja. Wir organisieren Zeitpläne und Phasen." },
         { question: "Sanieren Sie Gemeinschaftsbereiche?", answer: "Ja. Wir führen alle notwendigen Arbeiten durch." },
