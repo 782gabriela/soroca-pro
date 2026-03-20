@@ -134,7 +134,7 @@ export const es = {
     nombreLabel: "Nombre y apellidos",
     nombrePlaceholder: "Ej.: Antonio García López",
     telefonoLabel: "Teléfono",
-    telefonoPlaceholder: "Ej.: 655 020 020",
+    telefonoPlaceholder: "Ej.: 959 000 000",
     servicioLabel: "Servicio",
     servicioPlaceholder: "Selecciona un servicio",
     mensajeLabel: "Cuéntanos qué necesitas",
