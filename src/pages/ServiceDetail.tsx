@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, MapPin, ImageIcon, Users, ShieldCheck, Phone } from "lucide-react";
+import { ArrowLeft, CheckCircle2, MapPin, Users, ShieldCheck, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -13,6 +13,48 @@ import { useTranslation } from "@/i18n/context";
 const renderBold = (text: string) => {
   const parts = text.split(/\*\*(.*?)\*\*/g);
   return parts.map((part, i) => i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part);
+};
+
+// Custom footer data per service
+const serviceFooterOverrides: Record<string, {
+  companyName: string;
+  nif?: string;
+  phones: { number: string; href: string }[];
+  hours?: string;
+  location?: { text: string; href: string };
+  hideDesc?: boolean;
+}> = {
+  fontaneria: {
+    companyName: "Fontaneria e Instalaciones Soroca 2025 S.L",
+    nif: "B21659784",
+    phones: [
+      { number: "959 000 000", href: "tel:+34959000000" },
+      { number: "614 938 605", href: "tel:+34614938605" },
+    ],
+    hours: "Lunes a viernes: 8:00 – 14:00",
+    location: {
+      text: "Av. Noruega 162 puerta 21, Santa Pola (Alicante), 03130",
+      href: "https://www.google.com/maps/search/Av.+Noruega+162+puerta+21,+Santa+Pola+(Alicante),+03130",
+    },
+  },
+  "pintura-decoracion": {
+    companyName: "Pinturas y Decoraciones Soroca S.L",
+    nif: "B-21659776",
+    phones: [{ number: "959 000 000", href: "tel:+34959000000" }],
+    hideDesc: true,
+  },
+  "ascensores-elevadores": {
+    companyName: "Soroca Proyectos y construcciones SL",
+    nif: "B42664573",
+    phones: [{ number: "959 000 000", href: "tel:+34959000000" }],
+    hours: "Lunes a viernes: 8:00 – 14:00",
+  },
+};
+
+// Custom title overrides (only inside the service detail page)
+const serviceTitleOverrides: Record<string, string> = {
+  fontaneria: "FONTANERIA E INSTALACIONES SOROCA",
+  "pintura-decoracion": "Pinturas y decoraciones soroca",
 };
 
 const ServiceDetail = () => {
@@ -39,13 +81,15 @@ const ServiceDetail = () => {
   }
 
   const Icon = service.icon;
-  const name = svcT?.name || service.name;
+  const titleOverride = slug ? serviceTitleOverrides[slug] : undefined;
+  const name = titleOverride || svcT?.name || service.name;
   const intro = svcT?.intro || service.intro;
   const features = svcT?.features || service.features;
   const audience = svcT?.audience || service.audience;
   const trust = svcT?.trust || service.trust;
   const processSteps = svcT?.process || service.process;
   const faq = svcT?.faq || service.faq;
+  const footerOverride = slug ? serviceFooterOverrides[slug] : undefined;
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -179,8 +223,31 @@ const ServiceDetail = () => {
           <div className="container mx-auto px-4 text-center">
             <div className="mx-auto max-w-xl">
               <Phone className="mx-auto mb-4 h-10 w-10 text-primary" />
-              <p className="mb-8 text-2xl font-bold text-foreground md:text-3xl">{name}</p>
-              <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(name)}>{t.serviceDetail.solicitar}</Button>
+              {footerOverride ? (
+                <>
+                  <p className="mb-2 text-2xl font-bold text-foreground md:text-3xl">{footerOverride.companyName}</p>
+                  {footerOverride.nif && <p className="mb-4 text-sm text-muted-foreground">NIF: {footerOverride.nif}</p>}
+                  {!footerOverride.hideDesc && footerOverride.hours && <p className="mb-4 text-sm text-muted-foreground">{footerOverride.hours}</p>}
+                  <div className="mb-6 flex flex-col items-center gap-2">
+                    {footerOverride.phones.map((p) => (
+                      <a key={p.number} href={p.href} className="text-lg font-bold text-primary hover:underline">{p.number}</a>
+                    ))}
+                  </div>
+                  {footerOverride.location && (
+                    <a href={footerOverride.location.href} target="_blank" rel="noopener noreferrer" className="mb-6 inline-flex items-center gap-2 text-sm text-primary hover:underline">
+                      <MapPin className="h-4 w-4" />{footerOverride.location.text}
+                    </a>
+                  )}
+                  <div className="mt-6">
+                    <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(svcT?.name || service.name)}>{t.serviceDetail.solicitar}</Button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p className="mb-8 text-2xl font-bold text-foreground md:text-3xl">{svcT?.name || service.name}</p>
+                  <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(svcT?.name || service.name)}>{t.serviceDetail.solicitar}</Button>
+                </>
+              )}
             </div>
           </div>
         </section>
