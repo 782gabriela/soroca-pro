@@ -371,7 +371,7 @@ export const services: ServiceData[] = [
     desc: "Instalación, reparación y mantenimiento de climatización",
     image: aireImg,
     intro:
-      "Instalación, sustitución y mantenimiento de aire acondicionado para viviendas, negocios y comunidades en **Alicante, Elche, Gran Alacant y alrededores**, con una instalación cuidada y remates limpios.",
+      "Instalación, sustitución y mantenimiento de aire acondicionado para viviendas, negocios y comunidades en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con una instalación cuidada y remates limpios.",
     features: [
       "Instalación o sustitución de equipos (según necesidad)",
       "Mantenimiento y puesta a punto",
