@@ -126,12 +126,25 @@ const ServiceDetail = () => {
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">{t.serviceDetail.nuestroServicio}</div>
               <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">{t.serviceDetail.queIncluye}</h2>
               <div className="grid gap-4 sm:grid-cols-2">
-                {features.map((feature: string) => (
-                  <div key={feature} className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 md:p-6">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-[15px] font-medium leading-relaxed text-foreground md:text-base">{feature}</span>
-                  </div>
-                ))}
+                {features.map((feature: string) => {
+                  const isRepuestosLink = slug === 'ascensores-elevadores' && feature === "Suministro de repuestos para ascensores multimarca";
+                  const cardContent = (
+                    <>
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="text-[15px] font-medium leading-relaxed text-foreground md:text-base">{feature}</span>
+                      {isRepuestosLink && <ExternalLink className="ml-auto mt-0.5 h-4 w-4 shrink-0 text-primary" />}
+                    </>
+                  );
+                  return isRepuestosLink ? (
+                    <a key={feature} href="https://prolift.es/es" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 md:p-6">
+                      {cardContent}
+                    </a>
+                  ) : (
+                    <div key={feature} className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 md:p-6">
+                      {cardContent}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
