@@ -49,7 +49,7 @@ export const services: ServiceData[] = [
     desc: "Reparaciones, instalaciones y detección de fugas",
     image: fontaneriaImg,
     intro:
-      "Instalación, reparación y mantenimiento de fontanería para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**, con un trabajo limpio, coordinado y bien rematado.",
+      "Instalación, reparación y mantenimiento de fontanería para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con un trabajo limpio, coordinado y bien rematado.",
     features: [
       "Reparación de fugas, goteos y roturas de tuberías",
       "Sustitución e instalación de grifería, sanitarios y mecanismos de cisterna",
