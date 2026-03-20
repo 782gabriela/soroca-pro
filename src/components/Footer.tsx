@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
-import logoSoroca from "@/assets/logo-soroca.jpeg";
+import logoSoroca from "@/assets/logo-soroca-new.jpeg";
 import { useCookieConsent } from "@/contexts/CookieConsentContext";
 import { useTranslation } from "@/i18n/context";
 
