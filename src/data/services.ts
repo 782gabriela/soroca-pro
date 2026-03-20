@@ -267,7 +267,7 @@ export const services: ServiceData[] = [
     desc: "Ventanas, puertas, rejas y estructuras metálicas",
     image: carpinteriaImg,
     intro:
-      "Fabricación, instalación y reparación de elementos metálicos para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**, con soluciones a medida y montaje seguro.",
+      "Fabricación, instalación y reparación de elementos metálicos para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con soluciones a medida y montaje seguro.",
     features: [
       "Puertas metálicas, rejas y cerramientos (según proyecto)",
       "Barandillas, pasamanos y protecciones",
