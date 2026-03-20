@@ -11,7 +11,7 @@ export const de: Translations = {
     pidePresupuesto: "Angebot anfordern",
   },
   hero: {
-    title: "Renovierungen, Wartung und Sanierung in Alicante.",
+    title: "Bau, Wartung und Sanierung in Alicante.",
     tagline: "Erfahrung · Zuverlässigkeit · Professionalität",
     description: "Wir betreuen Wohnungen, Gemeinschaften und Unternehmen. Ein Team für alles, was Ihr Projekt braucht.",
     ctaBudget: "Kostenloses Angebot anfordern",
