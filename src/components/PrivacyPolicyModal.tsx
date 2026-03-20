@@ -30,7 +30,7 @@ const PrivacyPolicyModal = ({ open, onOpenChange }: PrivacyPolicyModalProps) => 
           <p>El responsable del tratamiento de los datos personales recabados a través de este sitio web es:</p>
           <ul className="list-disc pl-5 space-y-1">
             <li><strong>Responsable:</strong> Soroca Proyectos y Construcciones S.L. (en adelante, "SOROCA")</li>
-            <li><strong>Domicilio:</strong> Gran Alacant, Alicante</li>
+            <li><strong>Domicilio:</strong> AVDA noruega 162, Santa Pola, Alicante</li>
             <li><strong>Correo electrónico:</strong> info@soroca.es</li>
             <li><strong>Teléfono:</strong> 959 000 000</li>
           </ul>

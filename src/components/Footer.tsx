@@ -34,7 +34,7 @@ const Footer = () => {
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
               <li className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0" /><a href="tel:+34959000000" className="transition-colors hover:text-primary-foreground">959 000 000</a></li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0" /><a href="mailto:info@soroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es</a></li>
-              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>Gran Alacant, Alicante</span></li>
+              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><a href="https://www.google.com/maps/search/AVDA+noruega+162,+Santa+Pola,+Alicante" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">AVDA noruega 162,<br />Santa Pola, Alicante</a></li>
             </ul>
             <p className="mt-5 font-body text-xs leading-relaxed text-primary-foreground/40">{t.footer.followSocial}</p>
             <div className="mt-3 flex items-center gap-3">

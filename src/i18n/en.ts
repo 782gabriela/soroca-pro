@@ -93,7 +93,7 @@ export const en: Translations = {
     toastError: "Please fill in all required fields.",
   },
   footer: {
-    desc: "Construction, maintenance and rehabilitation in the province of Alicante.",
+    desc: "Construction, maintenance and rehabilitation in Alicante.",
     horario: "Schedule",
     lunesViernes: "Monday – Friday",
     sabDom: "Saturday / Sunday",
@@ -206,6 +206,7 @@ export const en: Translations = {
   },
   serviceDetail: {
     volverServicios: "Back to services",
+    paginaAnterior: "Previous page",
     nuestroServicio: "Our service",
     queIncluye: "What this service includes",
     clientes: "Clients",

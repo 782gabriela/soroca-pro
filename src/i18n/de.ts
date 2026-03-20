@@ -93,7 +93,7 @@ export const de: Translations = {
     toastError: "Bitte füllen Sie alle Pflichtfelder aus.",
   },
   footer: {
-    desc: "Bau, Wartung und Sanierung in der Provinz Alicante.",
+    desc: "Bau, Wartung und Sanierung in Alicante.",
     horario: "Büro",
     lunesViernes: "Montag – Freitag",
     sabDom: "Samstag / Sonntag",
@@ -206,6 +206,7 @@ export const de: Translations = {
   },
   serviceDetail: {
     volverServicios: "Zurück zu Dienstleistungen",
+    paginaAnterior: "Vorherige Seite",
     nuestroServicio: "Unsere Dienstleistung",
     queIncluye: "Was dieser Service umfasst",
     clientes: "Kunden",

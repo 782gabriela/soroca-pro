@@ -20,7 +20,7 @@ export const es = {
     viviendas: "Viviendas",
     comunidades: "Comunidades",
     negociosLocales: "Negocios y locales",
-    urgencias: "Urgencias",
+    urgencias: "Averías",
     pidePresupuesto: "Pide presupuesto",
     hazteCliente: "Hazte cliente",
     verMas: "Ver más",
@@ -91,7 +91,7 @@ export const es = {
     toastError: "Por favor, rellena todos los campos obligatorios.",
   },
   footer: {
-    desc: "Reformas, mantenimiento y rehabilitación en la provincia de Alicante.",
+    desc: "Construcción, mantenimiento y rehabilitación en Alicante.",
     horario: "Horario",
     lunesViernes: "Lunes - Viernes",
     sabDom: "Sábado / Domingo",
@@ -204,6 +204,7 @@ export const es = {
   },
   serviceDetail: {
     volverServicios: "Volver a servicios",
+    paginaAnterior: "Página anterior",
     nuestroServicio: "Nuestro servicio",
     queIncluye: "Qué incluye este servicio",
     clientes: "Clientes",

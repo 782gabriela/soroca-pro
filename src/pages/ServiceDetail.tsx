@@ -1,5 +1,5 @@
-import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, MapPin, Users, ShieldCheck, Phone } from "lucide-react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { ArrowLeft, CheckCircle2, MapPin, Users, ShieldCheck, Phone, ExternalLink, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -59,6 +59,7 @@ const serviceTitleOverrides: Record<string, string> = {
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const service = services.find((s) => s.slug === slug);
   const { openBudgetModal } = useBudgetModal();
   const { t, localePath } = useTranslation();
@@ -97,13 +98,13 @@ const ServiceDetail = () => {
       <main className="flex-1">
         <section className="bg-gradient-to-b from-primary/5 to-background pt-20 pb-12 md:pt-28 md:pb-16">
           <div className="container mx-auto px-4">
-            <Link to={localePath("/#servicios")} className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
-              <ArrowLeft className="h-4 w-4" />{t.serviceDetail.volverServicios}
-            </Link>
+            <button onClick={() => navigate(-1)} className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+              <ArrowLeft className="h-4 w-4" />{t.serviceDetail.paginaAnterior}
+            </button>
             <div className="mx-auto max-w-3xl">
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 shadow-sm"><Icon className="h-7 w-7 text-primary" /></div>
               <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">{name}</h1>
-              <p className="text-base font-normal uppercase leading-[1.7] tracking-wide text-foreground/85 md:text-lg md:leading-[1.75]" style={{ maxWidth: '780px' }}>{renderBold(intro)}</p>
+              <p className={`text-base font-normal uppercase leading-[1.7] tracking-wide text-foreground/85 md:text-lg md:leading-[1.75] ${slug === 'ascensores-elevadores' ? 'font-body text-[15px] normal-case tracking-normal leading-[1.85] md:text-base md:leading-[1.9]' : ''}`} style={{ maxWidth: '780px' }}>{renderBold(intro)}</p>
             </div>
           </div>
         </section>
@@ -125,12 +126,25 @@ const ServiceDetail = () => {
               <div className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">{t.serviceDetail.nuestroServicio}</div>
               <h2 className="mb-10 text-2xl font-bold leading-snug text-foreground md:text-3xl">{t.serviceDetail.queIncluye}</h2>
               <div className="grid gap-4 sm:grid-cols-2">
-                {features.map((feature: string) => (
-                  <div key={feature} className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 md:p-6">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                    <span className="text-[15px] font-medium leading-relaxed text-foreground md:text-base">{feature}</span>
-                  </div>
-                ))}
+                {features.map((feature: string) => {
+                  const isRepuestosLink = slug === 'ascensores-elevadores' && feature === "Suministro de repuestos para ascensores multimarca";
+                  const cardContent = (
+                    <>
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <span className="text-[15px] font-medium leading-relaxed text-foreground md:text-base">{feature}</span>
+                      {isRepuestosLink && <ExternalLink className="ml-auto mt-0.5 h-4 w-4 shrink-0 text-primary" />}
+                    </>
+                  );
+                  return isRepuestosLink ? (
+                    <a key={feature} href="https://prolift.es/es" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 md:p-6">
+                      {cardContent}
+                    </a>
+                  ) : (
+                    <div key={feature} className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all hover:shadow-md hover:-translate-y-0.5 md:p-6">
+                      {cardContent}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -223,36 +237,51 @@ const ServiceDetail = () => {
           <div className="container mx-auto px-4 text-center">
             <div className="mx-auto max-w-xl">
               <Phone className="mx-auto mb-4 h-10 w-10 text-primary" />
-              {footerOverride ? (
-                <>
-                  <p className="mb-2 text-2xl font-bold text-foreground md:text-3xl">{footerOverride.companyName}</p>
-                  {footerOverride.nif && <p className="mb-4 text-sm text-muted-foreground">NIF: {footerOverride.nif}</p>}
-                  {!footerOverride.hideDesc && footerOverride.hours && <p className="mb-4 text-sm text-muted-foreground">{footerOverride.hours}</p>}
-                  <div className="mb-6 flex flex-col items-center gap-2">
-                    {footerOverride.phones.map((p) => (
-                      <a key={p.number} href={p.href} className="text-lg font-bold text-primary hover:underline">{p.number}</a>
-                    ))}
-                  </div>
-                  {footerOverride.location && (
-                    <a href={footerOverride.location.href} target="_blank" rel="noopener noreferrer" className="mb-6 inline-flex items-center gap-2 text-sm text-primary hover:underline">
-                      <MapPin className="h-4 w-4" />{footerOverride.location.text}
-                    </a>
-                  )}
-                  <div className="mt-6">
-                    <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(svcT?.name || service.name)}>{t.serviceDetail.solicitar}</Button>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <p className="mb-8 text-2xl font-bold text-foreground md:text-3xl">{svcT?.name || service.name}</p>
-                  <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(svcT?.name || service.name)}>{t.serviceDetail.solicitar}</Button>
-                </>
-              )}
+              <p className="mb-8 text-2xl font-bold text-foreground md:text-3xl">{svcT?.name || service.name}</p>
+              <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(svcT?.name || service.name)}>{t.serviceDetail.solicitar}</Button>
             </div>
           </div>
         </section>
       </main>
-      <Footer />
+      {footerOverride ? (
+        <footer className="glass-dark py-12 text-primary-foreground/70">
+          <div className="container mx-auto px-4">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              <div>
+                <p className="mb-2 font-display text-lg font-bold text-primary-foreground">{footerOverride.companyName}</p>
+                {footerOverride.nif && <p className="font-body text-sm text-primary-foreground/50">NIF: {footerOverride.nif}</p>}
+                {!footerOverride.hideDesc && <p className="mt-2 font-body text-sm leading-relaxed text-primary-foreground/50">{t.footer.desc}</p>}
+              </div>
+              <div>
+                <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.horario}</h4>
+                <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
+                  <li><span className="font-medium text-primary-foreground/70">{t.footer.lunesViernes}</span><br />{footerOverride.hours || "8:00 - 14:00"}</li>
+                  <li><span className="font-medium text-primary-foreground/70">{t.footer.urgencias24h}</span><br />{t.footer.dias365}</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.contacto}</h4>
+                <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
+                  {footerOverride.phones.map((p) => (
+                    <li key={p.number} className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0" /><a href={p.href} className="transition-colors hover:text-primary-foreground">{p.number}</a></li>
+                  ))}
+                  <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0" /><a href="mailto:info@soroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es</a></li>
+                  {footerOverride.location ? (
+                    <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><a href={footerOverride.location.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">{footerOverride.location.text}</a></li>
+                  ) : (
+                    <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><a href="https://www.google.com/maps/search/AVDA+noruega+162,+Santa+Pola,+Alicante" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">AVDA noruega 162,<br />Santa Pola, Alicante</a></li>
+                  )}
+                </ul>
+              </div>
+            </div>
+            <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-primary-foreground/8 pt-6 sm:flex-row">
+              <p className="font-body text-xs text-primary-foreground/30">{t.footer.copyright}</p>
+            </div>
+          </div>
+        </footer>
+      ) : (
+        <Footer />
+      )}
       <WhatsAppButton />
     </div>
   );
