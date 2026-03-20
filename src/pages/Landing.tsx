@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import logoSorocaFull from "@/assets/logo-soroca-full.png";
+import logoSorocaFull from "@/assets/logo-soroca-new.jpeg";
 import landingBg from "@/assets/landing-bg.png";
 
 const Landing = () => {
