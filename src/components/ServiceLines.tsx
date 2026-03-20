@@ -44,8 +44,8 @@ const ServiceLines = () => {
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               <Link to={localePath(line.path)} className="group flex flex-col overflow-hidden rounded-lg glass-card transition-all duration-400 hover:shadow-md hover:shadow-primary/10 hover:-translate-y-0.5">
-                <div className="aspect-[16/10] w-full overflow-hidden">
-                  <img src={line.img} alt={line.title} className="h-full w-full object-cover transition-transform duration-600 group-hover:scale-105" />
+                <div className={`aspect-[16/10] w-full overflow-hidden ${line.isUrgency ? 'bg-white flex items-center justify-center' : ''}`}>
+                  <img src={line.img} alt={line.title} className={`h-full w-full transition-transform duration-600 group-hover:scale-105 ${line.isUrgency ? 'object-contain p-2' : 'object-cover'}`} />
                 </div>
                 <div className="flex flex-1 flex-col p-2">
                   <h3 className="mb-1 font-display text-[9px] font-semibold text-foreground flex items-center gap-1 sm:text-[11px]">
