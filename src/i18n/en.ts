@@ -226,7 +226,7 @@ export const en: Translations = {
   viviendas: {
     title: "Homes",
     volverInicio: "Back to home",
-    description: "Renovations and repairs for homes in Alicante, Elche, Gran Alacant and surrounding areas. We carry out bathroom and kitchen improvements, painting and finishing work, electrical and plumbing, as well as general repairs and home maintenance. We coordinate all trades for a smooth process and a clean, well-finished result.",
+    description: "Renovations and repairs for homes in Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas. We carry out bathroom and kitchen improvements, painting and finishing work, electrical and plumbing, as well as general repairs and home maintenance. We coordinate all trades for a smooth process and a clean, well-finished result.",
     serviciosRelacionados: "Related services",
     serviciosParaVivienda: "Services for your home",
     ctaTitle: "Need a quote for your home?",
@@ -236,7 +236,7 @@ export const en: Translations = {
   comunidades: {
     title: "Communities",
     volverInicio: "Back to home",
-    description: "Maintenance and rehabilitation of homeowner communities in Alicante, Elche, Gran Alacant and surrounding areas. We handle facade and roof work, waterproofing, masonry repairs, plumbing and electrical work in common areas. Planned service, team coordination and lasting solutions.",
+    description: "Maintenance and rehabilitation of homeowner communities in Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas. We handle facade and roof work, waterproofing, masonry repairs, plumbing and electrical work in common areas. Planned service, team coordination and lasting solutions.",
     serviciosRelacionados: "Related services",
     serviciosParaComunidad: "Services for your community",
     ctaTitle: "Does your community need a quote?",
@@ -246,7 +246,7 @@ export const en: Translations = {
   negocios: {
     title: "Businesses & shops",
     volverInicio: "Back to home",
-    description: "Renovations and maintenance of commercial premises and offices in Alicante, Elche, Gran Alacant and surrounding areas. We handle fit-outs, repairs and improvements to make your space functional, safe and attractive: painting, electrical, plumbing, finishes and minor renovations.",
+    description: "Renovations and maintenance of commercial premises and offices in Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas. We handle fit-outs, repairs and improvements to make your space functional, safe and attractive: painting, electrical, plumbing, finishes and minor renovations.",
     serviciosRelacionados: "Related services",
     serviciosParaNegocio: "Services for your business",
     ctaTitle: "Need to renovate your premises?",
@@ -256,7 +256,7 @@ export const en: Translations = {
   urgencias: {
     title: "Emergencies",
     volverInicio: "Back to home",
-    description: "Emergency service exclusively for Grupo Soroca clients in Alicante, Elche, Gran Alacant and surrounding areas. Priority attention for incidents that can't wait, with fast response and team coordination.",
+    description: "Emergency service exclusively for Grupo Soroca clients in Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas. Priority attention for incidents that can't wait, with fast response and team coordination.",
     llamar: "Call: 959 000 000",
     noEresCliente: "Not a client yet? Contract your maintenance with Grupo Soroca and access priority emergency service whenever you need it.",
     hazteCliente: "Become a client",
@@ -339,7 +339,7 @@ export const en: Translations = {
     fontaneria: {
       name: "Plumbing",
       desc: "Repairs, installations and leak detection",
-      intro: "Plumbing installation, repair and maintenance for homes, communities and businesses in **Alicante, Elche, Gran Alacant and surrounding areas**, with clean, coordinated and well-finished work.",
+      intro: "Plumbing installation, repair and maintenance for homes, communities and businesses in **Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas**, with clean, coordinated and well-finished work.",
       features: [
         "Repair of leaks, drips and pipe breaks",
         "Replacement and installation of taps, toilets and cistern mechanisms",
@@ -367,7 +367,7 @@ export const en: Translations = {
     "pintura-decoracion": {
       name: "Painting & decoration",
       desc: "Interior, exterior and decorative finishes",
-      intro: "Interior and exterior painting with careful finishes for homes, communities and businesses in **Alicante, Elche, Gran Alacant and surrounding areas**. We work with protection, order and a professional result.",
+      intro: "Interior and exterior painting with careful finishes for homes, communities and businesses in **Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas**. We work with protection, order and a professional result.",
       features: [
         "Interior painting (walls, ceilings, full rooms)",
         "Exterior painting (facades, patios, terraces and elements)",
@@ -395,7 +395,7 @@ export const en: Translations = {
     electricidad: {
       name: "Electrical",
       desc: "Installations, faults and certificates",
-      intro: "Electrical installations and repairs for homes, communities and businesses in **Alicante, Elche, Gran Alacant and surrounding areas**. Safe, tidy work with final verification.",
+      intro: "Electrical installations and repairs for homes, communities and businesses in **Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas**. Safe, tidy work with final verification.",
       features: [
         "Repair of electrical faults and supply failures",
         "Replacement/installation of sockets, switches and light points",
@@ -423,7 +423,7 @@ export const en: Translations = {
     cerrajeria: {
       name: "Locksmith",
       desc: "Opening, installation and repair of locks",
-      intro: "Locksmith services for homes, communities and businesses in **Alicante, Elche, Gran Alacant and surrounding areas**: replacements, repairs and access maintenance with a serious and effective service.",
+      intro: "Locksmith services for homes, communities and businesses in **Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas**: replacements, repairs and access maintenance with a serious and effective service.",
       features: [
         "Replacement of locks, cylinders and barrels",
         "Repair of doors, handles, strikers and hardware",
@@ -450,7 +450,7 @@ export const en: Translations = {
     "carpinteria-metalica": {
       name: "Metal carpentry",
       desc: "Windows, doors, grilles and metal structures",
-      intro: "Manufacture, installation and repair of metal elements for homes, communities and businesses in **Alicante, Elche, Gran Alacant and surrounding areas**, with custom solutions and safe assembly.",
+      intro: "Manufacture, installation and repair of metal elements for homes, communities and businesses in **Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas**, with custom solutions and safe assembly.",
       features: [
         "Metal doors, grilles and enclosures (per project)",
         "Railings, handrails and protections",
@@ -500,7 +500,7 @@ export const en: Translations = {
     "aire-acondicionado": {
       name: "Air conditioning",
       desc: "Installation, repair and climate control maintenance",
-      intro: "Air conditioning installation, replacement and maintenance for homes, businesses and communities in **Alicante, Elche, Gran Alacant and surrounding areas**, with careful installation and clean finishes.",
+      intro: "Air conditioning installation, replacement and maintenance for homes, businesses and communities in **Alicante, Elche, Santa Pola, Gran Alacant and surrounding areas**, with careful installation and clean finishes.",
       features: [
         "Equipment installation or replacement (as needed)",
         "Maintenance and tune-up",
