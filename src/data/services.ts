@@ -108,7 +108,6 @@ export const services: ServiceData[] = [
     features: [
       "Pintura interior (paredes, techos, estancias completas)",
       "Pintura exterior (fachadas, patios, terrazas y elementos)",
-      "Preparación de superficies: lijado, reparación, sellado",
       "Alisados, masillados y corrección de imperfecciones",
       "Esmaltes en puertas, barandillas y carpinterías",
       "Pinturas específicas (anti-humedad, lavables) según el soporte",
