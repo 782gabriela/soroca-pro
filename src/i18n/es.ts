@@ -204,6 +204,7 @@ export const es = {
   },
   serviceDetail: {
     volverServicios: "Volver a servicios",
+    paginaAnterior: "Página anterior",
     nuestroServicio: "Nuestro servicio",
     queIncluye: "Qué incluye este servicio",
     clientes: "Clientes",
