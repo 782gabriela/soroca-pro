@@ -318,7 +318,7 @@ export const es = {
     alrededores: "Alrededores",
     noAparece: "¿Tu zona no aparece?",
     noApareceDesc: "Llámanos y lo confirmamos.",
-    llamar: "Llamar: 655 020 020",
+    llamar: "Llamar: 959 000 000",
   },
   horarioPage: {
     title: "Horario",
