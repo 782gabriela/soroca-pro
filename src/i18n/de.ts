@@ -93,7 +93,7 @@ export const de: Translations = {
     toastError: "Bitte füllen Sie alle Pflichtfelder aus.",
   },
   footer: {
-    desc: "Renovierungen, Wartung und Sanierung in der Provinz Alicante.",
+    desc: "Bau, Wartung und Sanierung in der Provinz Alicante.",
     horario: "Büro",
     lunesViernes: "Montag – Freitag",
     sabDom: "Samstag / Sonntag",
