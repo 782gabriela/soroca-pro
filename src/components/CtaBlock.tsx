@@ -27,7 +27,7 @@ const CtaBlock = () => {
               <a href="tel:+34959000000"><Phone className="mr-1.5 h-4 w-4" />{t.cta.llamanos}</a>
             </Button>
             <Button size="lg" variant="outline" asChild className="w-full rounded-full border-primary-foreground/20 font-body text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/10 sm:w-auto">
-              <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer"><MessageCircle className="mr-1.5 h-4 w-4" />{t.cta.whatsapp}</a>
+              <a href="https://wa.me/34959000000" target="_blank" rel="noopener noreferrer"><MessageCircle className="mr-1.5 h-4 w-4" />{t.cta.whatsapp}</a>
             </Button>
             <Button size="lg" variant="outline" className="w-full rounded-full border-primary-foreground/20 font-body text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/10 sm:w-auto" onClick={() => openBudgetModal()}>
               <Camera className="mr-1.5 h-4 w-4" />{t.cta.enviaFotos}

@@ -62,7 +62,7 @@ const ContactoPage = () => {
                   <div className="flex flex-col gap-2">
                     <Button onClick={() => openBudgetModal()}>{t.contactoPage.pedirPresupuesto}</Button>
                     <Button asChild variant="outline">
-                      <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                      <a href="https://wa.me/34959000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                     </Button>
                   </div>
                 </div>

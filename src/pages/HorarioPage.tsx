@@ -35,7 +35,7 @@ const HorarioPage = () => {
                   <a href="tel:+34959000000"><Phone className="mr-2 h-4 w-4" />{t.horarioPage.llamar}</a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                  <a href="https://wa.me/34959000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 </Button>
               </div>
             </div>
