@@ -321,18 +321,15 @@ export const services: ServiceData[] = [
     desc: "Instalación, mantenimiento y modernización",
     image: ascensoresImg,
     intro:
-      "Soluciones para comunidades y edificios en **Alicante, Elche, Gran Alacant y alrededores**: coordinación de trabajos vinculados a ascensores y elevadores, con planificación, orden y seguimiento.",
+      "En SOROCA somos el aliado que necesitas para mantener tu negocio en marcha. Nos especializamos en dar soporte a empresas dedicadas al mantenimiento de ascensores, ofreciéndote desde pequeñas reparaciones y reformas hasta montajes completos.\n\nPonemos a tu disposición un equipo experimentado, rápido y eficiente para que puedas cumplir con tus plazos y mantener la satisfacción de tus clientes. Además, contamos con un amplio stock de materiales que puedes consultar en cualquier momento para que no pierdas tiempo buscando repuestos.",
     features: [
-      "Coordinación de instalación o sustitución (según proyecto)",
-      "Adecuación de huecos, cuartos y elementos auxiliares (si procede)",
-      "Trabajos de apoyo de albañilería, pintura y remates",
-      "Actuaciones complementarias en zonas comunes relacionadas con el proyecto",
-      "Seguimiento de tiempos y coordinación con empresa especialista",
+      "Reformas y adaptación del ascensor a la nueva ITC",
+      "Obra y montaje ascensor nuevo",
+      "Bajadas a cuota 0",
+      "Suministro de repuestos para ascensores multimarca",
     ],
     audience: [
-      { label: "Comunidades de propietarios", detail: "" },
-      { label: "Edificios residenciales", detail: "y zonas comunes" },
-      { label: "Rehabilitaciones", detail: "y mejoras de accesibilidad" },
+      { label: "Empresas", detail: "" },
     ],
     trust: [
       "Más de 15 años de experiencia en rehabilitación y coordinación de oficios",
@@ -346,11 +343,11 @@ export const services: ServiceData[] = [
       "Presupuestamos y planificamos por fases",
       "Ejecutamos apoyos/remates y revisamos el resultado final",
     ],
-    zones: ["Alicante", "Elche", "Gran Alacant", "Alrededores"],
+    zones: ["Elche", "Alicante", "Valencia", "Baleares", "Murcia", "Madrid"],
     faq: [
       {
         question: "¿Trabajáis con comunidades de propietarios?",
-        answer: "Sí. Trabajamos con comunidades gestionando la coordinación y el seguimiento para que el proyecto avance con orden.",
+        answer: "Trabajamos solo con empresas especializadas",
       },
       {
         question: "¿Podéis coordinar albañilería y remates del proyecto?",
