@@ -11,7 +11,7 @@ export const en: Translations = {
     pidePresupuesto: "Get a quote",
   },
   hero: {
-    title: "Renovations, maintenance and rehabilitation in Alicante.",
+    title: "Construction, maintenance and rehabilitation in Alicante.",
     tagline: "Experience · Reliability · Professionalism",
     description: "We serve homes, communities and businesses. One team for everything your project needs.",
     ctaBudget: "Get a free quote",
