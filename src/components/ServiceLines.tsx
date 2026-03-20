@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const viviendaImg = "/lovable-uploads/7c7e7606-1c68-472e-a901-74e2ed0e001e.png";
 import comunidadesImg from "@/assets/comunidades.jpeg";
 import negociosImg from "@/assets/negocios.jpeg";
-import urgenciasImg from "@/assets/urgencias-casco.png";
+import averiasImg from "@/assets/averias-24h.png";
 
 const ServiceLines = () => {
   const { openBudgetModal } = useBudgetModal();
