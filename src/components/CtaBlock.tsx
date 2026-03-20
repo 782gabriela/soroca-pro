@@ -24,7 +24,7 @@ const CtaBlock = () => {
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <Button size="lg" className="w-full rounded-full bg-primary-foreground px-8 font-body text-soroca-dark transition-all hover:bg-primary-foreground/90 hover:shadow-lg sm:w-auto" onClick={() => openBudgetModal()}>{t.cta.pidePresupuesto}</Button>
             <Button size="lg" variant="outline" asChild className="w-full rounded-full border-primary-foreground/20 font-body text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/10 sm:w-auto">
-              <a href="tel:+34655020020"><Phone className="mr-1.5 h-4 w-4" />{t.cta.llamanos}</a>
+              <a href="tel:+34959000000"><Phone className="mr-1.5 h-4 w-4" />{t.cta.llamanos}</a>
             </Button>
             <Button size="lg" variant="outline" asChild className="w-full rounded-full border-primary-foreground/20 font-body text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/10 sm:w-auto">
               <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer"><MessageCircle className="mr-1.5 h-4 w-4" />{t.cta.whatsapp}</a>
