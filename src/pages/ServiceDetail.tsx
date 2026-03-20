@@ -104,7 +104,7 @@ const ServiceDetail = () => {
             <div className="mx-auto max-w-3xl">
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 shadow-sm"><Icon className="h-7 w-7 text-primary" /></div>
               <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">{name}</h1>
-              <p className="text-base font-normal uppercase leading-[1.7] tracking-wide text-foreground/85 md:text-lg md:leading-[1.75]" style={{ maxWidth: '780px' }}>{renderBold(intro)}</p>
+              <p className={`text-base font-normal uppercase leading-[1.7] tracking-wide text-foreground/85 md:text-lg md:leading-[1.75] ${slug === 'ascensores-elevadores' ? 'font-body text-[15px] normal-case tracking-normal leading-[1.85] md:text-base md:leading-[1.9]' : ''}`} style={{ maxWidth: '780px' }}>{renderBold(intro)}</p>
             </div>
           </div>
         </section>
