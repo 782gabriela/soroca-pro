@@ -213,7 +213,7 @@ export const services: ServiceData[] = [
     desc: "Apertura, instalación y reparación de cerraduras",
     image: cerrajeriaImg,
     intro:
-      "Cerrajería para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**: sustituciones, reparaciones y mantenimiento de accesos con un servicio serio y eficaz.",
+      "Cerrajería para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**: sustituciones, reparaciones y mantenimiento de accesos con un servicio serio y eficaz.",
     features: [
       "Sustitución de cerraduras, bombines y cilindros",
       "Reparación de puertas, manillas, cerraderos y herrajes",
