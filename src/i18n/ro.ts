@@ -93,7 +93,7 @@ export const ro: Translations = {
     toastError: "Te rugăm să completezi toate câmpurile obligatorii.",
   },
   footer: {
-    desc: "Construcții, întreținere și reabilitare în provincia Alicante.",
+    desc: "Construcții, întreținere și reabilitare în Alicante.",
     horario: "Program",
     lunesViernes: "Luni – Vineri",
     sabDom: "Sâmbătă / Duminică",

@@ -20,7 +20,7 @@ export const es = {
     viviendas: "Viviendas",
     comunidades: "Comunidades",
     negociosLocales: "Negocios y locales",
-    urgencias: "Urgencias",
+    urgencias: "Averías",
     pidePresupuesto: "Pide presupuesto",
     hazteCliente: "Hazte cliente",
     verMas: "Ver más",
