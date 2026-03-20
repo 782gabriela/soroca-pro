@@ -98,9 +98,9 @@ const ServiceDetail = () => {
       <main className="flex-1">
         <section className="bg-gradient-to-b from-primary/5 to-background pt-20 pb-12 md:pt-28 md:pb-16">
           <div className="container mx-auto px-4">
-            <Link to={localePath("/#servicios")} className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
-              <ArrowLeft className="h-4 w-4" />{t.serviceDetail.volverServicios}
-            </Link>
+            <button onClick={() => navigate(-1)} className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+              <ArrowLeft className="h-4 w-4" />{t.serviceDetail.paginaAnterior}
+            </button>
             <div className="mx-auto max-w-3xl">
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 shadow-sm"><Icon className="h-7 w-7 text-primary" /></div>
               <h1 className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">{name}</h1>
