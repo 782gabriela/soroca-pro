@@ -497,7 +497,7 @@ export const es = {
     "aire-acondicionado": {
       name: "Aire acondicionado",
       desc: "Instalación, reparación y mantenimiento de climatización",
-      intro: "Instalación, sustitución y mantenimiento de aire acondicionado para viviendas, negocios y comunidades en **Alicante, Elche, Gran Alacant y alrededores**, con una instalación cuidada y remates limpios.",
+      intro: "Instalación, sustitución y mantenimiento de aire acondicionado para viviendas, negocios y comunidades en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con una instalación cuidada y remates limpios.",
       features: [
         "Instalación o sustitución de equipos (según necesidad)",
         "Mantenimiento y puesta a punto",
