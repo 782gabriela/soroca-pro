@@ -396,7 +396,7 @@ export const es = {
       features: [
         "Reparación de averías eléctricas y fallos de suministro",
         "Sustitución/instalación de enchufes, interruptores y puntos de luz",
-        "Montaje de iluminación interior y exterior",
+        "Proyectos de iluminación",
         "Revisión y puesta a punto de cuadros eléctricos (según necesidad)",
         "Renovación parcial de cableado y líneas (si procede)",
         "Instalación de timbres/videoporteros y pequeños equipos",
