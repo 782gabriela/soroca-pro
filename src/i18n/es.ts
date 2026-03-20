@@ -9,7 +9,7 @@ export const es = {
     pidePresupuesto: "Pide presupuesto",
   },
   hero: {
-    title: "Reformas, mantenimiento y rehabilitación en Alicante.",
+    title: "Construcción, mantenimiento y rehabilitación en Alicante.",
     tagline: "Experiencia · Seriedad · Profesionalismo",
     description: "Prestamos servicios a viviendas, comunidades y negocios. Un solo equipo para todo lo que tu proyecto necesita.",
     ctaBudget: "Pide presupuesto sin compromiso",
