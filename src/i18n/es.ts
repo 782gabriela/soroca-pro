@@ -91,7 +91,7 @@ export const es = {
     toastError: "Por favor, rellena todos los campos obligatorios.",
   },
   footer: {
-    desc: "Reformas, mantenimiento y rehabilitación en la provincia de Alicante.",
+    desc: "Construcción, mantenimiento y rehabilitación en Alicante.",
     horario: "Horario",
     lunesViernes: "Lunes - Viernes",
     sabDom: "Sábado / Domingo",
