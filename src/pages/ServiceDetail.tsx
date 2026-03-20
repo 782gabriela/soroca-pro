@@ -59,6 +59,7 @@ const serviceTitleOverrides: Record<string, string> = {
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const service = services.find((s) => s.slug === slug);
   const { openBudgetModal } = useBudgetModal();
   const { t, localePath } = useTranslation();
