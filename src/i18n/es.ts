@@ -365,7 +365,7 @@ export const es = {
     "pintura-decoracion": {
       name: "Pintura y decoración",
       desc: "Interior, exterior y acabados decorativos",
-      intro: "Pintura interior y exterior con acabados cuidados para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**. Trabajamos con protección, orden y un resultado profesional.",
+      intro: "Pintura interior y exterior con acabados cuidados para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**. Trabajamos con protección, orden y un resultado profesional.",
       features: [
         "Pintura interior (paredes, techos, estancias completas)",
         "Pintura exterior (fachadas, patios, terrazas y elementos)",
