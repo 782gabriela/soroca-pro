@@ -104,7 +104,7 @@ export const services: ServiceData[] = [
     desc: "Interior, exterior y acabados decorativos",
     image: pinturaImg,
     intro:
-      "Pintura interior y exterior con acabados cuidados para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**. Trabajamos con protección, orden y un resultado profesional.",
+      "Pintura interior y exterior con acabados cuidados para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**. Trabajamos con protección, orden y un resultado profesional.",
     features: [
       "Pintura interior (paredes, techos, estancias completas)",
       "Pintura exterior (fachadas, patios, terrazas y elementos)",
