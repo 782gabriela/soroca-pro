@@ -44,7 +44,7 @@ const ZonasPage = () => {
                 <h3 className="mb-2 text-lg font-bold text-foreground">{t.zonasPage.noAparece}</h3>
                 <p className="mb-6 text-muted-foreground">{t.zonasPage.noApareceDesc}</p>
                 <Button asChild size="lg">
-                  <a href="tel:+34655020020"><Phone className="mr-2 h-4 w-4" />{t.zonasPage.llamar}</a>
+                  <a href="tel:+34959000000"><Phone className="mr-2 h-4 w-4" />{t.zonasPage.llamar}</a>
                 </Button>
               </div>
             </div>

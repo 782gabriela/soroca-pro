@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
-import logoSoroca from "@/assets/logo-soroca.jpeg";
+import logoSoroca from "@/assets/logo-soroca-new.jpeg";
 import { useCookieConsent } from "@/contexts/CookieConsentContext";
 import { useTranslation } from "@/i18n/context";
 
@@ -24,8 +24,7 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.horario}</h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-              <li><span className="font-medium text-primary-foreground/70">{t.footer.lunesViernes}</span><br />8:00 - 18:00</li>
-              <li><span className="font-medium text-primary-foreground/70">{t.footer.sabDom}</span><br />{t.footer.cerrado}</li>
+              <li><span className="font-medium text-primary-foreground/70">{t.footer.lunesViernes}</span><br />8:00 - 14:00</li>
               <li><span className="font-medium text-primary-foreground/70">{t.footer.urgencias24h}</span><br />{t.footer.dias365}</li>
             </ul>
           </div>
@@ -33,7 +32,7 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.contacto}</h4>
             <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0" /><a href="tel:+34655020020" className="transition-colors hover:text-primary-foreground">655 020 020</a></li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0" /><a href="tel:+34959000000" className="transition-colors hover:text-primary-foreground">959 000 000</a></li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0" /><a href="mailto:info@soroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es</a></li>
               <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>Gran Alacant, Alicante</span></li>
             </ul>

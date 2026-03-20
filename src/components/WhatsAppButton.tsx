@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import logoSoroca from "@/assets/logo-soroca.jpeg";
+import logoSoroca from "@/assets/logo-soroca-new.jpeg";
 import { useTranslation } from "@/i18n/context";
 
-const WHATSAPP_NUMBER = "34655020020";
+const WHATSAPP_NUMBER = "34959000000";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const WhatsAppButton = () => {

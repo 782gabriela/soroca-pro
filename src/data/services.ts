@@ -49,7 +49,7 @@ export const services: ServiceData[] = [
     desc: "Reparaciones, instalaciones y detección de fugas",
     image: fontaneriaImg,
     intro:
-      "Instalación, reparación y mantenimiento de fontanería para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**, con un trabajo limpio, coordinado y bien rematado.",
+      "Instalación, reparación y mantenimiento de fontanería para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con un trabajo limpio, coordinado y bien rematado.",
     features: [
       "Reparación de fugas, goteos y roturas de tuberías",
       "Sustitución e instalación de grifería, sanitarios y mecanismos de cisterna",
@@ -104,11 +104,10 @@ export const services: ServiceData[] = [
     desc: "Interior, exterior y acabados decorativos",
     image: pinturaImg,
     intro:
-      "Pintura interior y exterior con acabados cuidados para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**. Trabajamos con protección, orden y un resultado profesional.",
+      "Pintura interior y exterior con acabados cuidados para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**. Trabajamos con protección, orden y un resultado profesional.",
     features: [
       "Pintura interior (paredes, techos, estancias completas)",
       "Pintura exterior (fachadas, patios, terrazas y elementos)",
-      "Preparación de superficies: lijado, reparación, sellado",
       "Alisados, masillados y corrección de imperfecciones",
       "Esmaltes en puertas, barandillas y carpinterías",
       "Pinturas específicas (anti-humedad, lavables) según el soporte",
@@ -159,11 +158,11 @@ export const services: ServiceData[] = [
     desc: "Instalaciones, averías y certificados",
     image: electricidadImg,
     intro:
-      "Instalaciones y reparaciones eléctricas para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**. Intervenciones seguras, ordenadas y con comprobación final.",
+      "Instalaciones y reparaciones eléctricas para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**. Intervenciones seguras, ordenadas y con comprobación final.",
     features: [
       "Reparación de averías eléctricas y fallos de suministro",
       "Sustitución/instalación de enchufes, interruptores y puntos de luz",
-      "Montaje de iluminación interior y exterior",
+      "Proyectos de iluminación",
       "Revisión y puesta a punto de cuadros eléctricos (según necesidad)",
       "Renovación parcial de cableado y líneas (si procede)",
       "Instalación de timbres/videoporteros y pequeños equipos",
@@ -214,7 +213,7 @@ export const services: ServiceData[] = [
     desc: "Apertura, instalación y reparación de cerraduras",
     image: cerrajeriaImg,
     intro:
-      "Cerrajería para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**: sustituciones, reparaciones y mantenimiento de accesos con un servicio serio y eficaz.",
+      "Cerrajería para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**: sustituciones, reparaciones y mantenimiento de accesos con un servicio serio y eficaz.",
     features: [
       "Sustitución de cerraduras, bombines y cilindros",
       "Reparación de puertas, manillas, cerraderos y herrajes",
@@ -268,7 +267,7 @@ export const services: ServiceData[] = [
     desc: "Ventanas, puertas, rejas y estructuras metálicas",
     image: carpinteriaImg,
     intro:
-      "Fabricación, instalación y reparación de elementos metálicos para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**, con soluciones a medida y montaje seguro.",
+      "Fabricación, instalación y reparación de elementos metálicos para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con soluciones a medida y montaje seguro.",
     features: [
       "Puertas metálicas, rejas y cerramientos (según proyecto)",
       "Barandillas, pasamanos y protecciones",
@@ -322,18 +321,15 @@ export const services: ServiceData[] = [
     desc: "Instalación, mantenimiento y modernización",
     image: ascensoresImg,
     intro:
-      "Soluciones para comunidades y edificios en **Alicante, Elche, Gran Alacant y alrededores**: coordinación de trabajos vinculados a ascensores y elevadores, con planificación, orden y seguimiento.",
+      "En SOROCA somos el aliado que necesitas para mantener tu negocio en marcha. Nos especializamos en dar soporte a empresas dedicadas al mantenimiento de ascensores, ofreciéndote desde pequeñas reparaciones y reformas hasta montajes completos.\n\nPonemos a tu disposición un equipo experimentado, rápido y eficiente para que puedas cumplir con tus plazos y mantener la satisfacción de tus clientes. Además, contamos con un amplio stock de materiales que puedes consultar en cualquier momento para que no pierdas tiempo buscando repuestos.",
     features: [
-      "Coordinación de instalación o sustitución (según proyecto)",
-      "Adecuación de huecos, cuartos y elementos auxiliares (si procede)",
-      "Trabajos de apoyo de albañilería, pintura y remates",
-      "Actuaciones complementarias en zonas comunes relacionadas con el proyecto",
-      "Seguimiento de tiempos y coordinación con empresa especialista",
+      "Reformas y adaptación del ascensor a la nueva ITC",
+      "Obra y montaje ascensor nuevo",
+      "Bajadas a cuota 0",
+      "Suministro de repuestos para ascensores multimarca",
     ],
     audience: [
-      { label: "Comunidades de propietarios", detail: "" },
-      { label: "Edificios residenciales", detail: "y zonas comunes" },
-      { label: "Rehabilitaciones", detail: "y mejoras de accesibilidad" },
+      { label: "Empresas", detail: "" },
     ],
     trust: [
       "Más de 15 años de experiencia en rehabilitación y coordinación de oficios",
@@ -347,11 +343,11 @@ export const services: ServiceData[] = [
       "Presupuestamos y planificamos por fases",
       "Ejecutamos apoyos/remates y revisamos el resultado final",
     ],
-    zones: ["Alicante", "Elche", "Gran Alacant", "Alrededores"],
+    zones: ["Elche", "Alicante", "Valencia", "Baleares", "Murcia", "Madrid"],
     faq: [
       {
         question: "¿Trabajáis con comunidades de propietarios?",
-        answer: "Sí. Trabajamos con comunidades gestionando la coordinación y el seguimiento para que el proyecto avance con orden.",
+        answer: "Trabajamos solo con empresas especializadas",
       },
       {
         question: "¿Podéis coordinar albañilería y remates del proyecto?",
@@ -375,7 +371,7 @@ export const services: ServiceData[] = [
     desc: "Instalación, reparación y mantenimiento de climatización",
     image: aireImg,
     intro:
-      "Instalación, sustitución y mantenimiento de aire acondicionado para viviendas, negocios y comunidades en **Alicante, Elche, Gran Alacant y alrededores**, con una instalación cuidada y remates limpios.",
+      "Instalación, sustitución y mantenimiento de aire acondicionado para viviendas, negocios y comunidades en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con una instalación cuidada y remates limpios.",
     features: [
       "Instalación o sustitución de equipos (según necesidad)",
       "Mantenimiento y puesta a punto",

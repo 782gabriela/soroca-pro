@@ -4,15 +4,17 @@ import { es, type Translations } from "./es";
 import { en } from "./en";
 import { de } from "./de";
 import { ru } from "./ru";
+import { ro } from "./ro";
 
-export type Language = "es" | "en" | "de" | "ru";
+export type Language = "es" | "en" | "de" | "ru" | "ro";
 
-const translationsMap: Record<Language, Translations> = { es, en, de, ru };
+const translationsMap: Record<Language, Translations> = { es, en, de, ru, ro };
 
 export const LANGUAGES: { code: Language; label: string }[] = [
   { code: "en", label: "EN" },
   { code: "de", label: "DE" },
   { code: "ru", label: "RU" },
+  { code: "ro", label: "RO" },
 ];
 
 interface LanguageContextType {
@@ -51,7 +53,7 @@ export const LanguageProvider = ({ language, children }: { language: Language; c
     let basePath = currentPath;
 
     // Remove current language prefix
-    const langPrefixes = ["/en", "/de", "/ru"];
+    const langPrefixes = ["/en", "/de", "/ru", "/ro"];
     for (const prefix of langPrefixes) {
       if (currentPath === prefix || currentPath.startsWith(prefix + "/")) {
         basePath = currentPath.slice(prefix.length) || "/";

@@ -29,7 +29,9 @@ const BudgetRequestModal = ({ open, onOpenChange, defaultService }: BudgetReques
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", phone: "", service: defaultService || "", message: "" });
+  const [form, setForm] = useState({ name: "", companyName: "", phone: "", service: defaultService || "", message: "" });
+
+  const isAscensores = defaultService === "Ascensores y elevadores" || form.service === "Ascensores y elevadores";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -70,7 +72,7 @@ const BudgetRequestModal = ({ open, onOpenChange, defaultService }: BudgetReques
     onOpenChange(false);
     setTimeout(() => {
       setSubmitted(false);
-      setForm({ name: "", phone: "", service: defaultService || "", message: "" });
+      setForm({ name: "", companyName: "", phone: "", service: defaultService || "", message: "" });
       setFiles([]);
       setPrivacyAccepted(false);
       setErrors({});
@@ -102,6 +104,12 @@ const BudgetRequestModal = ({ open, onOpenChange, defaultService }: BudgetReques
                   <Input id="budget-name" name="name" value={form.name} onChange={handleChange} maxLength={100} className={`h-12 ${errors.name ? "border-destructive" : ""}`} placeholder={t.budgetModal.nombrePlaceholder} />
                   {errors.name && <p className="text-xs font-medium text-destructive">{errors.name}</p>}
                 </div>
+                {isAscensores && (
+                  <div className="space-y-1.5">
+                    <Label htmlFor="budget-company" className="text-sm font-medium">Nombre de empresa</Label>
+                    <Input id="budget-company" name="companyName" value={form.companyName} onChange={handleChange} maxLength={100} className="h-12" placeholder="Ej.: Ascensores García S.L." />
+                  </div>
+                )}
                 <div className="space-y-1.5">
                   <Label htmlFor="budget-phone" className="text-sm font-medium">{t.budgetModal.telefonoLabel} <span className="text-destructive">*</span></Label>
                   <Input id="budget-phone" name="phone" type="tel" value={form.phone} onChange={handleChange} maxLength={20} className={`h-12 ${errors.phone ? "border-destructive" : ""}`} placeholder={t.budgetModal.telefonoPlaceholder} />
@@ -159,13 +167,13 @@ const BudgetRequestModal = ({ open, onOpenChange, defaultService }: BudgetReques
               <aside className="border-t border-border/50 bg-muted/30 px-6 py-8 sm:px-8 lg:border-t-0 lg:border-l">
                 <div className="mb-6">
                   <p className="mb-2 text-sm font-semibold text-foreground">{t.budgetModal.llamarnos}</p>
-                  <a href="tel:+34655020020" className="flex items-center gap-2 text-lg font-bold text-primary"><Phone className="h-5 w-5" />655 020 020</a>
-                  <Button asChild variant="outline" className="mt-3 h-11 w-full gap-2"><a href="tel:+34655020020"><Phone className="h-4 w-4" />{t.budgetModal.llamarAhora}</a></Button>
+                  <a href="tel:+34959000000" className="flex items-center gap-2 text-lg font-bold text-primary"><Phone className="h-5 w-5" />959 000 000</a>
+                  <Button asChild variant="outline" className="mt-3 h-11 w-full gap-2"><a href="tel:+34959000000"><Phone className="h-4 w-4" />{t.budgetModal.llamarAhora}</a></Button>
                 </div>
                 <div className="mb-6">
                   <p className="mb-2 text-sm font-semibold text-foreground">{t.budgetModal.escribirWhatsapp}</p>
                   <Button asChild className="h-11 w-full gap-2 bg-[hsl(142,70%,40%)] text-white hover:bg-[hsl(142,70%,35%)]">
-                    <a href="https://wa.me/34655020020" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" />WhatsApp</a>
+                    <a href="https://wa.me/34959000000" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" />WhatsApp</a>
                   </Button>
                 </div>
                 <div className="mb-6">
@@ -176,7 +184,7 @@ const BudgetRequestModal = ({ open, onOpenChange, defaultService }: BudgetReques
                   </ul>
                 </div>
                 <div className="rounded-xl border border-border bg-background p-4">
-                  <div className="flex items-center gap-2 text-sm"><Clock className="h-4 w-4 text-primary" /><span className="font-medium text-foreground">L–V: 8:00–18:00</span></div>
+                  <div className="flex items-center gap-2 text-sm"><Clock className="h-4 w-4 text-primary" /><span className="font-medium text-foreground">L–V: 8:00–14:00</span></div>
                   <Collapsible open={scheduleOpen} onOpenChange={setScheduleOpen}>
                     <CollapsibleTrigger className="mt-2 flex items-center gap-1 text-sm font-medium text-primary hover:text-primary/80">
                       {scheduleOpen ? t.budgetModal.horarioLabel : t.budgetModal.verHorario}
@@ -186,8 +194,7 @@ const BudgetRequestModal = ({ open, onOpenChange, defaultService }: BudgetReques
                       <div className="mt-3 space-y-2 border-t border-border pt-3">
                         <h4 className="text-base font-bold text-foreground">{t.budgetModal.horarioLabel}</h4>
                         <div className="space-y-1 text-sm text-foreground/80">
-                          <div className="flex justify-between"><span>{t.budgetModal.lunesJueves}</span><span className="font-medium">8:00 – 18:00</span></div>
-                          <div className="flex justify-between"><span>{t.budgetModal.viernes}</span><span className="font-medium">8:00 – 15:00</span></div>
+                          <div className="flex justify-between"><span>{t.budgetModal.lunesJueves}</span><span className="font-medium">8:00 – 14:00</span></div>
                           <div className="flex justify-between"><span>{t.budgetModal.finDeSemana}</span><span className="font-medium text-muted-foreground">{t.budgetModal.cerradoLabel}</span></div>
                         </div>
                       </div>

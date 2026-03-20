@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { services } from "@/data/services";
-import logoSoroca from "@/assets/logo-soroca.jpeg";
+import logoSoroca from "@/assets/logo-soroca-new.jpeg";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
 import { useTranslation } from "@/i18n/context";
 import LanguageSelector from "@/components/LanguageSelector";
@@ -47,7 +47,7 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:h-20">
         <Link to={localePath("/inicio")} className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
           <div className="h-10 w-10 overflow-hidden rounded-xl shadow-md">
-            <img alt="Grupo Soroca" className="h-full w-full object-fill" src="/lovable-uploads/fcca1031-6aef-43ad-8781-2025ae3f0ab3.png" />
+            <img alt="Grupo Soroca" className="h-full w-full object-cover" src={logoSoroca} />
           </div>
           <div className="hidden sm:block">
             <span className="font-display text-lg font-bold text-foreground"></span>

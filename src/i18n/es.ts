@@ -9,7 +9,7 @@ export const es = {
     pidePresupuesto: "Pide presupuesto",
   },
   hero: {
-    title: "Reformas, mantenimiento y rehabilitación en Alicante.",
+    title: "Construcción, mantenimiento y rehabilitación en Alicante.",
     tagline: "Experiencia · Seriedad · Profesionalismo",
     description: "Prestamos servicios a viviendas, comunidades y negocios. Un solo equipo para todo lo que tu proyecto necesita.",
     ctaBudget: "Pide presupuesto sin compromiso",
@@ -134,7 +134,7 @@ export const es = {
     nombreLabel: "Nombre y apellidos",
     nombrePlaceholder: "Ej.: Antonio García López",
     telefonoLabel: "Teléfono",
-    telefonoPlaceholder: "Ej.: 655 020 020",
+    telefonoPlaceholder: "Ej.: 959 000 000",
     servicioLabel: "Servicio",
     servicioPlaceholder: "Selecciona un servicio",
     mensajeLabel: "Cuéntanos qué necesitas",
@@ -170,10 +170,10 @@ export const es = {
     errorServicio: "Selecciona un servicio",
     errorMensaje: "Describe qué necesitas",
     errorPrivacidad: "Debes aceptar la política de privacidad",
-    horarioLabel: "Horario de atención",
-    lunesJueves: "Lunes – Jueves",
+    horarioLabel: "Oficina",
+    lunesJueves: "Lunes – Viernes",
     viernes: "Viernes",
-    finDeSemana: "Fin de semana",
+    finDeSemana: "Sábado y domingo",
     cerradoLabel: "Cerrado",
     verHorario: "Ver horario completo",
   },
@@ -318,17 +318,17 @@ export const es = {
     alrededores: "Alrededores",
     noAparece: "¿Tu zona no aparece?",
     noApareceDesc: "Llámanos y lo confirmamos.",
-    llamar: "Llamar: 655 020 020",
+    llamar: "Llamar: 959 000 000",
   },
   horarioPage: {
     title: "Horario",
-    llamar: "Llamar: 655 020 020",
+    llamar: "Llamar: 959 000 000",
     dias: [
-      { dia: "Lunes", horas: "08:00 – 18:00" },
-      { dia: "Martes", horas: "08:00 – 18:00" },
-      { dia: "Miércoles", horas: "08:00 – 18:00" },
-      { dia: "Jueves", horas: "08:00 – 18:00" },
-      { dia: "Viernes", horas: "08:00 – 15:00" },
+      { dia: "Lunes", horas: "08:00 – 14:00" },
+      { dia: "Martes", horas: "08:00 – 14:00" },
+      { dia: "Miércoles", horas: "08:00 – 14:00" },
+      { dia: "Jueves", horas: "08:00 – 14:00" },
+      { dia: "Viernes", horas: "08:00 – 14:00" },
       { dia: "Sábado", horas: "Cerrado" },
       { dia: "Domingo", horas: "Cerrado" },
     ],
@@ -337,7 +337,7 @@ export const es = {
     fontaneria: {
       name: "Fontanería",
       desc: "Reparaciones, instalaciones y detección de fugas",
-      intro: "Instalación, reparación y mantenimiento de fontanería para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**, con un trabajo limpio, coordinado y bien rematado.",
+      intro: "Instalación, reparación y mantenimiento de fontanería para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con un trabajo limpio, coordinado y bien rematado.",
       features: [
         "Reparación de fugas, goteos y roturas de tuberías",
         "Sustitución e instalación de grifería, sanitarios y mecanismos de cisterna",
@@ -365,11 +365,10 @@ export const es = {
     "pintura-decoracion": {
       name: "Pintura y decoración",
       desc: "Interior, exterior y acabados decorativos",
-      intro: "Pintura interior y exterior con acabados cuidados para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**. Trabajamos con protección, orden y un resultado profesional.",
+      intro: "Pintura interior y exterior con acabados cuidados para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**. Trabajamos con protección, orden y un resultado profesional.",
       features: [
         "Pintura interior (paredes, techos, estancias completas)",
         "Pintura exterior (fachadas, patios, terrazas y elementos)",
-        "Preparación de superficies: lijado, reparación, sellado",
         "Alisados, masillados y corrección de imperfecciones",
         "Esmaltes en puertas, barandillas y carpinterías",
         "Pinturas específicas (anti-humedad, lavables) según el soporte",
@@ -393,11 +392,11 @@ export const es = {
     electricidad: {
       name: "Electricidad",
       desc: "Instalaciones, averías y certificados",
-      intro: "Instalaciones y reparaciones eléctricas para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**. Intervenciones seguras, ordenadas y con comprobación final.",
+      intro: "Instalaciones y reparaciones eléctricas para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**. Intervenciones seguras, ordenadas y con comprobación final.",
       features: [
         "Reparación de averías eléctricas y fallos de suministro",
         "Sustitución/instalación de enchufes, interruptores y puntos de luz",
-        "Montaje de iluminación interior y exterior",
+        "Proyectos de iluminación",
         "Revisión y puesta a punto de cuadros eléctricos (según necesidad)",
         "Renovación parcial de cableado y líneas (si procede)",
         "Instalación de timbres/videoporteros y pequeños equipos",
@@ -421,7 +420,7 @@ export const es = {
     cerrajeria: {
       name: "Cerrajería",
       desc: "Apertura, instalación y reparación de cerraduras",
-      intro: "Cerrajería para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**: sustituciones, reparaciones y mantenimiento de accesos con un servicio serio y eficaz.",
+      intro: "Cerrajería para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**: sustituciones, reparaciones y mantenimiento de accesos con un servicio serio y eficaz.",
       features: [
         "Sustitución de cerraduras, bombines y cilindros",
         "Reparación de puertas, manillas, cerraderos y herrajes",
@@ -448,7 +447,7 @@ export const es = {
     "carpinteria-metalica": {
       name: "Carpintería metálica",
       desc: "Ventanas, puertas, rejas y estructuras metálicas",
-      intro: "Fabricación, instalación y reparación de elementos metálicos para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**, con soluciones a medida y montaje seguro.",
+      intro: "Fabricación, instalación y reparación de elementos metálicos para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con soluciones a medida y montaje seguro.",
       features: [
         "Puertas metálicas, rejas y cerramientos (según proyecto)",
         "Barandillas, pasamanos y protecciones",
@@ -475,23 +474,20 @@ export const es = {
     "ascensores-elevadores": {
       name: "Ascensores y elevadores",
       desc: "Instalación, mantenimiento y modernización",
-      intro: "Soluciones para comunidades y edificios en **Alicante, Elche, Gran Alacant y alrededores**: coordinación de trabajos vinculados a ascensores y elevadores, con planificación, orden y seguimiento.",
+      intro: "En SOROCA somos el aliado que necesitas para mantener tu negocio en marcha. Nos especializamos en dar soporte a empresas dedicadas al mantenimiento de ascensores, ofreciéndote desde pequeñas reparaciones y reformas hasta montajes completos.\n\nPonemos a tu disposición un equipo experimentado, rápido y eficiente para que puedas cumplir con tus plazos y mantener la satisfacción de tus clientes. Además, contamos con un amplio stock de materiales que puedes consultar en cualquier momento para que no pierdas tiempo buscando repuestos.",
       features: [
-        "Coordinación de instalación o sustitución (según proyecto)",
-        "Adecuación de huecos, cuartos y elementos auxiliares (si procede)",
-        "Trabajos de apoyo de albañilería, pintura y remates",
-        "Actuaciones complementarias en zonas comunes relacionadas con el proyecto",
-        "Seguimiento de tiempos y coordinación con empresa especialista",
+        "Reformas y adaptación del ascensor a la nueva ITC",
+        "Obra y montaje ascensor nuevo",
+        "Bajadas a cuota 0",
+        "Suministro de repuestos para ascensores multimarca",
       ],
       audience: [
-        { label: "Comunidades de propietarios", detail: "" },
-        { label: "Edificios residenciales", detail: "y zonas comunes" },
-        { label: "Rehabilitaciones", detail: "y mejoras de accesibilidad" },
+        { label: "Empresas", detail: "" },
       ],
       trust: ["Más de 15 años de experiencia en rehabilitación y coordinación de oficios", "Equipo organizado y seguimiento de obra", "Presupuesto sin compromiso", "Planificación por fases para minimizar molestias"],
       process: ["Revisamos la necesidad y el estado del edificio", "Definimos el alcance y coordinamos con especialista", "Presupuestamos y planificamos por fases", "Ejecutamos apoyos/remates y revisamos el resultado final"],
       faq: [
-        { question: "¿Trabajáis con comunidades de propietarios?", answer: "Sí. Trabajamos con comunidades gestionando la coordinación y el seguimiento para que el proyecto avance con orden." },
+        { question: "¿Trabajáis con comunidades de propietarios?", answer: "Trabajamos solo con empresas especializadas" },
         { question: "¿Podéis coordinar albañilería y remates del proyecto?", answer: "Sí. Coordinamos albañilería, pintura y remates necesarios para dejar el entorno terminado y bien presentado." },
         { question: "¿Gestionáis la planificación con la empresa especialista?", answer: "Sí. Organizamos tiempos y fases con la empresa especialista para evitar retrasos y reducir molestias." },
         { question: "¿Hacéis rehabilitación de zonas comunes vinculadas?", answer: "Sí. Realizamos las actuaciones necesarias en zonas comunes para que el resultado final quede completo y uniforme." },
@@ -501,7 +497,7 @@ export const es = {
     "aire-acondicionado": {
       name: "Aire acondicionado",
       desc: "Instalación, reparación y mantenimiento de climatización",
-      intro: "Instalación, sustitución y mantenimiento de aire acondicionado para viviendas, negocios y comunidades en **Alicante, Elche, Gran Alacant y alrededores**, con una instalación cuidada y remates limpios.",
+      intro: "Instalación, sustitución y mantenimiento de aire acondicionado para viviendas, negocios y comunidades en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**, con una instalación cuidada y remates limpios.",
       features: [
         "Instalación o sustitución de equipos (según necesidad)",
         "Mantenimiento y puesta a punto",

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import logoSorocaFull from "@/assets/logo-soroca-full.png";
+import logoSorocaFull from "@/assets/logo-soroca-new.jpeg";
 import landingBg from "@/assets/landing-bg.png";
 
 const Landing = () => {
@@ -82,7 +82,7 @@ const Landing = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          Tus especialistas en construcción, mantenimiento y reformas.
+          Tus especialistas en construcción, mantenimiento y rehabilitación.
         </motion.p>
 
         {/* CTA Buttons */}
