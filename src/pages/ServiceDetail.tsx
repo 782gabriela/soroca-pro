@@ -237,31 +237,8 @@ const ServiceDetail = () => {
           <div className="container mx-auto px-4 text-center">
             <div className="mx-auto max-w-xl">
               <Phone className="mx-auto mb-4 h-10 w-10 text-primary" />
-              {footerOverride ? (
-                <>
-                  <p className="mb-2 text-2xl font-bold text-foreground md:text-3xl">{footerOverride.companyName}</p>
-                  {footerOverride.nif && <p className="mb-4 text-sm text-muted-foreground">NIF: {footerOverride.nif}</p>}
-                  {!footerOverride.hideDesc && footerOverride.hours && <p className="mb-4 text-sm text-muted-foreground">{footerOverride.hours}</p>}
-                  <div className="mb-6 flex flex-col items-center gap-2">
-                    {footerOverride.phones.map((p) => (
-                      <a key={p.number} href={p.href} className="text-lg font-bold text-primary hover:underline">{p.number}</a>
-                    ))}
-                  </div>
-                  {footerOverride.location && (
-                    <a href={footerOverride.location.href} target="_blank" rel="noopener noreferrer" className="mb-6 inline-flex items-center gap-2 text-sm text-primary hover:underline">
-                      <MapPin className="h-4 w-4" />{footerOverride.location.text}
-                    </a>
-                  )}
-                  <div className="mt-6">
-                    <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(svcT?.name || service.name)}>{t.serviceDetail.solicitar}</Button>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <p className="mb-8 text-2xl font-bold text-foreground md:text-3xl">{svcT?.name || service.name}</p>
-                  <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(svcT?.name || service.name)}>{t.serviceDetail.solicitar}</Button>
-                </>
-              )}
+              <p className="mb-8 text-2xl font-bold text-foreground md:text-3xl">{svcT?.name || service.name}</p>
+              <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(svcT?.name || service.name)}>{t.serviceDetail.solicitar}</Button>
             </div>
           </div>
         </section>
