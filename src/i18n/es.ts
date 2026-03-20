@@ -392,7 +392,7 @@ export const es = {
     electricidad: {
       name: "Electricidad",
       desc: "Instalaciones, averías y certificados",
-      intro: "Instalaciones y reparaciones eléctricas para viviendas, comunidades y negocios en **Alicante, Elche, Gran Alacant y alrededores**. Intervenciones seguras, ordenadas y con comprobación final.",
+      intro: "Instalaciones y reparaciones eléctricas para viviendas, comunidades y negocios en **Alicante, Elche, Santa Pola, Gran Alacant y alrededores**. Intervenciones seguras, ordenadas y con comprobación final.",
       features: [
         "Reparación de averías eléctricas y fallos de suministro",
         "Sustitución/instalación de enchufes, interruptores y puntos de luz",
