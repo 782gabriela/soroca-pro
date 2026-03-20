@@ -66,6 +66,7 @@ const App = () => (
             <Route path="/en/*" element={<AppRoutes language="en" />} />
             <Route path="/de/*" element={<AppRoutes language="de" />} />
             <Route path="/ru/*" element={<AppRoutes language="ru" />} />
+            <Route path="/ro/*" element={<AppRoutes language="ro" />} />
             <Route path="/*" element={<AppRoutes language="es" />} />
           </Routes>
         </CookieConsentProvider>
