@@ -196,6 +196,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Rehabilitación de cubiertas | Grupo Soroca",
     metaDescription: "Servicio integral de rehabilitación de cubiertas. Restauramos y mejoramos la durabilidad, impermeabilidad y eficiencia energética de su edificio.",
     icon: Home,
+    image: cubiertasImg,
     desc: "Rehabilitación integral de cubiertas",
     content: [
       { type: "p", text: "En Soroca Proyectos y Construcciones S.L., comprendemos que las cubiertas son una de las partes más cruciales y vulnerables de cualquier edificación. Están constantemente expuestas a las inclemencias del tiempo, como la lluvia, el viento, el sol intenso, y las fluctuaciones de temperatura. Con el tiempo, estas condiciones pueden causar un desgaste significativo, afectando no solo la apariencia de la cubierta, sino también su funcionalidad y la seguridad estructural del edificio." },
