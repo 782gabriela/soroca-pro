@@ -81,6 +81,7 @@ export interface ExtraServiceData {
   metaDescription: string;
   icon: LucideIcon;
   desc: string;
+  image?: string;
   content: ContentBlock[];
 }
 
