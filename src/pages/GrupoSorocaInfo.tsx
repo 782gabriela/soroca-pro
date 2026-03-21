@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Zap, Landmark, Mountain, Paintbrush, RectangleHorizontal, Wrench, Droplets, Phone, Users, CheckCircle, Award, FolderCheck, MessageCircle, ClipboardList, Clock, CheckSquare } from "lucide-react";
+import { ArrowLeft, Zap, Landmark, Mountain, Paintbrush, RectangleHorizontal, Wrench, Droplets, Phone, Users, Award, FolderCheck, MessageCircle, ClipboardList, Clock, CheckSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";

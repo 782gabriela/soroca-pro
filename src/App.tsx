@@ -51,7 +51,7 @@ const AppRoutes = ({ language }: { language: Language }) => (
         <Route path="/rehabilitaciones/:sub" element={<ExtraServiceDetail />} />
         <Route path="/reformas/:sub" element={<ExtraServiceDetail />} />
         <Route path="/electricidad/:sub" element={<ExtraServiceDetail />} />
-        <Route path="/soluciones-de-accesibilidad" element={<ExtraServiceDetail />} />
+        
         <Route path="/albanileria" element={<ExtraServiceDetail />} />
         <Route path="/impermeabilizaciones" element={<ExtraServiceDetail />} />
         <Route path="/servicios-de-arquitectura" element={<ExtraServiceDetail />} />
