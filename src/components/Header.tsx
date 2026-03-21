@@ -62,50 +62,47 @@ const Header = () => {
         <nav className="hidden items-center gap-0.5 md:flex">
           <button onClick={handleInicio} className="rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">{t.nav.inicio}</button>
           <div ref={dropdownRef} className="relative">
-            <button onClick={() => { setServicesOpen(!servicesOpen); setMasOpen(false); }} className="flex items-center gap-1 rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">
+            <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center gap-1 rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">
               {t.nav.servicios}
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
-            {servicesOpen && <div className="absolute left-0 top-full mt-2 w-60 rounded-2xl bg-soroca-lavender border border-border/50 py-2 shadow-xl">
+            {servicesOpen && <div className="absolute left-0 top-full mt-2 w-72 rounded-2xl bg-soroca-lavender border border-border/50 py-2 shadow-xl max-h-[80vh] overflow-y-auto z-50">
                 {services.map((s) =>
               s.externalUrl ?
               <a key={s.slug} href={s.externalUrl} target="_blank" rel="noopener noreferrer" onClick={() => setServicesOpen(false)} className="flex items-center gap-3 px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
                       <s.icon className="h-4 w-4 text-primary" />
                       {getServiceName(s.slug)}
                     </a> :
-
               <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setServicesOpen(false)} className="flex items-center gap-3 px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
                       <s.icon className="h-4 w-4 text-primary" />
                       {getServiceName(s.slug)}
                     </Link>
-
               )}
+                <div className="mx-3 my-1 h-px bg-border/50" />
+                <button onClick={() => setMasOpen(!masOpen)} className="flex w-full items-center justify-between px-4 py-2.5 font-body text-sm font-medium uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
+                  {t.nav.mas}
+                  <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${masOpen ? "rotate-180" : ""}`} />
+                </button>
+                {masOpen && <div className="ml-2 border-l border-border/30">
+                  {extraMenuGroups.map((group) =>
+                    group.children ? (
+                      <div key={group.label}>
+                        <p className="px-4 py-2 font-body text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{group.label}</p>
+                        {group.children.map((child) => (
+                          <Link key={child.path} to={localePath(child.path)} onClick={() => { setServicesOpen(false); setMasOpen(false); }} className="block px-6 py-2 font-body text-sm text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <Link key={group.path} to={localePath(group.path!)} onClick={() => { setServicesOpen(false); setMasOpen(false); }} className="block px-4 py-2.5 font-body text-sm text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
+                        {group.label}
+                      </Link>
+                    )
+                  )}
+                </div>}
               </div>
             }
-          </div>
-          <div className="relative">
-            <button onClick={() => { setMasOpen(!masOpen); setServicesOpen(false); }} className="flex items-center gap-1 rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">
-              {t.nav.mas}
-              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${masOpen ? "rotate-180" : ""}`} />
-            </button>
-            {masOpen && <div className="absolute left-0 top-full mt-2 w-72 rounded-2xl bg-soroca-lavender border border-border/50 py-2 shadow-xl max-h-[70vh] overflow-y-auto z-50">
-              {extraMenuGroups.map((group) =>
-                group.children ? (
-                  <div key={group.label}>
-                    <p className="px-4 py-2 font-body text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{group.label}</p>
-                    {group.children.map((child) => (
-                      <Link key={child.path} to={localePath(child.path)} onClick={() => setMasOpen(false)} className="block px-6 py-2 font-body text-sm text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                ) : (
-                  <Link key={group.path} to={localePath(group.path!)} onClick={() => setMasOpen(false)} className="block px-4 py-2.5 font-body text-sm text-foreground/70 transition-colors hover:bg-accent/50 hover:text-foreground">
-                    {group.label}
-                  </Link>
-                )
-              )}
-            </div>}
           </div>
           <Link to={localePath("/proyectos")} className="rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">{t.nav.proyectos}</Link>
           <Link to={localePath("/zonas")} className="rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">{t.nav.zonas}</Link>
@@ -139,37 +136,36 @@ const Header = () => {
                       <s.icon className="h-4 w-4 text-primary" />
                       {getServiceName(s.slug)}
                     </a> :
-
             <Link key={s.slug} to={localePath(`/servicios/${s.slug}`)} onClick={() => setMobileOpen(false)} className="flex items-center gap-2 rounded-xl px-4 py-2.5 font-body text-sm uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
                       <s.icon className="h-4 w-4 text-primary" />
                       {getServiceName(s.slug)}
                     </Link>
-
             )}
-              </div>
-          }
-            <button onClick={() => setMobileMasOpen(!mobileMasOpen)} className="flex items-center justify-between rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">
-              {t.nav.mas}
-              <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileMasOpen ? "rotate-180" : ""}`} />
-            </button>
-            {mobileMasOpen &&
-          <div className="ml-4 flex flex-col gap-1">
-                {extraMenuGroups.map((group) =>
-              group.children ? (
-                <div key={group.label}>
-                  <p className="px-4 py-2 font-body text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{group.label}</p>
-                  {group.children.map((child) => (
-                    <Link key={child.path} to={localePath(child.path)} onClick={() => setMobileOpen(false)} className="block rounded-xl px-6 py-2.5 font-body text-sm text-foreground/70 transition-colors hover:bg-accent">
-                      {child.label}
+                <div className="mx-2 my-1 h-px bg-border/50" />
+                <button onClick={() => setMobileMasOpen(!mobileMasOpen)} className="flex items-center justify-between rounded-xl px-4 py-2.5 font-body text-sm font-medium uppercase tracking-wide text-foreground/70 transition-colors hover:bg-accent">
+                  {t.nav.mas}
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileMasOpen ? "rotate-180" : ""}`} />
+                </button>
+                {mobileMasOpen &&
+              <div className="ml-4 flex flex-col gap-1 border-l border-border/30 pl-2">
+                    {extraMenuGroups.map((group) =>
+                  group.children ? (
+                    <div key={group.label}>
+                      <p className="px-4 py-2 font-body text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{group.label}</p>
+                      {group.children.map((child) => (
+                        <Link key={child.path} to={localePath(child.path)} onClick={() => setMobileOpen(false)} className="block rounded-xl px-6 py-2.5 font-body text-sm text-foreground/70 transition-colors hover:bg-accent">
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <Link key={group.path} to={localePath(group.path!)} onClick={() => setMobileOpen(false)} className="block rounded-xl px-4 py-2.5 font-body text-sm text-foreground/70 transition-colors hover:bg-accent">
+                      {group.label}
                     </Link>
-                  ))}
-                </div>
-              ) : (
-                <Link key={group.path} to={localePath(group.path!)} onClick={() => setMobileOpen(false)} className="block rounded-xl px-4 py-2.5 font-body text-sm text-foreground/70 transition-colors hover:bg-accent">
-                  {group.label}
-                </Link>
-              )
-            )}
+                  )
+                )}
+                  </div>
+              }
               </div>
           }
             <Link to={localePath("/proyectos")} onClick={() => setMobileOpen(false)} className="rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">{t.nav.proyectos}</Link>
