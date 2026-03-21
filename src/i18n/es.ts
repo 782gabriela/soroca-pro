@@ -7,6 +7,7 @@ export const es = {
     sobreNosotros: "Sobre nosotros",
     contacto: "Contacto",
     pidePresupuesto: "Pide presupuesto",
+    mas: "Más",
   },
   hero: {
     title: "Construcción, mantenimiento y rehabilitación en Alicante.",
