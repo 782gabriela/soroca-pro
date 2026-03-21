@@ -15,7 +15,7 @@ const NotFound = () => {
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold">{t.notFound.title}</h1>
         <p className="mb-4 text-xl text-muted-foreground">{t.notFound.subtitle}</p>
-        <a href={localePath("/")} className="text-primary underline hover:text-primary/90">{t.notFound.link}</a>
+        <a href={localePath("/inicio")} className="text-primary underline hover:text-primary/90">{t.notFound.link}</a>
       </div>
     </div>
   );

@@ -78,7 +78,7 @@ const ServiceDetail = () => {
         <main className="flex flex-1 items-center justify-center">
           <div className="text-center">
             <h1 className="mb-4 text-2xl font-bold text-foreground">{t.serviceDetail.servicioNoEncontrado}</h1>
-            <Button asChild><Link to={localePath("/")}>{t.serviceDetail.volverInicio}</Link></Button>
+            <Button asChild><Link to={localePath("/inicio")}>{t.serviceDetail.volverInicio}</Link></Button>
           </div>
         </main>
         <Footer />
