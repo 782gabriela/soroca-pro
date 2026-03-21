@@ -13,6 +13,8 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [masOpen, setMasOpen] = useState(false);
+  const [mobileMasOpen, setMobileMasOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { openBudgetModal } = useBudgetModal();
   const dropdownRef = useRef<HTMLDivElement>(null);
