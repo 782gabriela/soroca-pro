@@ -325,7 +325,7 @@ export const extraServices: ExtraServiceData[] = [
   },
   {
     path: "/electricidad/domotica",
-    title: "DOMOTICA-EN ALICANTE",
+    title: "Domótica",
     metaTitle: "Domótica en Alicante - Instaladores de Domótica | Grupo Soroca",
     metaDescription: "Servicio de instalación de domótica en Alicante. Hogares inteligentes a medida con Grupo Soroca. Asesoramiento personalizado e instalación profesional.",
     icon: Smartphone,
