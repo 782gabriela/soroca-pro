@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { services } from "@/data/services";
+import { extraMenuGroups } from "@/data/extraServices";
 import logoSoroca from "@/assets/logo-soroca-new.jpeg";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
 import { useTranslation } from "@/i18n/context";
