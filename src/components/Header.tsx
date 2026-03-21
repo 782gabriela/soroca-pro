@@ -62,7 +62,7 @@ const Header = () => {
         <nav className="hidden items-center gap-0.5 md:flex">
           <button onClick={handleInicio} className="rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">{t.nav.inicio}</button>
           <div ref={dropdownRef} className="relative">
-            <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center gap-1 rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">
+            <button onClick={() => { setServicesOpen(!servicesOpen); setMasOpen(false); }} className="flex items-center gap-1 rounded-full px-4 py-2 font-body text-sm font-medium text-foreground/70 transition-all hover:bg-accent hover:text-foreground">
               {t.nav.servicios}
               <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
