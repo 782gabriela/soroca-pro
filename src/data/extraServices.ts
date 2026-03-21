@@ -291,6 +291,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Obras y Reformas de Albañilería en Alicante | Grupo Soroca",
     metaDescription: "Servicios de albañilería profesional en Alicante. Obras, reformas y reparaciones con presupuestos gratuitos. Grupo Soroca.",
     icon: Wrench,
+    image: albanileriaImg,
     desc: "Trabajos de albañilería profesional",
     content: [
       { type: "p", text: "Soroca.es es tu aliado confiable en el mundo de la albañilería en Alicante y sus alrededores. Contamos con un equipo de profesionales altamente competentes y de confianza que ofrecen servicios de calidad a un precio inigualable. Nos especializamos en resolver cualquier tipo de avería, incidencia o reparación que puedas necesitar, con rapidez y eficacia, sin causarte ninguna molestia." },
