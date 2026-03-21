@@ -175,6 +175,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Rehabilitación de piscinas | Grupo Soroca",
     metaDescription: "Servicios profesionales de rehabilitación y mantenimiento de piscinas. Soroca S.L., empresa especializada en revitalización de piscinas.",
     icon: Waves,
+    image: piscinasImg,
     desc: "Rehabilitación y mantenimiento de piscinas",
     content: [
       { type: "h3", text: "Reforma piscina" },
