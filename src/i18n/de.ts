@@ -9,6 +9,7 @@ export const de: Translations = {
     sobreNosotros: "Über uns",
     contacto: "Kontakt",
     pidePresupuesto: "Angebot anfordern",
+    mas: "Mehr",
   },
   hero: {
     title: "Bau, Wartung und Sanierung in Alicante.",
