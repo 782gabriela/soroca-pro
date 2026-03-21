@@ -227,6 +227,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Reformas Integrales en Alicante | Grupo Soroca",
     metaDescription: "Reformas integrales en Alicante. Más de 15 años de experiencia en reformas, construcciones y remodelaciones residenciales y comerciales.",
     icon: Hammer,
+    image: reformasIntegralesImg,
     desc: "Reformas integrales de viviendas y locales",
     content: [
       { type: "p", text: "/ Reformas / Reformas Integrales" },
