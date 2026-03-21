@@ -23,8 +23,6 @@ import reformasIntegralesImg from "@/assets/services/reformas-integrales.jpg";
 import albanileriaImgV2 from "@/assets/services/albanileria-v2.jpg";
 import electricidadMantenimientoImgV2 from "@/assets/services/electricidad-mantenimiento-v2.jpg";
 import fugasAguaImgV2 from "@/assets/services/fugas-agua-v2.jpg";
-import albanileriaImg from "@/assets/services/albanileria.jpg";
-import electricidadMantenimientoImg from "@/assets/services/electricidad-mantenimiento.jpg";
 import domoticaImg from "@/assets/services/domotica.jpg";
 import impermeabilizacionesImg from "@/assets/services/impermeabilizaciones.jpg";
 import arquitecturaImg from "@/assets/services/arquitectura.jpg";
