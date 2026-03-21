@@ -472,7 +472,7 @@ export const extraServices: ExtraServiceData[] = [
   // ========== FUGAS DE AGUA ==========
   {
     path: "/fugas-de-agua",
-    title: "FUGAS DE AGUA- en Alicante",
+    title: "Fugas de Agua",
     metaTitle: "Fugas de Agua en Alicante - Detección y Reparación | Grupo Soroca",
     metaDescription: "Detección y reparación de fugas de agua en Alicante. Tecnología avanzada, gas trazador, geófonos y ultrasonido. Servicio urgente 24h. Grupo Soroca.",
     icon: Droplets,
