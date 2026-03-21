@@ -22,7 +22,7 @@ const Viviendas = () => {
       <main className="flex-1">
         <section className="bg-gradient-to-b from-primary/5 to-background pt-20 pb-12 md:pt-28 md:pb-16">
           <div className="container mx-auto px-4">
-            <Link to={localePath("/")} className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+            <Link to={localePath("/inicio")} className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
               <ArrowLeft className="h-4 w-4" />{t.viviendas.volverInicio}
             </Link>
             <div className="mx-auto max-w-3xl">
