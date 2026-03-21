@@ -18,7 +18,7 @@ const ServiceLines = () => {
     { img: viviendaImg, title: t.serviceLines.viviendas, path: "/categorias/viviendas", cta: t.serviceLines.pidePresupuesto },
     { img: comunidadesImg, title: t.serviceLines.comunidades, path: "/categorias/comunidades", cta: t.serviceLines.pidePresupuesto },
     { img: negociosImg, title: t.serviceLines.negociosLocales, path: "/categorias/negocios-locales", cta: t.serviceLines.pidePresupuesto },
-    { img: averiasImg, title: t.serviceLines.urgencias, path: "/categorias/urgencias", cta: t.serviceLines.hazteCliente, isUrgency: true },
+    { img: averiasImg, title: t.serviceLines.urgencias, path: "/categorias/urgencias", cta: t.serviceLines.hazteCliente },
   ];
 
   return (
