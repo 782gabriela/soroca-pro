@@ -9,6 +9,7 @@ export const en: Translations = {
     sobreNosotros: "About us",
     contacto: "Contact",
     pidePresupuesto: "Get a quote",
+    mas: "More",
   },
   hero: {
     title: "Construction, maintenance and rehabilitation in Alicante.",
