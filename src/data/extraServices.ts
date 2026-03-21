@@ -266,6 +266,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Soluciones de Accesibilidad en Alicante | Grupo Soroca",
     metaDescription: "Soluciones de accesibilidad diversas e innovadoras en Alicante. Ascensores domésticos, elevadores especiales, montacargas y más. Grupo Soroca.",
     icon: Landmark,
+    image: accesibilidadImg,
     desc: "Accesibilidad para edificios y viviendas",
     content: [
       { type: "h2", text: "Soluciones de accesibilidad" },
