@@ -538,6 +538,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Trabajos Verticales en Alicante | Grupo Soroca",
     metaDescription: "Especialistas en trabajos verticales en Alicante. Limpieza en altura, rehabilitación de fachadas, líneas de vida, aislamiento térmico y más. Grupo Soroca.",
     icon: ArrowUp,
+    image: trabajosVerticalesImg,
     desc: "Trabajos en altura y verticales",
     content: [
       { type: "h2", text: "Trabajos Verticales" },
