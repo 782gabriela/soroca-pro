@@ -70,7 +70,7 @@ export const ru: Translations = {
     verMenos: "Свернуть",
   },
   stats: {
-    proyectosValue: "350+",
+    proyectosValue: "400+",
     proyectosLabel: "Завершённых проектов",
     trabajadoresValue: "20+",
     trabajadoresLabel: "Работников",

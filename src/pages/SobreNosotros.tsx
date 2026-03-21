@@ -11,7 +11,7 @@ const SobreNosotros = () => {
 
   const stats = [
   { icon: Users, value: "20+", label: t.sobreNosotros.statsLabels.trabajadores },
-  { icon: FolderCheck, value: "400", label: t.sobreNosotros.statsLabels.proyectos },
+  { icon: FolderCheck, value: "400+", label: t.sobreNosotros.statsLabels.proyectos },
   { icon: MapPin, value: "15+", label: t.sobreNosotros.statsLabels.experiencia }];
 
 

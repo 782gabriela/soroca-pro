@@ -70,7 +70,7 @@ export const de: Translations = {
     verMenos: "Weniger lesen",
   },
   stats: {
-    proyectosValue: "350+",
+    proyectosValue: "400+",
     proyectosLabel: "Abgeschlossene Projekte",
     trabajadoresValue: "20+",
     trabajadoresLabel: "Mitarbeiter",

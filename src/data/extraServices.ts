@@ -53,7 +53,7 @@ export const extraMenuGroups: ExtraMenuGroup[] = [
       { label: "Reformas Integrales", path: "/reformas/reformas-integrales" },
     ],
   },
-  { label: "Soluciones de Accesibilidad", path: "/soluciones-de-accesibilidad" },
+  
   { label: "Albañilería", path: "/albanileria" },
   {
     label: "Electricidad",

@@ -49,7 +49,6 @@ const ServiceLines = () => {
                 </div>
                 <div className="flex flex-1 flex-col p-2">
                   <h3 className="mb-1 font-display text-[9px] font-semibold text-foreground flex items-center gap-1 sm:text-[11px]">
-                    {line.isUrgency && <AlertTriangle className="h-2.5 w-2.5 text-destructive" />}
                     {line.title}
                   </h3>
                   <div className="mt-auto flex flex-wrap items-center gap-1.5">
