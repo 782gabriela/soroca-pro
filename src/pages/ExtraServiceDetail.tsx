@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowLeft, Phone } from "lucide-react";
+import { ArrowLeft, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
@@ -40,7 +39,7 @@ const ExtraServiceDetail = () => {
             <Button onClick={() => navigate(-1)}>{t.serviceDetail.paginaAnterior}</Button>
           </div>
         </main>
-        <Footer />
+        <footer className="glass-dark py-12 text-primary-foreground/70"><div className="container mx-auto px-4"><p className="font-body text-xs text-primary-foreground/30">{t.serviceDetail.servicioNoEncontrado}</p></div></footer>
       </div>
     );
   }
@@ -130,7 +129,35 @@ const ExtraServiceDetail = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <footer className="glass-dark py-12 text-primary-foreground/70">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <p className="mb-2 font-display text-lg font-bold text-primary-foreground">Soroca Proyectos y construcciones SL</p>
+              <p className="font-body text-sm text-primary-foreground/50">NIF: B42664573</p>
+              <p className="mt-2 font-body text-sm leading-relaxed text-primary-foreground/50">{t.footer.desc}</p>
+            </div>
+            <div>
+              <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.horario}</h4>
+              <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
+                <li><span className="font-medium text-primary-foreground/70">{t.footer.lunesViernes}</span><br />Lunes a viernes: 8:00 – 14:00</li>
+                <li><span className="font-medium text-primary-foreground/70">{t.footer.urgencias24h}</span><br />{t.footer.dias365}</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.contacto}</h4>
+              <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
+                <li className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0" /><a href="tel:+34959000000" className="transition-colors hover:text-primary-foreground">959 000 000</a></li>
+                <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0" /><a href="mailto:info@soroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es</a></li>
+                <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><a href="https://www.google.com/maps/search/AVDA+noruega+162,+Santa+Pola,+Alicante" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">AVDA noruega 162,<br />Santa Pola, Alicante</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-primary-foreground/8 pt-6 sm:flex-row">
+            <p className="font-body text-xs text-primary-foreground/30">{t.footer.copyright}</p>
+          </div>
+        </div>
+      </footer>
       <WhatsAppButton />
       <ScrollToTopButton />
     </div>
