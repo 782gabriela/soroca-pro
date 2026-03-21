@@ -15,8 +15,18 @@ const renderBold = (text: string) => {
   return parts.map((part, i) => i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part);
 };
 
+// Shared footer type
+type ServiceFooterData = {
+  companyName: string;
+  nif?: string;
+  phones: { number: string; href: string }[];
+  hours?: string;
+  location?: { text: string; href: string };
+  hideDesc?: boolean;
+};
+
 // Default footer for most services (matches Ascensores y Elevadores)
-const defaultServiceFooter = {
+const defaultServiceFooter: ServiceFooterData = {
   companyName: "Soroca Proyectos y construcciones SL",
   nif: "B42664573",
   phones: [{ number: "959 000 000", href: "tel:+34959000000" }],
