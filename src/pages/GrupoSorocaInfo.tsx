@@ -22,8 +22,8 @@ const GrupoSorocaInfo = () => {
 
 
   const stats = [
-  { value: "215", label: "Proyectos completados", icon: FolderCheck },
-  { value: "15", label: "Trabajadores", icon: Users },
+  { value: "400", label: "Proyectos completados", icon: FolderCheck },
+  { value: "20", label: "Trabajadores", icon: Users },
   { value: "395", label: "Clientes satisfechos", icon: CheckCircle },
   { value: "17", label: "Ganador del premio", icon: Award }];
 
