@@ -135,7 +135,7 @@ const GrupoSorocaInfo = () => {
         {/* Stats */}
         <section className="border-y border-border/50 bg-primary/5 py-16 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-4">
+            <div className="mx-auto grid max-w-4xl grid-cols-3 gap-8">
               {stats.map((s) =>
               <div key={s.label} className="text-center">
                   <s.icon className="mx-auto mb-3 h-8 w-8 text-primary" />
