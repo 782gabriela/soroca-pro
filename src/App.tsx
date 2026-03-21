@@ -17,6 +17,7 @@ import Urgencias from "./pages/Urgencias";
 import ProyectosPage from "./pages/ProyectosPage";
 import ZonasPage from "./pages/ZonasPage";
 import SobreNosotros from "./pages/SobreNosotros";
+import GrupoSorocaInfo from "./pages/GrupoSorocaInfo";
 import ContactoPage from "./pages/ContactoPage";
 import HorarioPage from "./pages/HorarioPage";
 import ExtraServiceDetail from "./pages/ExtraServiceDetail";
