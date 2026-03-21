@@ -458,6 +458,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Servicios de Arquitectura en Alicante | Grupo Soroca",
     metaDescription: "Arquitectura, reformas e interiorismo en Alicante. Proyectos integrales con profesionales reconocidos. Grupo Soroca.",
     icon: Compass,
+    image: arquitecturaImg,
     desc: "Arquitectura y proyectos técnicos",
     content: [
       { type: "h2", text: "Arquitectura, reformas e interiorismo en ALICANTE" },
