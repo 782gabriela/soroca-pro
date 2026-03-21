@@ -93,6 +93,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Rehabilitación de pilares | Grupo Soroca",
     metaDescription: "Servicios especializados en reparación de estructuras y pilares en edificios y viviendas. Soroca Proyectos Y Construcciones S.L.",
     icon: Building2,
+    image: pilaresImg,
     desc: "Reparación de estructuras y pilares en edificios",
     content: [
       { type: "location", text: "en Gran Alacant" },
