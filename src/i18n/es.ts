@@ -31,6 +31,7 @@ export const es = {
     subtitle: "Todos los oficios que necesitas, coordinados por un solo equipo.",
     noEncuentras: "¿No encuentras lo que buscas?",
     cuentanosTuCaso: "Cuéntanos tu caso",
+    verMasServicios: "Ver más servicios",
   },
   projectsHome: {
     title: "Trabajos que hablan por nosotros",

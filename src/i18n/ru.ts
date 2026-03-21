@@ -33,6 +33,7 @@ export const ru: Translations = {
     subtitle: "Все специалисты, которые вам нужны, координируются одной командой.",
     noEncuentras: "Не нашли то, что искали?",
     cuentanosTuCaso: "Расскажите нам о вашем случае",
+    verMasServicios: "Больше услуг",
   },
   projectsHome: {
     title: "Наша работа говорит сама за себя",

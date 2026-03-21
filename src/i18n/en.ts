@@ -33,6 +33,7 @@ export const en: Translations = {
     subtitle: "All the trades you need, coordinated by a single team.",
     noEncuentras: "Can't find what you're looking for?",
     cuentanosTuCaso: "Tell us about your case",
+    verMasServicios: "View more services",
   },
   projectsHome: {
     title: "Our work speaks for itself",

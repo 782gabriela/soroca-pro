@@ -33,6 +33,7 @@ export const ro: Translations = {
     subtitle: "Toate meseriile de care ai nevoie, coordonate de o singură echipă.",
     noEncuentras: "Nu găsești ce cauți?",
     cuentanosTuCaso: "Spune-ne despre cazul tău",
+    verMasServicios: "Mai multe servicii",
   },
   projectsHome: {
     title: "Lucrările noastre vorbesc de la sine",

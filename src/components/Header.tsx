@@ -148,6 +148,30 @@ const Header = () => {
             )}
               </div>
           }
+            <button onClick={() => setMobileMasOpen(!mobileMasOpen)} className="flex items-center justify-between rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">
+              {t.nav.mas}
+              <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileMasOpen ? "rotate-180" : ""}`} />
+            </button>
+            {mobileMasOpen &&
+          <div className="ml-4 flex flex-col gap-1">
+                {extraMenuGroups.map((group) =>
+              group.children ? (
+                <div key={group.label}>
+                  <p className="px-4 py-2 font-body text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{group.label}</p>
+                  {group.children.map((child) => (
+                    <Link key={child.path} to={localePath(child.path)} onClick={() => setMobileOpen(false)} className="block rounded-xl px-6 py-2.5 font-body text-sm text-foreground/70 transition-colors hover:bg-accent">
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <Link key={group.path} to={localePath(group.path!)} onClick={() => setMobileOpen(false)} className="block rounded-xl px-4 py-2.5 font-body text-sm text-foreground/70 transition-colors hover:bg-accent">
+                  {group.label}
+                </Link>
+              )
+            )}
+              </div>
+          }
             <Link to={localePath("/proyectos")} onClick={() => setMobileOpen(false)} className="rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">{t.nav.proyectos}</Link>
             <Link to={localePath("/zonas")} onClick={() => setMobileOpen(false)} className="rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">{t.nav.zonas}</Link>
             <Link to={localePath("/sobre-nosotros")} onClick={() => setMobileOpen(false)} className="rounded-xl px-4 py-3 font-body text-sm font-medium text-foreground/70 transition-colors hover:bg-accent">{t.nav.sobreNosotros}</Link>

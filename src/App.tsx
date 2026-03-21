@@ -46,6 +46,15 @@ const AppRoutes = ({ language }: { language: Language }) => (
         <Route path="/sobre-nosotros" element={<SobreNosotros />} />
         <Route path="/contacto" element={<ContactoPage />} />
         <Route path="/horario" element={<HorarioPage />} />
+        <Route path="/rehabilitaciones/:sub" element={<ExtraServiceDetail />} />
+        <Route path="/reformas/:sub" element={<ExtraServiceDetail />} />
+        <Route path="/electricidad/:sub" element={<ExtraServiceDetail />} />
+        <Route path="/soluciones-de-accesibilidad" element={<ExtraServiceDetail />} />
+        <Route path="/albanileria" element={<ExtraServiceDetail />} />
+        <Route path="/impermeabilizaciones" element={<ExtraServiceDetail />} />
+        <Route path="/servicios-de-arquitectura" element={<ExtraServiceDetail />} />
+        <Route path="/fugas-de-agua" element={<ExtraServiceDetail />} />
+        <Route path="/trabajos-verticales" element={<ExtraServiceDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <CookieBanner />
