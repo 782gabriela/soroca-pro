@@ -9,6 +9,7 @@ export const ro: Translations = {
     sobreNosotros: "Despre noi",
     contacto: "Contact",
     pidePresupuesto: "Cere ofertă",
+    mas: "Mai multe",
   },
   hero: {
     title: "Construcții, întreținere și reabilitare în Alicante.",
