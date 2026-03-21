@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Services = () => {
   const { t, localePath } = useTranslation();
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <section id="servicios" className="relative bg-muted/30 py-16 md:py-24">
