@@ -39,7 +39,7 @@ const ExtraServiceDetail = () => {
             <Button onClick={() => navigate(-1)}>{t.serviceDetail.paginaAnterior}</Button>
           </div>
         </main>
-        <Footer />
+        <footer className="glass-dark py-12 text-primary-foreground/70"><div className="container mx-auto px-4"><p className="font-body text-xs text-primary-foreground/30">{t.serviceDetail.servicioNoEncontrado}</p></div></footer>
       </div>
     );
   }

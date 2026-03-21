@@ -34,15 +34,7 @@ const defaultServiceFooter: ServiceFooterData = {
 };
 
 // Custom footer overrides ONLY for Fontanería and Pintura
-const serviceFooterOverrides: Record<string, {
-  companyName: string;
-  nif?: string;
-  phones: { number: string; href: string }[];
-  hours?: string;
-  location?: { text: string; href: string };
-  hideDesc?: boolean;
-  useDefaultFooter?: boolean;
-}> = {
+const serviceFooterOverrides: Record<string, ServiceFooterData> = {
   fontaneria: {
     companyName: "Fontaneria e Instalaciones Soroca 2025 S.L",
     nif: "B21659784",
