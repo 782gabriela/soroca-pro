@@ -97,8 +97,14 @@ const Services = () => {
                   transition={{ duration: 0.4, delay: i * 0.04 }}
                 >
                   <Link to={localePath(s.path)} className="group flex flex-col items-center overflow-hidden rounded-xl glass-card transition-all duration-400 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 block">
-                    <div className="aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                      <s.icon className="h-10 w-10 text-primary/30" />
+                    <div className="aspect-[4/3] w-full overflow-hidden">
+                      {s.image ? (
+                        <img src={s.image} alt={s.title} className="h-full w-full object-cover transition-transform duration-600 group-hover:scale-105" loading="lazy" />
+                      ) : (
+                        <div className="h-full w-full bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                          <s.icon className="h-10 w-10 text-primary/30" />
+                        </div>
+                      )}
                     </div>
                     <div className="flex flex-1 flex-col items-center px-2 py-2 text-center">
                       <h3 className="mb-0.5 font-display text-[10px] font-semibold leading-tight text-primary sm:text-xs">{s.title}</h3>
