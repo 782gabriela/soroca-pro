@@ -268,7 +268,7 @@ export const es = {
   },
   sobreNosotros: {
     title: "Sobre nosotros",
-    subtitle: "Somos un equipo de profesionales comprometidos con la calidad y el servicio en la provincia de Alicante.",
+    subtitle: "Somos un equipo de  PROFESIONALES comprometidos con la calidad y el servicio en la provincia de Alicante.",
     conocenos: "Conócenos",
     quienesSomos: "Quiénes somos y qué hacemos",
     items: [
