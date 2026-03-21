@@ -249,45 +249,41 @@ const ServiceDetail = () => {
           </div>
         </section>
       </main>
-      {footerOverride ? (
-        <footer className="glass-dark py-12 text-primary-foreground/70">
-          <div className="container mx-auto px-4">
-            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-              <div>
-                <p className="mb-2 font-display text-lg font-bold text-primary-foreground">{footerOverride.companyName}</p>
-                {footerOverride.nif && <p className="font-body text-sm text-primary-foreground/50">NIF: {footerOverride.nif}</p>}
-                {!footerOverride.hideDesc && <p className="mt-2 font-body text-sm leading-relaxed text-primary-foreground/50">{t.footer.desc}</p>}
-              </div>
-              <div>
-                <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.horario}</h4>
-                <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-                  <li><span className="font-medium text-primary-foreground/70">{t.footer.lunesViernes}</span><br />{footerOverride.hours || "8:00 - 14:00"}</li>
-                  <li><span className="font-medium text-primary-foreground/70">{t.footer.urgencias24h}</span><br />{t.footer.dias365}</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.contacto}</h4>
-                <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
-                  {footerOverride.phones.map((p) => (
-                    <li key={p.number} className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0" /><a href={p.href} className="transition-colors hover:text-primary-foreground">{p.number}</a></li>
-                  ))}
-                  <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0" /><a href="mailto:info@soroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es</a></li>
-                  {footerOverride.location ? (
-                    <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><a href={footerOverride.location.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">{footerOverride.location.text}</a></li>
-                  ) : (
-                    <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><a href="https://www.google.com/maps/search/AVDA+noruega+162,+Santa+Pola,+Alicante" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">AVDA noruega 162,<br />Santa Pola, Alicante</a></li>
-                  )}
-                </ul>
-              </div>
+      <footer className="glass-dark py-12 text-primary-foreground/70">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div>
+              <p className="mb-2 font-display text-lg font-bold text-primary-foreground">{footerOverride.companyName}</p>
+              {footerOverride.nif && <p className="font-body text-sm text-primary-foreground/50">NIF: {footerOverride.nif}</p>}
+              {!footerOverride.hideDesc && <p className="mt-2 font-body text-sm leading-relaxed text-primary-foreground/50">{t.footer.desc}</p>}
             </div>
-            <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-primary-foreground/8 pt-6 sm:flex-row">
-              <p className="font-body text-xs text-primary-foreground/30">{t.footer.copyright}</p>
+            <div>
+              <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.horario}</h4>
+              <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
+                <li><span className="font-medium text-primary-foreground/70">{t.footer.lunesViernes}</span><br />{footerOverride.hours || "8:00 - 14:00"}</li>
+                <li><span className="font-medium text-primary-foreground/70">{t.footer.urgencias24h}</span><br />{t.footer.dias365}</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/80">{t.footer.contacto}</h4>
+              <ul className="space-y-3 font-body text-sm text-primary-foreground/50">
+                {footerOverride.phones.map((p) => (
+                  <li key={p.number} className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0" /><a href={p.href} className="transition-colors hover:text-primary-foreground">{p.number}</a></li>
+                ))}
+                <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0" /><a href="mailto:info@soroca.es" className="transition-colors hover:text-primary-foreground">info@soroca.es</a></li>
+                {footerOverride.location ? (
+                  <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><a href={footerOverride.location.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">{footerOverride.location.text}</a></li>
+                ) : (
+                  <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><a href="https://www.google.com/maps/search/AVDA+noruega+162,+Santa+Pola,+Alicante" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary-foreground">AVDA noruega 162,<br />Santa Pola, Alicante</a></li>
+                )}
+              </ul>
             </div>
           </div>
-        </footer>
-      ) : (
-        <Footer />
-      )}
+          <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-primary-foreground/8 pt-6 sm:flex-row">
+            <p className="font-body text-xs text-primary-foreground/30">{t.footer.copyright}</p>
+          </div>
+        </div>
+      </footer>
       <WhatsAppButton />
     </div>
   );
