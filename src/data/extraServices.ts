@@ -293,7 +293,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Instalación y Mantenimiento Eléctrico en Alicante | Grupo Soroca",
     metaDescription: "Instalación y mantenimiento de sistemas eléctricos en Alicante. Soluciones completas para infraestructura eléctrica segura y eficiente. Grupo Soroca.",
     icon: Zap,
-    image: electricidadMantenimientoImg,
+    image: electricidadMantenimientoImgV2,
     desc: "Instalación y mantenimiento eléctrico",
     content: [
       { type: "h2", text: "Instalación y Mantenimiento de Electricidad" },
