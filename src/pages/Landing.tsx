@@ -35,18 +35,19 @@ const Landing = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
         >
-          <div className="relative h-44 w-44 sm:h-52 sm:w-52 md:h-56 md:w-56">
+          <div className="relative h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64">
             {/* Soft glow behind logo */}
             <div className="absolute -inset-8 rounded-full bg-primary/[0.06] blur-[40px]" />
             {/* Glow ring */}
             <div className="animate-pulse-glow absolute -inset-3 rounded-full" />
             {/* Glass disc behind logo */}
-            <div className="absolute inset-0 rounded-full border border-border/20 bg-card/25 shadow-[0_4px_30px_-8px_hsl(var(--primary)/0.08)] backdrop-blur-xl" />
-            <img
-              src={logoSorocaFull}
-              alt="Grupo Soroca – Proyectos y Construcciones"
-              className="relative h-full w-full rounded-full object-contain p-2 drop-shadow-lg transition-all duration-500 group-hover:drop-shadow-2xl"
-            />
+            <div className="absolute inset-0 flex items-center justify-center rounded-full border border-border/20 bg-card shadow-[0_4px_30px_-8px_hsl(var(--primary)/0.08)] backdrop-blur-xl overflow-hidden">
+              <img
+                src={logoSorocaFull}
+                alt="Grupo Soroca – Proyectos y Construcciones"
+                className="h-full w-full rounded-full object-cover drop-shadow-lg transition-all duration-500 group-hover:drop-shadow-2xl"
+              />
+            </div>
           </div>
         </motion.button>
 
