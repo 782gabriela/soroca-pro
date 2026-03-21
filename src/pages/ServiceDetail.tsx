@@ -93,7 +93,10 @@ const ServiceDetail = () => {
   const trust = svcT?.trust || service.trust;
   const processSteps = svcT?.process || service.process;
   const faq = svcT?.faq || service.faq;
-  const footerOverride = slug ? serviceFooterOverrides[slug] : undefined;
+  // Use specific override for fontaneria/pintura, otherwise use default service footer
+  const footerOverride = slug && serviceFooterOverrides[slug]
+    ? serviceFooterOverrides[slug]
+    : defaultServiceFooter;
 
   return (
     <div className="flex min-h-screen flex-col">
