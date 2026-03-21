@@ -9,6 +9,7 @@ export const ru: Translations = {
     sobreNosotros: "О нас",
     contacto: "Контакт",
     pidePresupuesto: "Запросить смету",
+    mas: "Ещё",
   },
   hero: {
     title: "Строительство, обслуживание и реконструкция в Аликанте.",
