@@ -15,6 +15,20 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import pilaresImg from "@/assets/services/rehabilitacion-pilares.jpg";
+import fachadasImg from "@/assets/services/fachadas.jpg";
+import piscinasImg from "@/assets/services/piscinas.jpg";
+import cubiertasImg from "@/assets/services/cubiertas.jpg";
+import reformasIntegralesImg from "@/assets/services/reformas-integrales.jpg";
+import accesibilidadImg from "@/assets/services/accesibilidad.jpg";
+import albanileriaImg from "@/assets/services/albanileria.jpg";
+import electricidadMantenimientoImg from "@/assets/services/electricidad-mantenimiento.jpg";
+import domoticaImg from "@/assets/services/domotica.jpg";
+import impermeabilizacionesImg from "@/assets/services/impermeabilizaciones.jpg";
+import arquitecturaImg from "@/assets/services/arquitectura.jpg";
+import fugasAguaImg from "@/assets/services/fugas-agua.jpg";
+import trabajosVerticalesImg from "@/assets/services/trabajos-verticales.jpg";
+
 export interface ExtraMenuGroup {
   label: string;
   path?: string;
@@ -67,6 +81,7 @@ export interface ExtraServiceData {
   metaDescription: string;
   icon: LucideIcon;
   desc: string;
+  image?: string;
   content: ContentBlock[];
 }
 
@@ -78,6 +93,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Rehabilitación de pilares | Grupo Soroca",
     metaDescription: "Servicios especializados en reparación de estructuras y pilares en edificios y viviendas. Soroca Proyectos Y Construcciones S.L.",
     icon: Building2,
+    image: pilaresImg,
     desc: "Reparación de estructuras y pilares en edificios",
     content: [
       { type: "location", text: "en Gran Alacant" },
@@ -126,6 +142,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Rehabilitación de fachadas | Grupo Soroca",
     metaDescription: "Rehabilitación de edificios y fachadas para asegurar óptimas condiciones. Mantenimiento, restauración y rehabilitación con los mejores estándares de calidad.",
     icon: Building,
+    image: fachadasImg,
     desc: "Rehabilitación de edificios y fachadas",
     content: [
       { type: "p", text: "La rehabilitación de edificios y fachadas es fundamental para asegurar que un inmueble se mantenga en óptimas condiciones y envejezca de manera natural. Este proceso evita daños más severos que podrían desencadenar problemas estructurales a lo largo del tiempo. Por consiguiente, el mantenimiento, la restauración y la rehabilitación de edificios y fachadas son acciones inevitables que deben llevarse a cabo en algún momento en cualquier construcción." },
@@ -158,6 +175,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Rehabilitación de piscinas | Grupo Soroca",
     metaDescription: "Servicios profesionales de rehabilitación y mantenimiento de piscinas. Soroca S.L., empresa especializada en revitalización de piscinas.",
     icon: Waves,
+    image: piscinasImg,
     desc: "Rehabilitación y mantenimiento de piscinas",
     content: [
       { type: "h3", text: "Reforma piscina" },
@@ -178,6 +196,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Rehabilitación de cubiertas | Grupo Soroca",
     metaDescription: "Servicio integral de rehabilitación de cubiertas. Restauramos y mejoramos la durabilidad, impermeabilidad y eficiencia energética de su edificio.",
     icon: Home,
+    image: cubiertasImg,
     desc: "Rehabilitación integral de cubiertas",
     content: [
       { type: "p", text: "En Soroca Proyectos y Construcciones S.L., comprendemos que las cubiertas son una de las partes más cruciales y vulnerables de cualquier edificación. Están constantemente expuestas a las inclemencias del tiempo, como la lluvia, el viento, el sol intenso, y las fluctuaciones de temperatura. Con el tiempo, estas condiciones pueden causar un desgaste significativo, afectando no solo la apariencia de la cubierta, sino también su funcionalidad y la seguridad estructural del edificio." },
@@ -208,6 +227,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Reformas Integrales en Alicante | Grupo Soroca",
     metaDescription: "Reformas integrales en Alicante. Más de 15 años de experiencia en reformas, construcciones y remodelaciones residenciales y comerciales.",
     icon: Hammer,
+    image: reformasIntegralesImg,
     desc: "Reformas integrales de viviendas y locales",
     content: [
       { type: "p", text: "/ Reformas / Reformas Integrales" },
@@ -246,6 +266,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Soluciones de Accesibilidad en Alicante | Grupo Soroca",
     metaDescription: "Soluciones de accesibilidad diversas e innovadoras en Alicante. Ascensores domésticos, elevadores especiales, montacargas y más. Grupo Soroca.",
     icon: Landmark,
+    image: accesibilidadImg,
     desc: "Accesibilidad para edificios y viviendas",
     content: [
       { type: "h2", text: "Soluciones de accesibilidad" },
@@ -270,6 +291,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Obras y Reformas de Albañilería en Alicante | Grupo Soroca",
     metaDescription: "Servicios de albañilería profesional en Alicante. Obras, reformas y reparaciones con presupuestos gratuitos. Grupo Soroca.",
     icon: Wrench,
+    image: albanileriaImg,
     desc: "Trabajos de albañilería profesional",
     content: [
       { type: "p", text: "Soroca.es es tu aliado confiable en el mundo de la albañilería en Alicante y sus alrededores. Contamos con un equipo de profesionales altamente competentes y de confianza que ofrecen servicios de calidad a un precio inigualable. Nos especializamos en resolver cualquier tipo de avería, incidencia o reparación que puedas necesitar, con rapidez y eficacia, sin causarte ninguna molestia." },
@@ -294,6 +316,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Instalación y Mantenimiento Eléctrico en Alicante | Grupo Soroca",
     metaDescription: "Instalación y mantenimiento de sistemas eléctricos en Alicante. Soluciones completas para infraestructura eléctrica segura y eficiente. Grupo Soroca.",
     icon: Zap,
+    image: electricidadMantenimientoImg,
     desc: "Instalación y mantenimiento eléctrico",
     content: [
       { type: "h2", text: "Instalación y Mantenimiento de Electricidad" },
@@ -329,6 +352,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Domótica en Alicante - Instaladores de Domótica | Grupo Soroca",
     metaDescription: "Servicio de instalación de domótica en Alicante. Hogares inteligentes a medida con Grupo Soroca. Asesoramiento personalizado e instalación profesional.",
     icon: Smartphone,
+    image: domoticaImg,
     desc: "Domótica e instalaciones inteligentes",
     content: [
       { type: "h2", text: "INSTALADORES DE DOMÓTICA" },
@@ -363,6 +387,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Impermeabilizaciones en Alicante | Grupo Soroca",
     metaDescription: "Expertos en impermeabilización de fachadas, terrazas, techos, piscinas y más en Alicante. Soluciones duraderas con garantía. Grupo Soroca.",
     icon: Shield,
+    image: impermeabilizacionesImg,
     desc: "Impermeabilización profesional",
     content: [
       { type: "p", text: "Grupo Soroca Alicante es un equipo de expertos en una amplia gama de servicios de impermeabilización, cubriendo desde la protección de fachadas y terrazas hasta la impermeabilización de techos, piscinas, fosas y sistemas de alcantarillado. En cada proyecto, Grupo Soroca se esfuerza por ofrecer soluciones duraderas y de alta calidad que satisfagan las necesidades específicas de nuestros clientes." },
@@ -433,6 +458,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Servicios de Arquitectura en Alicante | Grupo Soroca",
     metaDescription: "Arquitectura, reformas e interiorismo en Alicante. Proyectos integrales con profesionales reconocidos. Grupo Soroca.",
     icon: Compass,
+    image: arquitecturaImg,
     desc: "Arquitectura y proyectos técnicos",
     content: [
       { type: "h2", text: "Arquitectura, reformas e interiorismo en ALICANTE" },
@@ -473,6 +499,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Fugas de Agua en Alicante - Detección y Reparación | Grupo Soroca",
     metaDescription: "Detección y reparación de fugas de agua en Alicante. Tecnología avanzada, gas trazador, geófonos y ultrasonido. Servicio urgente 24h. Grupo Soroca.",
     icon: Droplets,
+    image: fugasAguaImg,
     desc: "Detección y reparación de fugas",
     content: [
       { type: "h2", text: "Reparación Fugas de Agua" },
@@ -511,6 +538,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Trabajos Verticales en Alicante | Grupo Soroca",
     metaDescription: "Especialistas en trabajos verticales en Alicante. Limpieza en altura, rehabilitación de fachadas, líneas de vida, aislamiento térmico y más. Grupo Soroca.",
     icon: ArrowUp,
+    image: trabajosVerticalesImg,
     desc: "Trabajos en altura y verticales",
     content: [
       { type: "h2", text: "Trabajos Verticales" },
