@@ -387,6 +387,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Impermeabilizaciones en Alicante | Grupo Soroca",
     metaDescription: "Expertos en impermeabilización de fachadas, terrazas, techos, piscinas y más en Alicante. Soluciones duraderas con garantía. Grupo Soroca.",
     icon: Shield,
+    image: impermeabilizacionesImg,
     desc: "Impermeabilización profesional",
     content: [
       { type: "p", text: "Grupo Soroca Alicante es un equipo de expertos en una amplia gama de servicios de impermeabilización, cubriendo desde la protección de fachadas y terrazas hasta la impermeabilización de techos, piscinas, fosas y sistemas de alcantarillado. En cada proyecto, Grupo Soroca se esfuerza por ofrecer soluciones duraderas y de alta calidad que satisfagan las necesidades específicas de nuestros clientes." },
