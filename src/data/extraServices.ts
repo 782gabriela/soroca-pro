@@ -261,31 +261,6 @@ export const extraServices: ExtraServiceData[] = [
       { type: "p", text: "Cada servicio de reforma en Alicante se lleva a cabo con un enfoque en la calidad, el diseño y las necesidades específicas del cliente, asegurándonos de que el resultado final refleje nuestros altos estándares de profesionalismo y la satisfacción del cliente." },
     ],
   },
-  // ========== SOLUCIONES DE ACCESIBILIDAD ==========
-  {
-    path: "/soluciones-de-accesibilidad",
-    title: "Soluciones de accesibilidad",
-    metaTitle: "Soluciones de Accesibilidad en Alicante | Grupo Soroca",
-    metaDescription: "Soluciones de accesibilidad diversas e innovadoras en Alicante. Ascensores domésticos, elevadores especiales, montacargas y más. Grupo Soroca.",
-    icon: Landmark,
-    image: accesibilidadImg,
-    desc: "Accesibilidad para edificios y viviendas",
-    content: [
-      { type: "h2", text: "Soluciones de accesibilidad" },
-      { type: "p", text: "grupo soroca" },
-      { type: "h2", text: "Soluciones de Accesibilidad en Alicante con Grupo Soroca: Mejorando la Movilidad y Acceso" },
-      { type: "p", text: "En Grupo Soroca, nos comprometemos a facilitar el acceso y la movilidad para todos, ofreciendo soluciones de accesibilidad diversas e innovadoras. En Alicante, nos enfocamos en proporcionar soluciones que mejoren la calidad de vida, permitiendo una accesibilidad sin esfuerzo en diversos entornos y para diversas necesidades." },
-      { type: "highlights", items: [
-        { title: "Ascensores Domésticos", desc: "Ofrecemos soluciones personalizadas de ascensores para viviendas, adaptadas según el espacio disponible y las necesidades individuales. Estos ascensores están diseñados para brindar comodidad e independencia dentro de su hogar." },
-        { title: "Sectores de Actividad", desc: "Colaboramos con diversas industrias y sectores para implementar soluciones de accesibilidad adaptadas a necesidades específicas. Desde instituciones públicas hasta espacios comerciales y muchos otros, nos aseguramos de que el acceso esté facilitado para todos." },
-        { title: "Elevadores Especiales", desc: "Ponemos a disposición soluciones avanzadas de elevadores especiales, adaptadas para situaciones únicas o espacios complejos. Estos equipos aseguran una movilidad fluida y facilitan el acceso a lugares que de otro modo serían difíciles de alcanzar." },
-        { title: "Montacargas", desc: "Ofrecemos una amplia gama de montacargas, soluciones eficientes para transportar mercancías u objetos en diversos entornos. Estos equipos están diseñados para garantizar eficiencia y seguridad en la manipulación y transporte de diversas cargas." },
-        { title: "Escaleras y Pasillos", desc: "Nuestra gama de soluciones también incluye facilidades para escaleras y pasillos, garantizando seguridad y comodidad en su uso. Independientemente de sus necesidades, ofrecemos soluciones adaptadas para facilitar el acceso en diversos entornos." },
-      ]},
-      { type: "h3", text: "Grupo Soroca: Tu Socio Confiable en el Mantenimiento del Hogar en Alicante" },
-      { type: "p", text: "En Grupo Soroca, nos enorgullecemos de nuestra capacidad para ofrecer soluciones de accesibilidad personalizadas, adaptadas a requisitos específicos y espacios únicos en Alicante. Contáctenos para descubrir cómo podemos mejorar la accesibilidad y movilidad en su hogar o negocio." },
-    ],
-  },
   // ========== ALBAÑILERÍA ==========
   {
     path: "/albanileria",
