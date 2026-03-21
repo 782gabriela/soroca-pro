@@ -15,7 +15,15 @@ const renderBold = (text: string) => {
   return parts.map((part, i) => i % 2 === 1 ? <strong key={i} className="font-semibold text-foreground">{part}</strong> : part);
 };
 
-// Custom footer data per service
+// Default footer for most services (matches Ascensores y Elevadores)
+const defaultServiceFooter = {
+  companyName: "Soroca Proyectos y construcciones SL",
+  nif: "B42664573",
+  phones: [{ number: "959 000 000", href: "tel:+34959000000" }],
+  hours: "Lunes a viernes: 8:00 – 14:00",
+};
+
+// Custom footer overrides ONLY for Fontanería and Pintura
 const serviceFooterOverrides: Record<string, {
   companyName: string;
   nif?: string;
@@ -23,6 +31,7 @@ const serviceFooterOverrides: Record<string, {
   hours?: string;
   location?: { text: string; href: string };
   hideDesc?: boolean;
+  useDefaultFooter?: boolean;
 }> = {
   fontaneria: {
     companyName: "Fontaneria e Instalaciones Soroca 2025 S.L",
@@ -42,12 +51,6 @@ const serviceFooterOverrides: Record<string, {
     nif: "B-21659776",
     phones: [{ number: "959 000 000", href: "tel:+34959000000" }],
     hideDesc: true,
-  },
-  "ascensores-elevadores": {
-    companyName: "Soroca Proyectos y construcciones SL",
-    nif: "B42664573",
-    phones: [{ number: "959 000 000", href: "tel:+34959000000" }],
-    hours: "Lunes a viernes: 8:00 – 14:00",
   },
 };
 
