@@ -15,6 +15,20 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import pilaresImg from "@/assets/services/rehabilitacion-pilares.jpg";
+import fachadasImg from "@/assets/services/fachadas.jpg";
+import piscinasImg from "@/assets/services/piscinas.jpg";
+import cubiertasImg from "@/assets/services/cubiertas.jpg";
+import reformasIntegralesImg from "@/assets/services/reformas-integrales.jpg";
+import accesibilidadImg from "@/assets/services/accesibilidad.jpg";
+import albanileriaImg from "@/assets/services/albanileria.jpg";
+import electricidadMantenimientoImg from "@/assets/services/electricidad-mantenimiento.jpg";
+import domoticaImg from "@/assets/services/domotica.jpg";
+import impermeabilizacionesImg from "@/assets/services/impermeabilizaciones.jpg";
+import arquitecturaImg from "@/assets/services/arquitectura.jpg";
+import fugasAguaImg from "@/assets/services/fugas-agua.jpg";
+import trabajosVerticalesImg from "@/assets/services/trabajos-verticales.jpg";
+
 export interface ExtraMenuGroup {
   label: string;
   path?: string;
