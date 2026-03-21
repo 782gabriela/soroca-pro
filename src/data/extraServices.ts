@@ -26,7 +26,7 @@ import fugasAguaImgV2 from "@/assets/services/fugas-agua-v2.jpg";
 import domoticaImg from "@/assets/services/domotica.jpg";
 import impermeabilizacionesImg from "@/assets/services/impermeabilizaciones.jpg";
 import arquitecturaImg from "@/assets/services/arquitectura.jpg";
-import fugasAguaImg from "@/assets/services/fugas-agua.jpg";
+
 import trabajosVerticalesImg from "@/assets/services/trabajos-verticales.jpg";
 
 export interface ExtraMenuGroup {
