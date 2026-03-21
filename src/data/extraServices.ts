@@ -4,7 +4,7 @@ import {
   Waves,
   Home,
   Hammer,
-  Landmark,
+  
   Wrench,
   Zap,
   Smartphone,
