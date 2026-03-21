@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const viviendaImg = "/lovable-uploads/7c7e7606-1c68-472e-a901-74e2ed0e001e.png";
 import comunidadesImg from "@/assets/comunidades.jpeg";
 import negociosImg from "@/assets/negocios.jpeg";
-import averiasImg from "@/assets/averias-24h.png";
+import averiasImg from "@/assets/averias-24h-v2.jpg";
 
 const ServiceLines = () => {
   const { openBudgetModal } = useBudgetModal();
@@ -18,7 +18,7 @@ const ServiceLines = () => {
     { img: viviendaImg, title: t.serviceLines.viviendas, path: "/categorias/viviendas", cta: t.serviceLines.pidePresupuesto },
     { img: comunidadesImg, title: t.serviceLines.comunidades, path: "/categorias/comunidades", cta: t.serviceLines.pidePresupuesto },
     { img: negociosImg, title: t.serviceLines.negociosLocales, path: "/categorias/negocios-locales", cta: t.serviceLines.pidePresupuesto },
-    { img: averiasImg, title: t.serviceLines.urgencias, path: "/categorias/urgencias", cta: t.serviceLines.hazteCliente, isUrgency: true },
+    { img: averiasImg, title: t.serviceLines.urgencias, path: "/categorias/urgencias", cta: t.serviceLines.hazteCliente },
   ];
 
   return (
@@ -44,12 +44,11 @@ const ServiceLines = () => {
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               <Link to={localePath(line.path)} className="group flex flex-col overflow-hidden rounded-lg glass-card transition-all duration-400 hover:shadow-md hover:shadow-primary/10 hover:-translate-y-0.5">
-                <div className={`aspect-[16/10] w-full overflow-hidden ${line.isUrgency ? 'bg-white flex items-center justify-center' : ''}`}>
-                  <img src={line.img} alt={line.title} className={`h-full w-full transition-transform duration-600 group-hover:scale-105 ${line.isUrgency ? 'object-contain p-2' : 'object-cover'}`} />
+                <div className="aspect-[16/10] w-full overflow-hidden">
+                  <img src={line.img} alt={line.title} className="h-full w-full object-cover transition-transform duration-600 group-hover:scale-105" />
                 </div>
                 <div className="flex flex-1 flex-col p-2">
                   <h3 className="mb-1 font-display text-[9px] font-semibold text-foreground flex items-center gap-1 sm:text-[11px]">
-                    {line.isUrgency && <AlertTriangle className="h-2.5 w-2.5 text-destructive" />}
                     {line.title}
                   </h3>
                   <div className="mt-auto flex flex-wrap items-center gap-1.5">

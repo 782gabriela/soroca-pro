@@ -68,7 +68,7 @@ export const es = {
     verMenos: "Ver menos",
   },
   stats: {
-    proyectosValue: "350+",
+    proyectosValue: "400+",
     proyectosLabel: "Proyectos completados",
     trabajadoresValue: "20+",
     trabajadoresLabel: "Trabajadores",

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Zap, Landmark, Mountain, Paintbrush, RectangleHorizontal, Wrench, Droplets, Phone, Users, CheckCircle, Award, FolderCheck, MessageCircle, ClipboardList, Clock, CheckSquare } from "lucide-react";
+import { ArrowLeft, Zap, Landmark, Mountain, Paintbrush, RectangleHorizontal, Wrench, Droplets, Phone, Users, Award, FolderCheck, MessageCircle, ClipboardList, Clock, CheckSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,9 +22,8 @@ const GrupoSorocaInfo = () => {
 
 
   const stats = [
-  { value: "400", label: "Proyectos completados", icon: FolderCheck },
+  { value: "400+", label: "Proyectos completados", icon: FolderCheck },
   { value: "20", label: "Trabajadores", icon: Users },
-  { value: "395", label: "Clientes satisfechos", icon: CheckCircle },
   { value: "17", label: "Ganador del premio", icon: Award }];
 
 
@@ -136,7 +135,7 @@ const GrupoSorocaInfo = () => {
         {/* Stats */}
         <section className="border-y border-border/50 bg-primary/5 py-16 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-4">
+            <div className="mx-auto grid max-w-4xl grid-cols-3 gap-8">
               {stats.map((s) =>
               <div key={s.label} className="text-center">
                   <s.icon className="mx-auto mb-3 h-8 w-8 text-primary" />

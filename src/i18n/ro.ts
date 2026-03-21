@@ -70,7 +70,7 @@ export const ro: Translations = {
     verMenos: "Citește mai puțin",
   },
   stats: {
-    proyectosValue: "350+",
+    proyectosValue: "400+",
     proyectosLabel: "Proiecte finalizate",
     trabajadoresValue: "20+",
     trabajadoresLabel: "Lucrători",
