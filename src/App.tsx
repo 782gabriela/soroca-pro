@@ -19,6 +19,7 @@ import ZonasPage from "./pages/ZonasPage";
 import SobreNosotros from "./pages/SobreNosotros";
 import ContactoPage from "./pages/ContactoPage";
 import HorarioPage from "./pages/HorarioPage";
+import ExtraServiceDetail from "./pages/ExtraServiceDetail";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import SEOHead from "./components/SEOHead";
