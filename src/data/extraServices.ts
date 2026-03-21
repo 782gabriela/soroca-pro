@@ -142,6 +142,7 @@ export const extraServices: ExtraServiceData[] = [
     metaTitle: "Rehabilitación de fachadas | Grupo Soroca",
     metaDescription: "Rehabilitación de edificios y fachadas para asegurar óptimas condiciones. Mantenimiento, restauración y rehabilitación con los mejores estándares de calidad.",
     icon: Building,
+    image: fachadasImg,
     desc: "Rehabilitación de edificios y fachadas",
     content: [
       { type: "p", text: "La rehabilitación de edificios y fachadas es fundamental para asegurar que un inmueble se mantenga en óptimas condiciones y envejezca de manera natural. Este proceso evita daños más severos que podrían desencadenar problemas estructurales a lo largo del tiempo. Por consiguiente, el mantenimiento, la restauración y la rehabilitación de edificios y fachadas son acciones inevitables que deben llevarse a cabo en algún momento en cualquier construcción." },
