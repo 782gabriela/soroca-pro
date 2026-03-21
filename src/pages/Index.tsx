@@ -3,7 +3,6 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Hero from "@/components/Hero";
 import ServiceLines from "@/components/ServiceLines";
 import Services from "@/components/Services";
-import Projects from "@/components/Projects";
 import Process from "@/components/Process";
 import Trust from "@/components/Trust";
 import Reviews from "@/components/Reviews";
@@ -20,7 +19,6 @@ const Index = () => {
           <Hero />
           <ServiceLines />
           <Services />
-          <Projects />
           <Process />
           <Trust />
           <Reviews />
