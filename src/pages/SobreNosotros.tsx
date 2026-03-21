@@ -55,6 +55,11 @@ const SobreNosotros = () => {
                   </div>
                 )}
               </div>
+              <div className="mt-10 text-center">
+                <Button asChild size="lg" variant="outline" className="rounded-full px-8 text-base font-medium border-primary/30 hover:bg-primary/5">
+                  <Link to={localePath("/sobre-nosotros/info")}>Más información sobre el Grupo Soroca</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
