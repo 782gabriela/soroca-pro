@@ -45,6 +45,7 @@ const AppRoutes = ({ language }: { language: Language }) => (
         <Route path="/proyectos" element={<ProyectosPage />} />
         <Route path="/zonas" element={<ZonasPage />} />
         <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+        <Route path="/sobre-nosotros/info" element={<GrupoSorocaInfo />} />
         <Route path="/contacto" element={<ContactoPage />} />
         <Route path="/horario" element={<HorarioPage />} />
         <Route path="/rehabilitaciones/:sub" element={<ExtraServiceDetail />} />
