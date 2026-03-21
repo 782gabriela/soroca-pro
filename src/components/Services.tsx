@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { services } from "@/data/services";
+import { extraServices } from "@/data/extraServices";
 import { useTranslation } from "@/i18n/context";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Services = () => {
   const { t, localePath } = useTranslation();
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <section id="servicios" className="relative bg-muted/30 py-16 md:py-24">
@@ -64,6 +67,49 @@ const Services = () => {
             );
           })}
         </div>
+        {!showMore && (
+          <motion.div
+            className="mt-8 text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <Button onClick={() => setShowMore(true)} className="rounded-full font-body">
+              {t.servicesGrid.verMasServicios}
+            </Button>
+          </motion.div>
+        )}
+        <AnimatePresence>
+          {showMore && (
+            <motion.div
+              className="mx-auto mt-6 grid max-w-5xl grid-cols-4 gap-2 sm:gap-3"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {extraServices.map((s, i) => (
+                <motion.div
+                  key={s.path}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.04 }}
+                >
+                  <Link to={localePath(s.path)} className="group flex flex-col items-center overflow-hidden rounded-xl glass-card transition-all duration-400 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 block">
+                    <div className="aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                      <s.icon className="h-10 w-10 text-primary/30" />
+                    </div>
+                    <div className="flex flex-1 flex-col items-center px-2 py-2 text-center">
+                      <h3 className="mb-0.5 font-display text-[10px] font-semibold leading-tight text-primary sm:text-xs">{s.title}</h3>
+                      <p className="hidden font-body text-[9px] leading-snug text-muted-foreground sm:line-clamp-2 sm:block sm:text-[10px]">{s.desc}</p>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
         <motion.div
           className="mt-10 text-center"
           initial={{ opacity: 0 }}

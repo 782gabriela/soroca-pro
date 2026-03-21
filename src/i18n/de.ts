@@ -9,6 +9,7 @@ export const de: Translations = {
     sobreNosotros: "Über uns",
     contacto: "Kontakt",
     pidePresupuesto: "Angebot anfordern",
+    mas: "Mehr",
   },
   hero: {
     title: "Bau, Wartung und Sanierung in Alicante.",
@@ -32,6 +33,7 @@ export const de: Translations = {
     subtitle: "Alle Gewerke, die Sie brauchen, von einem einzigen Team koordiniert.",
     noEncuentras: "Nicht gefunden, was Sie suchen?",
     cuentanosTuCaso: "Erzählen Sie uns Ihren Fall",
+    verMasServicios: "Weitere Dienstleistungen",
   },
   projectsHome: {
     title: "Unsere Arbeit spricht für sich",

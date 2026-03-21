@@ -9,6 +9,7 @@ export const en: Translations = {
     sobreNosotros: "About us",
     contacto: "Contact",
     pidePresupuesto: "Get a quote",
+    mas: "More",
   },
   hero: {
     title: "Construction, maintenance and rehabilitation in Alicante.",
@@ -32,6 +33,7 @@ export const en: Translations = {
     subtitle: "All the trades you need, coordinated by a single team.",
     noEncuentras: "Can't find what you're looking for?",
     cuentanosTuCaso: "Tell us about your case",
+    verMasServicios: "View more services",
   },
   projectsHome: {
     title: "Our work speaks for itself",
