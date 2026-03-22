@@ -288,7 +288,7 @@ export const es = {
     telefono: "Teléfono",
     correo: "Correo electrónico",
     ubicacion: "Ubicación",
-    direccion: "Alicante (Gran Alacant)\nAvenida Noruega 1, BUNGALOW 21 URB NOVAMAR 3",
+    direccion: "Alicante (Santa Pola)\nAvenida Noruega 1, BUNGALOW 21 URB NOVAMAR 3",
     horario: "Horario",
     consultaHorario: "Consulta nuestro horario de atención.",
     consultaHorarioBtn: "Consulta nuestro horario",

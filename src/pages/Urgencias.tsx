@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useBudgetModal } from "@/contexts/BudgetModalContext";
 import { useTranslation } from "@/i18n/context";
-import urgenciasImg from "@/assets/urgencias-casco.png";
+import urgenciasImg from "@/assets/averias-24h.png";
 
 const relatedSlugs = ["fontaneria", "electricidad", "cerrajeria", "aire-acondicionado"];
 

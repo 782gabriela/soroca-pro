@@ -290,7 +290,7 @@ export const de: Translations = {
     telefono: "Telefon",
     correo: "E-Mail",
     ubicacion: "Standort",
-    direccion: "Alicante (Gran Alacant)\nAvenida Noruega 1, BUNGALOW 21 URB NOVAMAR 3",
+    direccion: "Alicante (Santa Pola)\nAvenida Noruega 1, BUNGALOW 21 URB NOVAMAR 3",
     horario: "Büro",
     consultaHorario: "Unsere Öffnungszeiten ansehen.",
     consultaHorarioBtn: "Öffnungszeiten ansehen",
