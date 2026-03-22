@@ -122,7 +122,7 @@ const ExtraServiceDetail = () => {
               </a>
               <div>
                 <Button size="lg" className="px-10 text-base" onClick={() => openBudgetModal(service.title)}>
-                  Pedir presupuesto
+                  {t.grupoSorocaInfo.pedirPresupuesto}
                 </Button>
               </div>
             </div>
